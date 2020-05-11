@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:la="https://linked.art/ns/terms/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/technical/258">
+    <crm:P2_has_type>
+      <crm:E55_Type rdf:about="https://data.rkd.nl/thesau/90837">
+        <rdfs:label>negative</rdfs:label>
+      </crm:E55_Type>
+    </crm:P2_has_type>
+    <crm:P67_refers_to>
+      <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52953"/>
+    </crm:P67_refers_to>
+    <crm:P108i_was_produced_by>
+      <crm:E12_Production rdf:about="https://data.rkd.nl/technical/production/258">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="https://data.rkd.nl/thesau/90906">
+            <rdfs:label>infrared reflectography</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P4_has_time-span>
+          <crm:E52_Time-Span>
+            <crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-01-18</crm:P82a_begin_of_the_begin>
+            <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-01-18</crm:P82b_end_of_the_end>
+          </crm:E52_Time-Span>
+        </crm:P4_has_time-span>
+        <crm:P14_carried_out_by>
+          <crm:E39_Actor rdf:about="https://data.rkd.nl/artists/438557">
+            <rdfs:label>Asperen de Boer, J.R.J. van</rdfs:label>
+          </crm:E39_Actor>
+        </crm:P14_carried_out_by>
+      </crm:E12_Production>
+    </crm:P108i_was_produced_by>
+  </crm:E22_Human-Made_Object>
+</rdf:RDF>
+	
+
