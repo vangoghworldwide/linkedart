@@ -1,4 +1,5 @@
 # Providing data to the vangoghworldwide.org platform
+In this repo we provide documentation and examples of the way we expect metadata about Van Gogh to be used in https://vangoghworldwide.org/. 
 
 ## Linked Art
 * Linked Data
