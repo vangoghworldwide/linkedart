@@ -21,8 +21,8 @@
     crm:P14_carried_out_by <https://data.rkd.nl/artists/438557> ;
     crm:P2_has_type <https://data.rkd.nl/thesau/90906> ;
     crm:P4_has_time-span [
-        crm:P82a_begin_of_the_begin "1991-01-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        crm:P82b_end_of_the_end "1991-01-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82a_begin_of_the_begin "1991-01-18"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        crm:P82b_end_of_the_end "1991-01-18"^^<http://www.w3.org/2001/XMLSchema#date> ;
         a crm:E52_Time-Span
     ] ;
     a crm:E12_Production .

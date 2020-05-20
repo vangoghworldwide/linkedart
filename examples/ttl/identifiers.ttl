@@ -1,40 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix la: <https://linked.art/ns/terms/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
+<http://vocab.getty.edu/aat/300404670>
+    a crm:E55_Type .
+
 <https://data.rkd.nl/images/52947>
+    crm:P1_is_identified_by <https://data.rkd.nl/images/fnr/52947>, <https://data.rkd.nl/images/jhnr/52947>, <https://data.rkd.nl/images/title/en/52947>, <https://data.rkd.nl/images/title/nl/52947> ;
     a crm:E22_Human-Made_Object ;
-    owl:sameAs <https://vangoghworldwide.org/data/artwork/F21> ;    
-    crm:P1_is_identified_by 
-    	<https://data.rkd.nl/images/fnr/52947> , 
-    	<https://data.rkd.nl/images/jhnr/52947> , 
-    	<https://data.rkd.nl/images/title/en/52947> , 
-    	<https://data.rkd.nl/images/title/nl/52947> .
-
-<https://data.rkd.nl/images/title/en/52947>
-    a crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "The peat boat"@en ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404670> .
-
-<https://data.rkd.nl/images/title/nl/52947>
-    a crm:E33_E41_Linguistic_Appellation ;
-    crm:P190_has_symbolic_content "De turfboot"@nl ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404670> .
+    owl:sameAs <https://vangoghworldwide.org/data/artwork/F21> .
 
 <https://data.rkd.nl/images/fnr/52947>
-    a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "F 21" ;
-    crm:P2_has_type <https://vangoghworldwide.org/data/concept/f_number> .
+    crm:P2_has_type <https://vangoghworldwide.org/data/concept/f_number> ;
+    a crm:E42_Identifier .
 
 <https://data.rkd.nl/images/jhnr/52947>
-    a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "JH 415" ;
-    crm:P2_has_type <https://vangoghworldwide.org/data/concept/jh_number> .
+    crm:P2_has_type <https://vangoghworldwide.org/data/concept/jh_number> ;
+    a crm:E42_Identifier .
 
-<https://vangoghworldwide.org/data/concept/jh_number>
-    a crm:E55_Type .
+<https://data.rkd.nl/images/title/en/52947>
+    crm:P190_has_symbolic_content "The peat boat"@en ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
+    a crm:E33_E41_Linguistic_Appellation .
+
+<https://data.rkd.nl/images/title/nl/52947>
+    crm:P190_has_symbolic_content "De turfboot"@nl ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
+    a crm:E33_E41_Linguistic_Appellation .
 
 <https://vangoghworldwide.org/data/concept/f_number>
     a crm:E55_Type .
 
-<http://vocab.getty.edu/aat/300404670>
+<https://vangoghworldwide.org/data/concept/jh_number>
     a crm:E55_Type .
+
