@@ -2,13 +2,13 @@
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
-  "identifier": [
+  "identified_by": [
     {
       "type": "Identifier",
       "content": "s0416M1990",
       "classified_as": [
         {
-          "@id": "http://vocab.getty.edu/aat/300312355",
+          "id": "http://vocab.getty.edu/aat/300312355",
           "_label": "accession numbers"
         }
       ]
