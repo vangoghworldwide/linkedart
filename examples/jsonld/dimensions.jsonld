@@ -1,0 +1,35 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "dimension": [
+    {
+      "type": "Dimension",
+      "value": "51.9",
+      "classified_as": [
+        {
+          "@id": "http://vocab.getty.edu/aat/300055647",
+          "_label": "width"
+        }
+      ],
+      "unit": {
+        "@id": "http://vocab.getty.edu/aat/300379098",
+        "_label": "centimeters"
+      }
+    },
+    {
+      "type": "Dimension",
+      "value": "36.4",
+      "classified_as": [
+        {
+          "@id": "http://vocab.getty.edu/aat/300055644",
+          "_label": "height"
+        }
+      ],
+      "unit": {
+        "@id": "http://vocab.getty.edu/aat/300379098",
+        "_label": "centimeters"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "has_phase": [
+    {
+      "@id": "http://vangoghmuseum.nl/data/artwork_lifetime/2106",
+      "type": "Phase",
+      "_label": "Lifetime of s0416M1990",
+      "part": [
+        {
+          "type": "Phase",
+          "carried_out_by": [
+            {
+              "id": "{URI_OF_OWNER}", 
+              "type": "{PERSON or GROUP}", 
+              "_label": "{NAME_OF_OWNER}", 
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300312281", 
+                  "type": "Type", 
+                  "_label": "Museum"
+                }
+              ]
+            }
+          ], 
+          "took_place_at": [
+            {
+              "id": "http://vocab.getty.edu/tgn/7006952",
+              "type": "Place",
+              "_label": "Amsterdam"
+            }
+          ],
+          "timespan": [
+            {
+              "type": "TimeSpan",
+              "end_of_the_end": "1990-12-31",
+              "begin_of_the_begin": "1949-01-01"
+            }
+          ],
+          "initiated_by": [
+            {
+              "type": "Acquisition",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300417645",
+                  "type": "Type",
+                  "_label": "loan"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

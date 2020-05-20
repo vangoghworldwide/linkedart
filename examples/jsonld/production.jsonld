@@ -1,0 +1,34 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "produced_by": {
+    "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990",
+    "type": "Production",
+    "carried_out_by": [
+      {
+        "id": "http://vocab.getty.edu/ulan/500115588",
+        "_label": "Gogh, Vincent van"
+      }
+    ],
+    "used_general_technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300054216",
+        "_label": "painting"
+      }
+    ],
+    "took_place_at": [
+      {
+        "id": "http://vocab.getty.edu/tgn/7006810",
+        "_label": "'s-Gravenhage"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "end_of_the_end": "1882-08-21",
+        "begin_of_the_begin": "1882-08-21"
+      }
+    ]
+  }
+}

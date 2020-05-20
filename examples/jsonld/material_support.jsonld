@@ -1,0 +1,22 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300014844",
+          "_label": "supports"
+        }
+      ],
+      "made_of": [
+        {
+          "@id": "http://vocab.getty.edu/aat/300014078",
+          "_label": "canvas"
+        }
+      ]
+    }
+  ]
+}

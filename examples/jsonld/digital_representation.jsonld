@@ -1,0 +1,18 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "{URL_TO_YOUR_IMAGE}",
+      "type": "VisualItem",
+      "format": "image/jpeg",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "used_for": [
+    {
+      "id": "http://vangoghmuseum.nl/data/exhibition/858",
+      "type": "Activity",
+      "classified_as": [
+        {
+          "@id": "http://vocab.getty.edu/aat/300054766",
+          "_label": "exhibitions"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Eeuwfeest Vincent van Gogh"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "@id": "http://vangoghmuseum.nl/data/person/8045",
+          "_label": "Stedelijk Museum Amsterdam"
+        }
+      ],
+      "timespan": [
+        {
+          "type": "TimeSpan",
+          "end_of_the_end": "1953-09-20",
+          "begin_of_the_begin": "1953-07-23"
+        }
+      ]
+    }
+  ]
+}
