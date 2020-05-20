@@ -1,0 +1,19 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "identifier": [
+    {
+      "type": "Name",
+      "content": {
+        "en": "View of the Sea at Scheveningen"
+      },
+      "classified_as": [
+        {
+          "@id": "http://vocab.getty.edu/aat/300404670",
+          "_label": "preferred terms"
+        }
+      ]
+    }
+  ]
+}

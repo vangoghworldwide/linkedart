@@ -2,11 +2,10 @@
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
-  "classified_as": [
+  "sameAs": [
     {
-      "id": "http://vocab.getty.edu/aat/300177435",
-      "type": "Type",
-      "_label": "paintings"
+      "id": "https://vangoghworldwide.org/data/artwork/F4"
     }
   ]
 }
+  
