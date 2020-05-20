@@ -5,13 +5,19 @@
   "identified_by": [
     {
       "type": "Name",
-      "content": {
-        "en": "View of the Sea at Scheveningen"
-      },
+      "content": "View of the Sea at Scheveningen",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ],
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
-          "_label": "preferred terms"
+          "type": "Type",
+          "_label": "Primary name"
         }
       ]
     }
