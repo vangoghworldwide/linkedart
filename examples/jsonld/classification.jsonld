@@ -5,8 +5,8 @@
   "classified_as": [
     {
       "id": "http://vocab.getty.edu/aat/300177435",
-	    "type": "Type",
-      "_label": "paintings",
+      "type": "Type",
+      "_label": "paintings"
     }
   ]
 }
