@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vocab.getty.edu/aat/300215302>
+    a crm:E55_Type .
+
+<https://data.rkd.nl/images/297265>
+    crm:P138i_has_representation <https://images.rkd.nl/rkd/thumb/650x650/ac4d3c88-ffd9-d9f0-2362-001c0166a2d0.jpg> ;
+    a crm:E22_Human-Made_Object .
+
+<https://images.rkd.nl/rkd/thumb/650x650/ac4d3c88-ffd9-d9f0-2362-001c0166a2d0.jpg>
+    crm:P2_has_type <http://vocab.getty.edu/aat/300215302> ;
+    a crm:E37_Visual_Item .
+

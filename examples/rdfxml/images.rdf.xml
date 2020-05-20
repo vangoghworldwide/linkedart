@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/297265">
+    <crm:P138i_has_representation>
+      <crm:E37_Visual_Item rdf:about="https://images.rkd.nl/rkd/thumb/650x650/ac4d3c88-ffd9-d9f0-2362-001c0166a2d0.jpg">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300215302"/>
+        </crm:P2_has_type>
+      </crm:E37_Visual_Item>
+    </crm:P138i_has_representation>
+  </crm:E22_Human-Made_Object>
+</rdf:RDF>
