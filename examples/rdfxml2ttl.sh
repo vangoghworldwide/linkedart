@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# serialize RDF/XML into turtle for the testing and adding examples in turtle
+# serialize RDF/XML into turtle for testing and adding examples in turtle
 for rdf_file in rdfxml/*.rdf.xml
 do
         ttl_file=$(basename -- "$rdf_file")
