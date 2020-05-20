@@ -2,26 +2,149 @@
 In this repo we provide documentation and examples of the way we expect metadata about Van Gogh to be used in https://vangoghworldwide.org/. 
 
 ## Linked Art
-We use [Linked Art](https://linked.art), a profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We prefer JSON-LD (obviously as it is the standard) but accept other RDF-serializations, like RDF/XML or Turtle, as well.
+We use [Linked Art](https://linked.art), a profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We prefer JSON-LD (obviously as it is the standard) but accept other RDF-serializations, like RDF/XML or Turtle, as well. We encourage you to get acquinted with the [fundemantals of linked art](https://linked.art/model/) and it's [basic patterns](https://linked.art/model/base/). 
 
-Important: avoid blank nodes.
+## General guidelines
 
-### Typing
-* always type a Thing with rdf:type and often with crm:P2_has_type too.
-* use xsd:dateTime
+* Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
+* Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
+* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies.
+* Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
+* Add a link to a digital representation of the artwork (image).
+<!-- * Provide provenance information about the artwork's current and previous owners.
+* Provide information about the exhibitions the artworks were used in.
+* Provide information about relevant literature.
+* Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports. -->
 
-### Usage of the AAT, ULAN and TGN
-* we don't redefine terms, like Linked Art does.
-* we allow delivery with references to other (eg. your own) SKOS-thesauri, iff it contains skos:exactMatch's to AAT, ULAN or TGN.
+## VGW Patterns
+###Artworks
+In Linked Art artworks are typed as HumanMadeObjects.
 
-## Artworks
-Deliver metadata about the artworks by Van Gogh in your collection.
-Provide:
-* identifiers (todo: link)
-* ...
+https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld
 
-## Technical documents
-Deliver metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports.
-Provide:
-* ...
+###Object types
+To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld
+
+The AAT concepts that are relevant for the oevre of Vincent van Gogh are:
+Painting http://vocab.getty.edu/aat/300033618
+Drawing http://vocab.getty.edu/aat/300033973
+Sketches http://vocab.getty.edu/aat/300015617
+Prints http://vocab.getty.edu/aat/300041273
+
+###Link to VGW URI
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. 
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld
+Identifiers
+Record identifiers. Type Identifier. And classified with an AAT concept. 
+
+Internal within the institution.
+
+Other relevant AAT concepts are:
+
+Two identifiers take a special role in the oevre of Vincent van Gogh. The F-number provided by de La Faille in catalogue, and the JH-number provided by. The concepts to classificy identifiers are defined in the VGW vocabulary.
+For F-numbers and JH-numbers we recommend the format F4 and JH… Do not use F0004, F 4 or f4.
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld
+
+###Titles
+In Linked Art titles are also considered identifiers. We thus use the same pattern with identified_by, but with type Name. 
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld
+
+As a classification use
+"http://vocab.getty.edu/aat/300404670", “Preferred name”
+
+### Current owner
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld
+Production
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld
+Creator
+ULAN URI Vincent van Gogh 
+http://vocab.getty.edu/ulan/500115588
+
+Previously attributed to
+
+#### Location
+
+  "http://vocab.getty.edu/tgn/7006835",  "Nuenen"
+  "http://vocab.getty.edu/tgn/7009654",  "Saint-Rémy-de-Provence"
+  "http://vocab.getty.edu/tgn/7008038",  "Paris"
+  "http://vocab.getty.edu/tgn/7008775",  "Arles"
+  "http://vocab.getty.edu/tgn/7006810",  "'s-Gravenhage"
+  "http://vocab.getty.edu/tgn/7008030",   "Auvers-sur-Oise"
+  "http://vocab.getty.edu/tgn/7250304",   "Parijs"
+  "http://vocab.getty.edu/tgn/7007856",  "Antwerpen"
+  "http://vocab.getty.edu/tgn/7006824",  "Etten"
+  "http://vocab.getty.edu/tgn/7003614", "Drenthe"
+  "http://vocab.getty.edu/tgn/7008792",   "Saintes-Maries-de-la-Mer"
+  "http://vocab.getty.edu/tgn/7007868",  "Bruxelles"
+  "http://vocab.getty.edu/tgn/7006952",  "Amsterdam"
+  "http://vocab.getty.edu/tgn/1026382",  "Cuesmes"
+  "http://vocab.getty.edu/tgn/1047973",   "Nieuw Amsterdam"
+  "http://vocab.getty.edu/tgn/1047843",  "Helvoirt"
+  "http://vocab.getty.edu/tgn/7006798",  "Dordrecht"
+  "http://vocab.getty.edu/tgn/7012090",  "Isleworth"
+  "http://vocab.getty.edu/tgn/7011562",  "Ramsgate"
+  "http://vocab.getty.edu/tgn/7006842",  "Eindhoven"
+  "http://vocab.getty.edu/tgn/7016995",  "Laken"
+#### Time
+Refer to timespan info from Linked Art. Machine readable dates are important, for example to sort artworks on date of production.
+
+#### Technique
+
+### Dimensions
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld
+
+aat:300055644	height	
+aat:300055647	width	
+aat:300072633	depth	
+
+aat:300379099	meters	
+aat:300379098	centimeters	
+aat:300379101	feet	
+aat:300379100	inches	
+
+### Material
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld
+
+@TBD Add common AAT terms
+
+#### Support material
+Model the material of the support, such as the canvas in a separate part. 
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld
+
+### Subject type
+Quote from Linked Art “ This could include classifications such as "Landscape" or "Allusion", compared to classifications that are derived from the physical nature of the object such as a "Painting", "Photograph" or "Sculpture" which are associated with the object.
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld
+
+### Digital representation
+Provide images via your own IIIF server
+
+URL to online image. Van Gogh Platform will serve them via their IIIF Server.
+
+Highest resolution possible. 
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld
+
+### Provenance
+Model a lifetime object. Phases within this lifetime. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld
+
+@TBD Add AAT terms for acquisition types.
+
+### Exhibitions
+Integrate with VGW URIs for exhibitions
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld
+
+### Literature
+
+### Technical research
+
+
 
