@@ -2,7 +2,7 @@
 In order to link an artwork to an exhibition, create a separate Thing, typed as E7_Activity.
 
 ## Identifying an exhibition
-Every exhibition MUST HAVE an uri, identifying the exhibition.
+Every exhibition MUST HAVE an uri, identifying the exhibition. A blank node for an exhibition is not allowed.
 
 ## Typing
 Every E7_Activity MUST BE typed as such with rdf:type. Additionaly, every exhibition MUST HAVE P2_has_type relation to AAT-uri for "exhibition": http://vocab.getty.edu/aat/300054766.

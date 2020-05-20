@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:la="https://linked.art/ns/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   <crm:E7_Activity rdf:about="https://data.rkd.nl/exhibit/100">
-    <crm:P2_has_type rdf:resource="http://vocab.getty.edu/aat/300054766"/>
+    <crm:P2_has_type>
+      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300054766"/>
+    </crm:P2_has_type>
     <crm:P1_is_identified_by>
       <crm:E33_E41_Linguistic_Appellation>
         <crm:P190_has_symbolic_content>Aufbruch zur Farbe : luministische Malerei in Holland und Deutschland</crm:P190_has_symbolic_content>

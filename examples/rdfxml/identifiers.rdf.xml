@@ -21,7 +21,9 @@
     </crm:P1_is_identified_by>
     <crm:P1_is_identified_by>
       <crm:E42_Identifier rdf:about="https://data.rkd.nl/images/fnr/52947">
-        <crm:P2_has_type rdf:resource="https://vangoghworldwide.org/data/concept/f_number"/>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="https://vangoghworldwide.org/data/concept/f_number"/>
+        </crm:P2_has_type>
         <crm:P190_has_symbolic_content>F 21</crm:P190_has_symbolic_content>
       </crm:E42_Identifier>
     </crm:P1_is_identified_by>
