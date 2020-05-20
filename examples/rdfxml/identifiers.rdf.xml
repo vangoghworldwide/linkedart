@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:la="https://linked.art/ns/terms/" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52947">
+    <owl:sameAs rdf:resource="https://vangoghworldwide.org/data/artwork/F21"/>
+    <crm:P1_is_identified_by>
+      <crm:E33_E41_Linguistic_Appellation rdf:about="https://data.rkd.nl/images/title/nl/52947">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300404670"/>
+        </crm:P2_has_type>
+        <crm:P190_has_symbolic_content xml:lang="nl">De turfboot</crm:P190_has_symbolic_content>
+      </crm:E33_E41_Linguistic_Appellation>
+    </crm:P1_is_identified_by>
+    <crm:P1_is_identified_by>
+      <crm:E33_E41_Linguistic_Appellation rdf:about="https://data.rkd.nl/images/title/en/52947">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300404670"/>
+        </crm:P2_has_type>
+        <crm:P190_has_symbolic_content xml:lang="en">The peat boat</crm:P190_has_symbolic_content>
+      </crm:E33_E41_Linguistic_Appellation>
+    </crm:P1_is_identified_by>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="https://data.rkd.nl/images/fnr/52947">
+        <crm:P2_has_type rdf:resource="https://vangoghworldwide.org/data/concept/f_number"/>
+        <crm:P190_has_symbolic_content>F 21</crm:P190_has_symbolic_content>
+      </crm:E42_Identifier>
+    </crm:P1_is_identified_by>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="https://data.rkd.nl/images/jhnr/52947">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="https://vangoghworldwide.org/data/concept/jh_number"/>
+        </crm:P2_has_type>
+        <crm:P190_has_symbolic_content>JH 415</crm:P190_has_symbolic_content>
+      </crm:E42_Identifier>
+    </crm:P1_is_identified_by>
+  </crm:E22_Human-Made_Object>
+</rdf:RDF>
