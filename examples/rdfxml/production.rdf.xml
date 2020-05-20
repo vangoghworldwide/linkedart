@@ -1,0 +1,22 @@
+<rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:la="https://linked.art/ns/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<crm:E22_Human-Made_Object rdf:about="https://data.kmm.nl/artwork/KMM_44477">
+		<crm:P108i_was_produced_by>
+			<crm:E12_Production rdf:about="https://data.kmm.nl/production/KMM_44477">
+				<crm:P14_carried_out_by rdf:resource="http://vocab.getty.edu/ulan/500115588"/>
+				<crm:P4_has_time-span>
+					<crm:E52_Time-Span>
+						<rdfs:label xml:lang="nl">augustus - september 1884</rdfs:label>
+						<rdfs:label xml:lang="en">August - September 1884</rdfs:label>
+						<crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1884-08-01</crm:P82a_begin_of_the_begin>
+						<crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1884-09-30</crm:P82b_end_of_the_end>
+					</crm:E52_Time-Span>
+				</crm:P4_has_time-span>
+				<crm:P7_took_place_at>
+					<crm:E53_Place rdf:about="???">
+						<rdfs:label>PlaceName</rdfs:label>
+					</crm:E53_Place>
+				</crm:P7_took_place_at>
+			</crm:E12_Production>
+		</crm:P108i_was_produced_by>
+	</crm:E22_Human-Made_Object>
+</rdf:RDF>
