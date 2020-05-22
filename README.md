@@ -7,8 +7,9 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ## General guidelines
 
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
+<!-- IZ?: All these patterns are MUST haves for participating in the platform unless stated otherwise. -->
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
-* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies.
+* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. <!-- IZ?: Linked Art prescribes to add your own _label, but be careful to use a label that is in line with the AAT concept. -->
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
 <!-- * Provide provenance information about the artwork's current and previous owners.
@@ -25,46 +26,59 @@ https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.
 ###Object types
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
 
-<!-- IZ?: MUST HAVE rdfs:label? -->
-
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld
 
 The AAT concepts that are relevant for the oeuvre of Vincent van Gogh are:
-Painting http://vocab.getty.edu/aat/300033618
-Drawing http://vocab.getty.edu/aat/300033973
+Paintings http://vocab.getty.edu/aat/300033618
+Drawings http://vocab.getty.edu/aat/300033973
 Sketches http://vocab.getty.edu/aat/300015617
 Prints http://vocab.getty.edu/aat/300041273
 
 ###Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. 
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld
 
 ###Identifiers
-Record identifiers. Type Identifier. And classified with an AAT concept. 
+Apart from the VGW-URI the artwork can be identified with identifiers used in the context of a current owner or in oeuvre catalogues.
 
-Internal within the institution.
+As a classification use 
+"http://vocab.getty.edu/aat/300312355", "accession number"
 
-Other relevant AAT concepts are:
-
-Two identifiers take a special role in the oevre of Vincent van Gogh. The F-number provided by de La Faille in catalogue, and the JH-number provided by. The concepts to classificy identifiers are defined in the VGW vocabulary.
-For F-numbers and JH-numbers we recommend the format F4 and JH… Do not use F0004, F 4 or f4.
+Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in catalogue, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). The concepts to classify identifiers are defined in the VGW vocabulary.
+For F-numbers and JH-numbers we recommend the format F4 and JH... Do not use F0004, F 4 or f4.
+<!-- IZ? Tot nu toe was dit steeds expliciet MET spatie. Dus juist wel "F 4" ipv "F4" -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld
 
 ###Titles
 In Linked Art titles are also considered identifiers. We thus use the same pattern with identified_by, but with type Name. 
 
-https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld
-
 As a classification use
 "http://vocab.getty.edu/aat/300404670", “Preferred name”
+<!-- IZ: je gebruikt "Primary Name" als label in je voorbeeld. Is dat bewust? -->
+<!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands -->
+
+Parallel titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English. NB Titles must be marked in Linked Art style, for general Linked Data purposes please add the usual Linked Data construct for language marking as well.
+
+The AAT concepts that are relevant for languages are:
+English http://vocab.getty.edu/aat/300388277
+Dutch http://vocab.getty.edu/aat/300388256
+
+https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld
 
 ### Current owner
+
+Van Gogh Museum: http://vocab.getty.edu/ulan/500275558
+Kröller-Müller Museum: http://vocab.getty.edu/ulan/500235923
+Rijksmuseum: http://vocab.getty.edu/ulan/500246547
+
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld
-Production
+
+###Production
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld
-Creator
+
+####Creator
 ULAN URI Vincent van Gogh 
 http://vocab.getty.edu/ulan/500115588
 

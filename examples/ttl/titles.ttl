@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    crm:P1_is_identified_by [
+        crm:P190_has_symbolic_content "Zeezicht in Scheveningen"@nl ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
+        crm:P72_has_language <http://vocab.getty.edu/aat/300388256> ;
+        a crm:E33_E41_Linguistic_Appellation
+    ], [
+        crm:P190_has_symbolic_content "View of the Sea at Scheveningen"@en ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
+        crm:P72_has_language <http://vocab.getty.edu/aat/300388277> ;
+        a crm:E33_E41_Linguistic_Appellation
+    ] ;
+    a crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300388256>
+    a crm:E56_Language ;
+    rdfs:label "Dutch (language)" .
+
+<http://vocab.getty.edu/aat/300388277>
+    a crm:E56_Language ;
+    rdfs:label "English (language)" .
+
+<http://vocab.getty.edu/aat/300404670>
+    a crm:E55_Type ;
+    rdfs:label "primary name" .
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
+    <owl:sameAs rdf:resource="https://vangoghworldwide.org/data/artwork/F4"/>
+  </crm:E22_Human-Made_Object>
+</rdf:RDF>
