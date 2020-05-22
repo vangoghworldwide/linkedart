@@ -7,7 +7,7 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ## General guidelines
 
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
-<!-- IZ?: All these patterns are MUST haves for participating in the platform unless stated otherwise. -->
+<!-- IZ?: All these patterns are "MUST HAVES" for participating in the platform unless stated otherwise. -->
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
 * Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. <!-- IZ?: Linked Art prescribes to add your own _label, but be careful to use a label that is in line with the AAT concept. -->
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
@@ -68,12 +68,16 @@ Dutch http://vocab.getty.edu/aat/300388256
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld
 
 ### Current owner
+Relate the current owner of the artwork with the current-owner-pattern.
 
+Use ULAN concepts to relate the current owner or RKDartist if not available:
 Van Gogh Museum: http://vocab.getty.edu/ulan/500275558
 Kröller-Müller Museum: http://vocab.getty.edu/ulan/500235923
 Rijksmuseum: http://vocab.getty.edu/ulan/500246547
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld
+
+<!-- IZ: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor -->
 
 ###Production
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld
