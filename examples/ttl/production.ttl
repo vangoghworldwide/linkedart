@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/production.rdf.xml???>
-    a crm:E53_Place ;
-    rdfs:label "PlaceName" .
-
-<https://data.kmm.nl/artwork/KMM_44477>
-    crm:P108i_was_produced_by <https://data.kmm.nl/production/KMM_44477> ;
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    crm:P108i_was_produced_by [
+        crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500115588> ;
+        crm:P32_used_general_technique <http://vocab.getty.edu/aat/300054216> ;
+        crm:P4_has_time-span [
+            crm:P82a_begin_of_the_begin "1882-08-21T00:00:00"^^xsd:dateTime ;
+            crm:P82b_end_of_the_end "1882-08-21T23:59:59"^^xsd:dateTime ;
+            a crm:E52_Time-Span
+        ] ;
+        crm:P7_took_place_at <http://vocab.getty.edu/tgn/7006810> ;
+        a crm:E12_Production
+    ] ;
     a crm:E22_Human-Made_Object .
 
-<https://data.kmm.nl/production/KMM_44477>
-    crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500115588> ;
-    crm:P4_has_time-span [
-        crm:P82a_begin_of_the_begin "1884-08-01"^^xsd:date ;
-        crm:P82b_end_of_the_end "1884-09-30"^^xsd:date ;
-        a crm:E52_Time-Span ;
-        rdfs:label "August - September 1884"@en, "augustus - september 1884"@nl
-    ] ;
-    crm:P7_took_place_at <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/production.rdf.xml???> ;
-    a crm:E12_Production .
+<http://vocab.getty.edu/aat/300054216>
+    a crm:E55_Type ;
+    rdfs:label "painting" .
+
+<http://vocab.getty.edu/tgn/7006810>
+    a crm:E53_Place ;
+    rdfs:label "'s-Gravenhage" .
 

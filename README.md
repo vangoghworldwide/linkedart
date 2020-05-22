@@ -7,9 +7,9 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ## General guidelines
 
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
-<!-- IZ?: All these patterns are "MUST HAVES" for participating in the platform unless stated otherwise. -->
+<!-- IZ: All these patterns are "MUST HAVES" for participating in the platform unless stated otherwise. -->
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
-* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. <!-- IZ?: Linked Art prescribes to add your own _label, but be careful to use a label that is in line with the AAT concept. -->
+* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. <!-- IZ: Linked Art prescribes to add your own _label, to increase usability of the data. Be careful to use a label that is in line with the AAT concept. Although required in the Linked Art VGW ignores the _labels in order to prevent ambiguity. -->
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
 <!-- * Provide provenance information about the artwork's current and previous owners.
@@ -59,11 +59,11 @@ As a classification use
 <!-- IZ: je gebruikt "Primary Name" als label in je voorbeeld. Is dat bewust? -->
 <!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands -->
 
-Parallel titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English. NB Titles must be marked in Linked Art style, for general Linked Data purposes please add the usual Linked Data construct for language marking as well.
+<!-- IZ: Parallel titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English. Titles must be typed in Linked Art style. For general Linked Data purposes please add the usual Linked Data construct for language marking as well.
 
 The AAT concepts that are relevant for languages are:
 English http://vocab.getty.edu/aat/300388277
-Dutch http://vocab.getty.edu/aat/300388256
+Dutch http://vocab.getty.edu/aat/300388256 -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld
 
@@ -80,41 +80,63 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 <!-- IZ: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor -->
 
 ###Production
+The production of the artwork is modeled as an Event, with agent, place, time and technique.
+
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld
 
-####Creator
-ULAN URI Vincent van Gogh 
-http://vocab.getty.edu/ulan/500115588
 
-Previously attributed to
+####Creator
+Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN-uri to model the relation.
+Vincent van Gogh: http://vocab.getty.edu/ulan/500115588
+
+Sometimes artworks are previously attributed to Van Gogh. Creating a pattern for this situation is to be decided on.
+
+<!-- IZ: ik heb in mijn voorbeeld de creator getypeerd als Actor -->
 
 #### Location
+Relate the location of the production-event.
 
-  "http://vocab.getty.edu/tgn/7006835",  "Nuenen"
-  "http://vocab.getty.edu/tgn/7009654",  "Saint-Rémy-de-Provence"
-  "http://vocab.getty.edu/tgn/7008038",  "Paris"
-  "http://vocab.getty.edu/tgn/7008775",  "Arles"
-  "http://vocab.getty.edu/tgn/7006810",  "'s-Gravenhage"
-  "http://vocab.getty.edu/tgn/7008030",   "Auvers-sur-Oise"
-  "http://vocab.getty.edu/tgn/7250304",   "Parijs"
-  "http://vocab.getty.edu/tgn/7007856",  "Antwerpen"
-  "http://vocab.getty.edu/tgn/7006824",  "Etten"
-  "http://vocab.getty.edu/tgn/7003614", "Drenthe"
-  "http://vocab.getty.edu/tgn/7008792",   "Saintes-Maries-de-la-Mer"
-  "http://vocab.getty.edu/tgn/7007868",  "Bruxelles"
-  "http://vocab.getty.edu/tgn/7006952",  "Amsterdam"
-  "http://vocab.getty.edu/tgn/1026382",  "Cuesmes"
-  "http://vocab.getty.edu/tgn/1047973",   "Nieuw Amsterdam"
-  "http://vocab.getty.edu/tgn/1047843",  "Helvoirt"
-  "http://vocab.getty.edu/tgn/7006798",  "Dordrecht"
-  "http://vocab.getty.edu/tgn/7012090",  "Isleworth"
-  "http://vocab.getty.edu/tgn/7011562",  "Ramsgate"
-  "http://vocab.getty.edu/tgn/7006842",  "Eindhoven"
-  "http://vocab.getty.edu/tgn/7016995",  "Laken"
+http://vocab.getty.edu/tgn/7006835: Nuenen
+http://vocab.getty.edu/tgn/7009654: Saint-Rémy-de-Provence
+http://vocab.getty.edu/tgn/7008038: Paris
+http://vocab.getty.edu/tgn/7008775: Arles
+http://vocab.getty.edu/tgn/7006810: 's-Gravenhage
+http://vocab.getty.edu/tgn/7008030: Auvers-sur-Oise
+http://vocab.getty.edu/tgn/7250304: Parijs
+http://vocab.getty.edu/tgn/7007856: Antwerpen
+http://vocab.getty.edu/tgn/7006824: Etten
+http://vocab.getty.edu/tgn/7003614: Drenthe
+http://vocab.getty.edu/tgn/7008792: Saintes-Maries-de-la-Mer
+http://vocab.getty.edu/tgn/7007868: Bruxelles
+http://vocab.getty.edu/tgn/7006952: Amsterdam
+http://vocab.getty.edu/tgn/1026382: Cuesmes
+http://vocab.getty.edu/tgn/1047973: Nieuw Amsterdam
+http://vocab.getty.edu/tgn/1047843: Helvoirt
+http://vocab.getty.edu/tgn/7006798: Dordrecht
+http://vocab.getty.edu/tgn/7012090: Isleworth
+http://vocab.getty.edu/tgn/7011562: Ramsgate
+http://vocab.getty.edu/tgn/7006842: Eindhoven
+http://vocab.getty.edu/tgn/7016995: Laken
+
+<!-- IZ: ik heb in mijn voorbeeld de location getypeerd als Place -->
+
 #### Time
-Refer to timespan info from Linked Art. Machine readable dates are important, for example to sort artworks on date of production.
+Time is modeled as timespan with a start and end. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). These machine readable dates are important, for example to sort artworks on date of production.
 
 #### Technique
+Relate the technique used in the production event.
+
+Relevant AAT-concepts:
+http://vocab.getty.edu/aat/300054216: painting 
+(NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
+
+<!-- IZ: deze heb ik tot nu toe steeds gemist :-( -->
+
+<!-- IZ: volgens Linked Art moeten we deze typeren als E55_Type -->
+
+<!-- IZ: fout verwijderd uit je jsonld voorbeeld: "use_specific_technique" moet zijn: "technique" -->
+
+<!-- IZ: tot hier gekomen 22 mei 2020 -->
 
 ### Dimensions
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld
@@ -137,7 +159,8 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 Model the material of the support, such as the canvas in a separate part. 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld
 
-### Subject type
+### Subject type 
+<!-- IZ: is de Engelse term niet Subject matter? Dat gebruikte Chris in zijn proefschrift volgens mij-->
 Quote from Linked Art “ This could include classifications such as "Landscape" or "Allusion", compared to classifications that are derived from the physical nature of the object such as a "Painting", "Photograph" or "Sculpture" which are associated with the object.
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld
@@ -153,6 +176,7 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 
 ### Provenance
 Model a lifetime object. Phases within this lifetime. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
+<!-- MUST have its own uri -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld
 
@@ -160,12 +184,14 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 
 ### Exhibitions
 Integrate with VGW URIs for exhibitions
+<!-- MUST have its own uri -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld
 
 ### Literature
+<!-- MUST have its own uri -->
 
 ### Technical research
-
+<!-- MUST have is own uri -->
 
 

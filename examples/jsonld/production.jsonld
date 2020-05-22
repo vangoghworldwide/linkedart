@@ -11,7 +11,7 @@
         "_label": "Gogh, Vincent van"
       }
     ],
-    "used_general_technique": [
+    "technique": [
       {
         "id": "http://vocab.getty.edu/aat/300054216",
         "_label": "painting"
@@ -26,8 +26,8 @@
     "timespan": [
       {
         "type": "TimeSpan",
-        "end_of_the_end": "1882-08-21",
-        "begin_of_the_begin": "1882-08-21"
+        "end_of_the_end": "1882-08-21T00:00:00",
+        "begin_of_the_begin": "1882-08-21T23:59:59"
       }
     ]
   }
