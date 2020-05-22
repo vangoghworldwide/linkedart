@@ -25,9 +25,11 @@ https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.
 ###Object types
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
 
+<!-- IZ?: MUST HAVE rdfs:label? -->
+
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld
 
-The AAT concepts that are relevant for the oevre of Vincent van Gogh are:
+The AAT concepts that are relevant for the oeuvre of Vincent van Gogh are:
 Painting http://vocab.getty.edu/aat/300033618
 Drawing http://vocab.getty.edu/aat/300033973
 Sketches http://vocab.getty.edu/aat/300015617
@@ -37,7 +39,8 @@ Prints http://vocab.getty.edu/aat/300041273
 To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. 
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld
-Identifiers
+
+###Identifiers
 Record identifiers. Type Identifier. And classified with an AAT concept. 
 
 Internal within the institution.
