@@ -18,12 +18,12 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 * Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports. -->
 
 ## VGW Patterns
-###Artworks
+### Artworks
 In Linked Art artworks are typed as HumanMadeObjects.
 
 https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld
 
-###Object types
+### Object types
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld
@@ -34,12 +34,12 @@ Drawings http://vocab.getty.edu/aat/300033973
 Sketches http://vocab.getty.edu/aat/300015617
 Prints http://vocab.getty.edu/aat/300041273
 
-###Link to VGW URI
+### Link to VGW URI
 To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld
 
-###Identifiers
+### Identifiers
 Apart from the VGW-URI the artwork can be identified with identifiers used in the context of a current owner or in oeuvre catalogues.
 
 As a classification use 
@@ -51,7 +51,7 @@ For F-numbers and JH-numbers we recommend the format F4 and JH... Do not use F00
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld
 
-###Titles
+### Titles
 In Linked Art titles are also considered identifiers. We thus use the same pattern with identified_by, but with type Name. 
 
 As a classification use
@@ -79,13 +79,12 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 
 <!-- IZ: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor -->
 
-###Production
+### Production
 The production of the artwork is modeled as an Event, with agent, place, time and technique.
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld
 
-
-####Creator
+#### Creator
 Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN-uri to model the relation.
 Vincent van Gogh: http://vocab.getty.edu/ulan/500115588
 
@@ -131,11 +130,8 @@ http://vocab.getty.edu/aat/300054216: painting
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
 <!-- IZ: deze heb ik tot nu toe steeds gemist :-( -->
-
 <!-- IZ: volgens Linked Art moeten we deze typeren als E55_Type -->
-
-<!-- IZ: fout verwijderd uit je jsonld voorbeeld: "use_specific_technique" moet zijn: "technique" -->
-
+<!-- IZ: fout verwijderd uit je jsonld voorbeeld: "used_specific_technique" moet zijn: "technique" -->
 <!-- IZ: tot hier gekomen 22 mei 2020 -->
 
 ### Dimensions
@@ -176,7 +172,7 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 
 ### Provenance
 Model a lifetime object. Phases within this lifetime. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
-<!-- MUST have its own uri -->
+<!-- IZ: MUST have its own uri -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld
 
@@ -184,14 +180,14 @@ https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.gi
 
 ### Exhibitions
 Integrate with VGW URIs for exhibitions
-<!-- MUST have its own uri -->
+<!-- IZ: MUST have its own uri -->
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld
 
 ### Literature
-<!-- MUST have its own uri -->
+<!-- IZ: MUST have its own uri -->
 
 ### Technical research
-<!-- MUST have is own uri -->
+<!-- IZ: MUST have is own uri -->
 
 
