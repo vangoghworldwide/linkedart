@@ -4,20 +4,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://vocab.getty.edu/aat/300054751>
-    a crm:E55_Type ;
-    rdfs:label "veiling" .
-
-<http://vocab.getty.edu/tgn/7006952>
-    a crm:E53_Place ;
-    rdfs:label "Amsterdam" .
-
-<https://data.kmm.nl/artwork/KMM_44477>
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
     a crm:E22_Human-Made_Object ;
-    la:has_phase <https://data.kmm.nl/artwork/KMM_44477/phase/3> .
+    la:has_phase <http://vangoghmuseum.nl/data/artwork_lifetime/2106> .
 
-<https://data.kmm.nl/artwork/KMM_44477/phase/3>
-    crm:P9_consists_of [
+<http://vangoghmuseum.nl/data/artwork_lifetime/2106>
+    a la:Phase ;
+    rdfs:label "Lifetime of s0416M1990" ;
+    la:has_phase [
         crm:P14_carried_out_by <https://data.rkd.nl/artists/447124> ;
         crm:P2_has_type <http://vocab.getty.edu/aat/300054751> ;
         crm:P4_has_time-span [
@@ -27,9 +21,16 @@
             rdfs:label "18 mei 1920"@nl
         ] ;
         crm:P7_took_place_at <http://vocab.getty.edu/tgn/7006952> ;
-        a crm:E8_Acquisition
-    ] ;
-    a la:Phase .
+        a la:Phase
+    ] .
+
+<http://vocab.getty.edu/aat/300054751>
+    a crm:E55_Type ;
+    rdfs:label "veiling" .
+
+<http://vocab.getty.edu/tgn/7006952>
+    a crm:E53_Place ;
+    rdfs:label "Amsterdam" .
 
 <https://data.rkd.nl/artists/447124>
     a crm:E39_Actor ;

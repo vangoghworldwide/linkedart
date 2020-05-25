@@ -7,7 +7,7 @@
       "id": "http://vangoghmuseum.nl/data/artwork_lifetime/2106",
       "type": "Phase",
       "_label": "Lifetime of s0416M1990",
-      "part": [
+      "has_phase": [
         {
           "type": "Phase",
           "carried_out_by": [
