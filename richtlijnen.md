@@ -7,7 +7,7 @@ Uit: Evelien de Visser & Marijke Heslenfeld, _Richtlijnen Van Gogh Worldwide_, v
 Naam | Uitleg | Linked Art voorbeeld
 --- | ----- | -----
 Toeschrijving/vervaardiger | Wie heeft het kunstwerk gemaakt?  Aan wie is het toegeschreven? | production
-Status | Gaat over de status van de toeschrijving: huidig, verworpen. | ???
+Status | Gaat over de status van de toeschrijving: huidig, verworpen. | 
 Datering | Wanneer is het kunstwerk gemaakt? Zo nauwkeurig mogelijk. | production
 Titel | Titel(s) van het kunstwerk, waaronder ook oude titels uit bijvoorbeeld veilingcatalogi of tentoonstellingscatalogi waaruit een duidelijk verkeerde/andere interpretatie van het onderwerp blijkt. | titles
 Vervaardigd in plaats/land | Waar heeft Van Gogh het werk het gemaakt? | production
@@ -24,17 +24,17 @@ Afmetingen | Wat zijn de afmetingen van het kunstwerk? | dimensions
 ### Metadata opschriften/merken (Indien aanwezig)
 Naam | Uitleg | Linked Art voorbeeld
 --- | ----- | -----
-Positie | Waar is het opschrift gesitueerd? | ???
-Soort | Wat voor soort opschrift is het? | ???
-Inhoud | Transcriptie van het opschrift | ???
+Positie | Waar is het opschrift gesitueerd? | 
+Soort | Wat voor soort opschrift is het? | 
+Inhoud | Transcriptie van het opschrift | 
 
 ### Metadata collecties
 Naam | Uitleg | Linked Art voorbeeld
 --- | ----- | -----
-Soort collectie | Museum, instelling, particuliere collectie | ???
+Soort collectie | Museum, instelling, particuliere collectie | 
 Eigenaar | Wie heeft het kunstwerk door de tijd heen in zijn bezit gehad of beheerd? Dit kan een museum, instelling, (particuliere) collectie zijn. | provenance
-Plaats | De plaats waar het kunstwerk zich bevindt/bevond | ???
-Inventarisnummer | Nummer dat de eigenaar gebruikt(e) om het kunstwerk te identificeren | ???
+Plaats | De plaats waar het kunstwerk zich bevindt/bevond | 
+Inventarisnummer | Nummer dat de eigenaar gebruikt(e) om het kunstwerk te identificeren | 
 Begin-en einddatum | Sinds en tot wanneer heeft de eigenaar het kunstwerk in het bezit (gehad)? | provenance
 Creditline collectie | Verantwoording eigenaar/beherende instelling
 
@@ -43,9 +43,9 @@ Naam | Uitleg | Linked Art voorbeeld
 --- | ----- | -----
 Tentoonstellingstitel| De titel van de tentoonstelling. | exhibition
 Instelling | De instelling(en) waar de tentoonstelling heeft plaatsgevonden. | exhibition
-Plaats | De plaats(en) waar de tentoonstelling heeft plaatsgevonden. | ???
+Plaats | De plaats(en) waar de tentoonstelling heeft plaatsgevonden. | 
 Begin-en einddatum| Wanneer de tentoonstelling heeft plaatsgevonden. | exhibition
-catalogusnummer| Het nummer dat het kunstwerk heeft in de tentoonstellingscatalogus. | ???
+catalogusnummer| Het nummer dat het kunstwerk heeft in de tentoonstellingscatalogus. | 
 
 ### Metadata literatuur/bronnen
 Naam | Uitleg | Linked Art voorbeeld
