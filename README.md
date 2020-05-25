@@ -59,8 +59,10 @@ http://vocab.getty.edu/aat/300015617 | Sketches
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
+<!-- MH Should we ask this from the contributors or should there be a VGW process that creates these links> -->
 To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
+@TBD sameAs does not exist in Linked Art
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
