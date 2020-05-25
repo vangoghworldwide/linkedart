@@ -362,7 +362,7 @@ http://vocab.getty.edu/aat/300379101 | feet
 http://vocab.getty.edu/aat/300379100 | inches	
 
 ### Material
-The artwork is constructed out of various materials. Model the the material used to create the art itself (eg. paint) as property of the artwork itself. For the support material (eg. the canvas) see the pattern Support material.
+The artwork is constructed out of various materials. Model the material that is used to create the art itself (eg. paint) as a property of the artwork. For the support material (eg. the canvas) see the pattern Support material.
 
 ```json
 {
@@ -494,7 +494,7 @@ In case you provide images via your own IIIF server use the following pattern:
 ```
 
 ### Provenance
-Provide the lifetime of the object by providing the different owners. We start with a phase for the entire lifetime, and add parts for each phases in which it a different owner. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
+The provenance defines the differnet owners of the artwork and how the acquired the work. Each ownership is modeled as a phase. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -555,10 +555,49 @@ URI | Label
 --- | -----
 
 ### Exhibitions
-Integrate with VGW URIs for exhibitions
-<!-- IZ: MUST have its own uri -->
+Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place.
 
-https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "used_for": [
+    {
+      "id": "http://vangoghmuseum.nl/data/exhibition/858",
+      "type": "Activity",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054766",
+          "type": "Type",
+          "_label": "exhibitions"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Eeuwfeest Vincent van Gogh"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/person/8045",
+          "type": "Group",
+          "_label": "Stedelijk Museum Amsterdam"
+        }
+      ],
+      "timespan": [
+        {
+          "type": "TimeSpan",
+          "end_of_the_end": "1953-09-20",
+          "begin_of_the_begin": "1953-07-23"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld)
 
 ### Literature
 <!-- IZ: MUST have its own uri -->
