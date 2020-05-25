@@ -1,30 +1,30 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix la: <https://linked.art/ns/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
-<http://vocab.getty.edu/aat/300054766>
-    a crm:E55_Type .
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    crm:P16i_was_used_for <http://vangoghmuseum.nl/data/exhibition/858> ;
+    a crm:E22_Human-Made_Object .
 
-<https://data.rkd.nl/exhibit/100>
+<http://vangoghmuseum.nl/data/exhibition/858>
     crm:P1_is_identified_by [
-        crm:P190_has_symbolic_content "Aufbruch zur Farbe : luministische Malerei in Holland und Deutschland" ;
+        crm:P190_has_symbolic_content "Eeuwfeest Vincent van Gogh" ;
         a crm:E33_E41_Linguistic_Appellation
     ] ;
     crm:P2_has_type <http://vocab.getty.edu/aat/300054766> ;
     crm:P4_has_time-span [
-        crm:P82a_begin_of_the_begin "1996-02-18"^^<http://www.w3.org/2001/XMLSchema#date> ;
-        crm:P82b_end_of_the_end "1996-04-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        crm:P82a_begin_of_the_begin "1953-07-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end "1953-09-20T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         a crm:E52_Time-Span
     ] ;
-    crm:P7_took_place_at <https://data.rkd.nl/thesau/1738>, <https://data.rkd.nl/venue/5356> ;
+    crm:P7_took_place_at <http://vocab.getty.edu/ulan/500220995> ;
     a crm:E7_Activity .
 
-<https://data.rkd.nl/thesau/1738>
-    a crm:E53_Place .
+<http://vocab.getty.edu/aat/300054766>
+    a crm:E55_Type ;
+    rdfs:label "exhibitions" .
 
-<https://data.rkd.nl/venue/5356>
+<http://vocab.getty.edu/ulan/500220995>
     a crm:E39_Actor ;
-    rdfs:label "Kunst-Museum Ahlen" .
+    rdfs:label "Stedelijk Museum Amsterdam" .
 
