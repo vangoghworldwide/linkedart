@@ -184,7 +184,7 @@ http://vocab.getty.edu/aat/300388277 | English
 http://vocab.getty.edu/aat/300388256 | Dutch
 
 ### Current owner
-Relate the current owner of the artwork with the current-owner-pattern.
+Describe the current owner of the artwork by relating it to a museum or person. Use the Linked Art type Group for a Museum and the Linked art type Person for an individuel.
 
 ```javascript
 {
@@ -202,28 +202,66 @@ Relate the current owner of the artwork with the current-owner-pattern.
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld)
 
-Use ULAN concepts to relate the current owner or RKDartist if not available:
+Use concepts from ULAN for the current owner. In case these are not available use your own identifier and label.
 URI | Label
 --- | -----
 http://vocab.getty.edu/ulan/500275558 | Van Gogh Museum 
 http://vocab.getty.edu/ulan/500235923 | Kröller-Müller Museum
 http://vocab.getty.edu/ulan/500246547 | Rijksmuseum
 
-<!-- IZ: typeren: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor Als je kiest voor Group sluit je personen als individu uit als eigenaar. -->
-
 ### Production
-The production of the artwork is modeled as an Event, with agent, place, time and technique.
-
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld).
+The production of the artwork is modeled as an activity with an agent, a place, a timespan. Optionally the technique by which the artwork was made can be added.
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "produced_by": {
+    "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990",
+    "type": "Production",
+    "carried_out_by": [
+      {
+        "id": "http://vocab.getty.edu/ulan/500115588",
+        "type": "Actor",
+        "_label": "Gogh, Vincent van"
+      }
+    ],
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300054216",
+        "type": "Type",
+        "_label": "painting"
+      }
+    ],
+    "took_place_at": [
+      {
+        "id": "http://vocab.getty.edu/tgn/7006810",
+        "type": "Place",
+        "_label": "'s-Gravenhage"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "end_of_the_end": "1882-08-21T00:00:00",
+        "begin_of_the_begin": "1882-08-21T23:59:59"
+      }
+    ]
+  }
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld).
 
 #### Creator
-Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN-uri to model the relation.
-* http://vocab.getty.edu/ulan/500115588: Vincent van Gogh
+Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN URI to model the relation.
+URI | Label
+--- | -----
+http://vocab.getty.edu/ulan/500115588 | Vincent van Gogh
 
 Sometimes artworks are previously attributed to Van Gogh. Creating a pattern for this situation is to be decided on.
 
 #### Location
-Relate the location of the production-event.
+Use a URI from TGN for the production location
 URI | Label
 --- | -----
 http://vocab.getty.edu/tgn/7006835 | Nuenen
@@ -247,8 +285,10 @@ http://vocab.getty.edu/tgn/7011562 | Ramsgate
 http://vocab.getty.edu/tgn/7006842 | Eindhoven
 http://vocab.getty.edu/tgn/7016995 | Laken
 
-#### Time
-Time is modeled as timespan with a start and an end. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). These machine readable dates are important, for example to sort artworks on date of production.
+#### Timespan
+Time is modeled as timespan with a start and an end date. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). When the date is not known exactly model the first possible begin and the latest possible end. 
+
+These machine readable dates are important, for example to sort artworks on date of production.
 
 #### Technique
 Relate the technique used in the production event.
@@ -263,8 +303,50 @@ http://vocab.getty.edu/aat/300054216: painting
 
 ### Dimensions
 Dimension consist of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
-
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld).
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "dimension": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/width",
+      "type": "Dimension",
+      "value": "51.9",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055647",
+          "type": "Type",
+          "_label": "width"
+        }
+      ],
+      "unit": {
+        "id": "http://vocab.getty.edu/aat/300379098",
+        "type": "MeasurementUnit",
+        "_label": "centimeters"
+      }
+    },
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/height",
+      "type": "Dimension",
+      "value": "36.4",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055644",
+          "type": "Type",
+          "_label": "height"
+        }
+      ],
+      "unit": {
+        "id": "http://vocab.getty.edu/aat/300379098",
+        "type": "MeasurementUnit",
+        "_label": "centimeters"
+      }
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld).
 
 Relevant AAT-concepts for dimension types:
 URI | Label
@@ -282,9 +364,23 @@ http://vocab.getty.edu/aat/300379101 | feet
 http://vocab.getty.edu/aat/300379100 | inches	
 
 ### Material
-The artwork is constructed out of various materials: the support material (eg. the canvas) and the material used to create the art itself (eg. paint).
+The artwork is constructed out of various materials. Model the the material used to create the art itself (eg. paint) as property of the artwork itself. For the support material (eg. the canvas) see the pattern Support material.
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld).
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "made_of": [
+    {
+      "id": "http://vocab.getty.edu/aat/300015050",
+      "type": "Material",
+      "_label": "oil paint"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld)
 
 @TBD Add common AAT terms
 URI | Label
@@ -292,27 +388,112 @@ URI | Label
 
 #### Support material
 Model the material of the support, such as the canvas in a separate part. 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300014844",
+          "type": "HumanMadeObject",
+          "_label": "Canvast Support"
+        }
+      ],
+      "made_of": [
+        {
+          "id": "http://vocab.getty.edu/aat/300014078",
+          "type": "Material",
+          "_label": "canvas"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld)
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld).
+@TBD Add common AAT terms
+URI | Label
+--- | -----
 
-### Subject type 
-<!-- IZ: is de Engelse term niet Subject matter? Dat gebruikte Chris in zijn proefschrift volgens mij-->
-Quote from Linked Art “ This could include classifications such as "Landscape" or "Allusion", compared to classifications that are derived from the physical nature of the object such as a "Painting", "Photograph" or "Sculpture" which are associated with the object.
+### Subject classification
+For the subject matter we only ask you to probide the type of the subject, such as landscape or portrait. You are free to provide the depicted content as well, but these are currently not shown on the VGW platform.
 
-https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "shows": [
+    {
+      "type": "VisualItem",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300117546",
+          "type": "Type",
+          "_label": "Seascape"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground(https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld)
 
 @TBD Add common AAT terms
 URI | Label
 --- | -----
 
 ### Digital representation
-Provide images via your own IIIF server
+The digital representation of the artwork is an image that is available online. 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "{URL_TO_YOUR_IMAGE}",
+      "type": "VisualItem",
+      "format": "image/jpeg",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld)
 
-URL to online image. Van Gogh Platform will serve them via their IIIF Server.
+Van Gogh Worldwide makes your images available according to the [IIIF standard](https://iiif.io/). This enables various functions such as zooming of high resolition images. Please provide the highest resolution you can share. We take your images and add them to VGWs IIIF server.
 
-Highest resolution possible. 
-
-https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld
+In case you provide images via your own IIIF server use the following pattern:
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "{BASE_URL_TO_IMAGE_ON_IIIF_SERVER}",
+      "type": "VisualItem",
+      "conforms_to": [
+        {
+          "id": "http://iiif.io/api/image"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### Provenance
 Model a lifetime object. Phases within this lifetime. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
