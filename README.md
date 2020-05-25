@@ -45,7 +45,9 @@ See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%
 Apart from the VGW-URI the artwork can be identified with identifiers used in the context of a current owner or in oeuvre catalogues.
 
 As a classification use 
-* http://vocab.getty.edu/aat/300312355: accession number
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300312355 | accession number
 
 Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in catalogue, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). The concepts to classify identifiers are defined in the VGW vocabulary.
 For F-numbers and JH-numbers we recommend the format F4 and JH... Do not use F0004, F 4 or f4.
@@ -57,15 +59,19 @@ See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%
 In Linked Art titles are also considered identifiers. We thus use the same pattern with identified_by, but with type Name. 
 
 As a classification use
-* http://vocab.getty.edu/aat/300404670: Preferred name
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300404670 | Preferred name
 <!-- IZ: je gebruikt "Primary Name" ipv "Preferred Name" als label in je voorbeeld. Is dat bewust? -->
 <!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands. Zullen we die ook toevoegen aan de json? -->
 
-<!-- IZ: Parallel titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English. Titles must be typed in Linked Art style. For general Linked Data purposes please add the usual Linked Data construct for language marking as well.
+Multiple titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English.
 
 The AAT concepts that are relevant for languages are:
-English http://vocab.getty.edu/aat/300388277
-Dutch http://vocab.getty.edu/aat/300388256 -->
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300388277 | English
+http://vocab.getty.edu/aat/300388256 | Dutch
 
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld).
 
@@ -73,9 +79,11 @@ See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%
 Relate the current owner of the artwork with the current-owner-pattern.
 
 Use ULAN concepts to relate the current owner or RKDartist if not available:
-* http://vocab.getty.edu/ulan/500275558: Van Gogh Museum 
-* http://vocab.getty.edu/ulan/500235923: Kröller-Müller Museum
-* http://vocab.getty.edu/ulan/500246547: Rijksmuseum
+URI | Label
+--- | -----
+http://vocab.getty.edu/ulan/500275558 | Van Gogh Museum 
+http://vocab.getty.edu/ulan/500235923 | Kröller-Müller Museum
+http://vocab.getty.edu/ulan/500246547 | Rijksmuseum
 
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld).
 
@@ -94,27 +102,28 @@ Sometimes artworks are previously attributed to Van Gogh. Creating a pattern for
 
 #### Location
 Relate the location of the production-event.
-
-* http://vocab.getty.edu/tgn/7006835: Nuenen
-* http://vocab.getty.edu/tgn/7008038: Paris
-* http://vocab.getty.edu/tgn/7008775: Arles
-* http://vocab.getty.edu/tgn/7006810: 's-Gravenhage
-* http://vocab.getty.edu/tgn/7008030: Auvers-sur-Oise
-* http://vocab.getty.edu/tgn/7250304: Parijs
-* http://vocab.getty.edu/tgn/7007856: Antwerpen
-* http://vocab.getty.edu/tgn/7006824: Etten
-* http://vocab.getty.edu/tgn/7003614: Drenthe
-* http://vocab.getty.edu/tgn/7008792: Saintes-Maries-de-la-Mer
-* http://vocab.getty.edu/tgn/7007868: Bruxelles
-* http://vocab.getty.edu/tgn/7006952: Amsterdam
-* http://vocab.getty.edu/tgn/1026382: Cuesmes
-* http://vocab.getty.edu/tgn/1047973: Nieuw Amsterdam
-* http://vocab.getty.edu/tgn/1047843: Helvoirt
-* http://vocab.getty.edu/tgn/7006798: Dordrecht
-* http://vocab.getty.edu/tgn/7012090: Isleworth
-* http://vocab.getty.edu/tgn/7011562: Ramsgate
-* http://vocab.getty.edu/tgn/7006842: Eindhoven
-* http://vocab.getty.edu/tgn/7016995: Laken
+URI | Label
+--- | -----
+http://vocab.getty.edu/tgn/7006835 | Nuenen
+http://vocab.getty.edu/tgn/7008038 | Paris
+http://vocab.getty.edu/tgn/7008775 | Arles
+http://vocab.getty.edu/tgn/7006810 | 's-Gravenhage
+http://vocab.getty.edu/tgn/7008030 | Auvers-sur-Oise
+http://vocab.getty.edu/tgn/7250304 | Parijs
+http://vocab.getty.edu/tgn/7007856 | Antwerpen
+http://vocab.getty.edu/tgn/7006824 | Etten
+http://vocab.getty.edu/tgn/7003614 | Drenthe
+http://vocab.getty.edu/tgn/7008792 | Saintes-Maries-de-la-Mer
+http://vocab.getty.edu/tgn/7007868 | Bruxelles
+http://vocab.getty.edu/tgn/7006952 | Amsterdam
+http://vocab.getty.edu/tgn/1026382 | Cuesmes
+http://vocab.getty.edu/tgn/1047973 | Nieuw Amsterdam
+http://vocab.getty.edu/tgn/1047843 | Helvoirt
+http://vocab.getty.edu/tgn/7006798 | Dordrecht
+http://vocab.getty.edu/tgn/7012090 | Isleworth
+http://vocab.getty.edu/tgn/7011562 | Ramsgate
+http://vocab.getty.edu/tgn/7006842 | Eindhoven
+http://vocab.getty.edu/tgn/7016995 | Laken
 
 #### Time
 Time is modeled as timespan with a start and an end. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). These machine readable dates are important, for example to sort artworks on date of production.
@@ -123,6 +132,8 @@ Time is modeled as timespan with a start and an end. This means that if you know
 Relate the technique used in the production event.
 
 Relevant AAT-concepts:
+URI | Label
+--- | -----
 http://vocab.getty.edu/aat/300054216: painting 
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
@@ -133,14 +144,20 @@ Dimension consist of a type (eg. height), a value and a measurement unit (eg. ce
 
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld).
 
-Relevant AAT-concepts:
-* http://vocab.getty.edu/aat/300055644: height
-* http://vocab.getty.edu/aat/300055647: width
-* http://vocab.getty.edu/aat/300072633: depth
-* http://vocab.getty.edu/aat/300379099: meters
-* http://vocab.getty.edu/aat/300379098: centimeters
-* http://vocab.getty.edu/aat/300379101: feet
-* http://vocab.getty.edu/aat/300379100: inches	
+Relevant AAT-concepts for dimension types:
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300055644 | height
+http://vocab.getty.edu/aat/300055647 | width
+http://vocab.getty.edu/aat/300072633 | depth
+
+Relevant AAT-concepts for measurment units:
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300379099 | meters
+http://vocab.getty.edu/aat/300379098 | centimeters
+http://vocab.getty.edu/aat/300379101 | feet
+http://vocab.getty.edu/aat/300379100 | inches	
 
 ### Material
 The artwork is constructed out of various materials: the support material (eg. the canvas) and the material used to create the art itself (eg. paint).
@@ -148,6 +165,8 @@ The artwork is constructed out of various materials: the support material (eg. t
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld).
 
 @TBD Add common AAT terms
+URI | Label
+--- | -----
 
 #### Support material
 Model the material of the support, such as the canvas in a separate part. 
@@ -159,6 +178,10 @@ See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%
 Quote from Linked Art “ This could include classifications such as "Landscape" or "Allusion", compared to classifications that are derived from the physical nature of the object such as a "Painting", "Photograph" or "Sculpture" which are associated with the object.
 
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld
+
+@TBD Add common AAT terms
+URI | Label
+--- | -----
 
 ### Digital representation
 Provide images via your own IIIF server
@@ -176,6 +199,8 @@ Model a lifetime object. Phases within this lifetime. A phase can be initiated b
 https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld
 
 @TBD Add AAT terms for acquisition types.
+URI | Label
+--- | -----
 
 ### Exhibitions
 Integrate with VGW URIs for exhibitions
