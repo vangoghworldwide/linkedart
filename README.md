@@ -21,7 +21,14 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ### Artworks
 In Linked Art artworks are typed as HumanMadeObjects.
 
-See [example](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld).
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject"
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld).
 
 ### Object types
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
