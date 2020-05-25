@@ -21,7 +21,7 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ### Artworks
 In Linked Art artworks are typed as HumanMadeObjects.
 
-```json
+```javascript
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
