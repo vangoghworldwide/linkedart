@@ -9,7 +9,7 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
 <!-- IZ: All these patterns are "MUST HAVES" for participating in the platform unless stated otherwise. -->
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
-* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. <!-- IZ: Linked Art prescribes to add your own _label, to increase usability of the data. Be careful to use a label that is in line with the AAT concept. Although required in the Linked Art VGW ignores the _labels in order to prevent ambiguity. -->
+* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. VGW ignores the \_labels and uses the preferred labels from the Getty vocabularies instead.
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
 <!-- * Provide provenance information about the artwork's current and previous owners.
