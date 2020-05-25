@@ -77,7 +77,7 @@ Use ULAN concepts to relate the current owner or RKDartist if not available:
 
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld).
 
-<!-- IZ: typeren: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor -->
+<!-- IZ: typeren: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor Als je kiest voor Group sluit je personen als individu uit als eigenaar. -->
 
 ### Production
 The production of the artwork is modeled as an Event, with agent, place, time and technique.
@@ -89,8 +89,6 @@ Obviously (most of) the artworks in the platform are created by Vincent van Gogh
 * http://vocab.getty.edu/ulan/500115588: Vincent van Gogh
 
 Sometimes artworks are previously attributed to Van Gogh. Creating a pattern for this situation is to be decided on.
-
-<!-- IZ: typeren: ik heb in mijn voorbeeld de creator getypeerd als Actor -->
 
 #### Location
 Relate the location of the production-event.
@@ -116,8 +114,6 @@ Relate the location of the production-event.
 * http://vocab.getty.edu/tgn/7006842: Eindhoven
 * http://vocab.getty.edu/tgn/7016995: Laken
 
-<!-- IZ: typeren: ik heb in mijn voorbeeld de location getypeerd als Place -->
-
 #### Time
 Time is modeled as timespan with a start and an end. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). These machine readable dates are important, for example to sort artworks on date of production.
 
@@ -129,15 +125,11 @@ http://vocab.getty.edu/aat/300054216: painting
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
 <!-- IZ: deze heb ik tot nu toe steeds gemist :-( -->
-<!-- IZ: typeren: volgens Linked Art moeten we deze typeren als E55_Type -->
-<!-- IZ: fout verwijderd uit je jsonld voorbeeld: "used_specific_technique" moet zijn: "technique" -->
 
 ### Dimensions
 Dimension consist of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
 
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld).
-
-<!-- IZ: typeren: measurement unit en type -->
 
 Relevant AAT-concepts:
 * http://vocab.getty.edu/aat/300055644: height

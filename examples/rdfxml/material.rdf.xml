@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
-  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52947">
-    <!-- @nl: materiaal -->
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
     <crm:P45_consists_of>
-      <crm:E57_Material rdf:about="http://vocab.getty.edu/aat/300015050"/>
+      <crm:E57_Material rdf:about="http://vocab.getty.edu/aat/300015050">
+        <rdfs:label>oil paint</rdfs:label>
+      </crm:E57_Material>
     </crm:P45_consists_of>
-    <!-- @nl: "drager" -->
-    <crm:P46_is_composed_of>
-      <crm:E22_Human-Made_Object>
-        <crm:P2_has_type>
-          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300014844"/> <!-- is AAT-uri for "drager" -->
-        </crm:P2_has_type>
-        <crm:P45_consists_of>
-          <crm:E57_Material rdf:about="http://vocab.getty.edu/aat/300014078"/>
-        </crm:P45_consists_of>
-      </crm:E22_Human-Made_Object>
-    </crm:P46_is_composed_of>
   </crm:E22_Human-Made_Object>
 </rdf:RDF>
