@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:la="https://linked.art/ns/terms/" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
+  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/101985">    
+    <crm:P43_has_dimension>
+      <crm:E54_Dimension>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300055647"/>
+        </crm:P2_has_type>
+        <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</crm:P90_has_value>
+        <crm:P91_has_unit>
+          <crm:E58_Measurement_Unit rdf:about="http://vocab.getty.edu/aat/300379098"/>
+        </crm:P91_has_unit>
+      </crm:E54_Dimension>
+    </crm:P43_has_dimension>
+    <crm:P43_has_dimension>
+      <crm:E54_Dimension>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300055644"/>
+        </crm:P2_has_type>
+        <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38</crm:P90_has_value>
+        <crm:P91_has_unit>
+          <crm:E58_Measurement_Unit rdf:about="http://vocab.getty.edu/aat/300379098"/>
+        </crm:P91_has_unit>
+      </crm:E54_Dimension>
+    </crm:P43_has_dimension>
+  </crm:E22_Human-Made_Object>
+</rdf:RDF>
