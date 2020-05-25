@@ -33,7 +33,22 @@ In Linked Art artworks are typed as HumanMadeObjects.
 ### Object types
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld).
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300177435",
+      "type": "Type",
+      "_label": "paintings"
+    }
+  ]
+}
+```
+
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld) 
 
 The AAT concepts that are relevant for the oeuvre of Vincent van Gogh are:
 URI | Label
@@ -46,24 +61,112 @@ http://vocab.getty.edu/aat/300041273 | Prints
 ### Link to VGW URI
 To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld).
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "sameAs": [
+    {
+      "id": "https://vangoghworldwide.org/data/artwork/F4"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld)
 
 ### Identifiers
 Apart from the VGW-URI the artwork can be identified with identifiers used in the context of a current owner or in oeuvre catalogues.
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "s0416M1990",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300312355",
+          "type": "Type",
+          "_label": "accession numbers"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "content": "F4",
+      "classified_as": [
+        {
+          "id": "https://vangoghworldwide.org/data/concept/f_number",
+          "type": "Type",
+          "_label": "De La Faille number"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "content": "JH187",
+      "classified_as": [
+        {
+          "id": "https://vangoghworldwide.org/data/concept/jh_number",
+          "type": "Type",
+          "_label": "Jan Hulsker number"
+        }
+      ]
+    }
+  ]
+}
+```
+
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld)
 
 As a classification use 
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300312355 | accession number
 
-Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in catalogue, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). The concepts to classify identifiers are defined in the VGW vocabulary.
-For F-numbers and JH-numbers we recommend the format F4 and JH... Do not use F0004, F 4 or f4.
-<!-- IZ? Tot nu toe was dit steeds expliciet MET spatie. Dus juist wel "F 4" ipv "F4" -->
+Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in catalogue, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). For F-numbers and JH-numbers we recommend the format F4. Do not use F0004, F 4 or f4.
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld).
+The concepts to classify identifiers are defined in the VGW vocabulary:
+URI | Label
+--- | -----
+https://vangoghworldwide.org/data/concept/f_number | De La Faille number
+https://vangoghworldwide.org/data/concept/jh_number | Jan Hulsker number
 
 ### Titles
 In Linked Art titles are also considered identifiers. We thus use the same pattern with identified_by, but with type Name. 
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "View of the Sea at Scheveningen",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary name"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld).
+
 
 As a classification use
 URI | Label
@@ -80,10 +183,24 @@ URI | Label
 http://vocab.getty.edu/aat/300388277 | English
 http://vocab.getty.edu/aat/300388256 | Dutch
 
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld).
-
 ### Current owner
 Relate the current owner of the artwork with the current-owner-pattern.
+
+```javascript
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "current_owner": [
+    {
+      "id": "http://vocab.getty.edu/ulan/500275558",
+      "type": "Group",
+      "_label":"Van Gogh Museum"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld)
 
 Use ULAN concepts to relate the current owner or RKDartist if not available:
 URI | Label
@@ -91,8 +208,6 @@ URI | Label
 http://vocab.getty.edu/ulan/500275558 | Van Gogh Museum 
 http://vocab.getty.edu/ulan/500235923 | Kröller-Müller Museum
 http://vocab.getty.edu/ulan/500246547 | Rijksmuseum
-
-See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld).
 
 <!-- IZ: typeren: in het jsonld voorbeeld is de current owner niet getypeerd. Ik heb in mijn voorbeeld gekozen voor E39_Actor Als je kiest voor Group sluit je personen als individu uit als eigenaar. -->
 
