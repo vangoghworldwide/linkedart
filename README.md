@@ -383,6 +383,12 @@ The artwork is constructed out of various materials. Model the material that is 
 @TBD Add common AAT terms
 URI | Label
 --- | -----
+http://vocab.getty.edu/aat/300015050 | oil paint
+http://vocab.getty.edu/aat/300015012 | ink
+http://vocab.getty.edu/aat/300011727 | chalk
+http://vocab.getty.edu/aat/300080064 | red chalk
+http://vocab.getty.edu/aat/300187371 | printing ink
+http://vocab.getty.edu/aat/300015017 | Chinese ink
 
 #### Support material
 Model the material of the support, such as the canvas in a separate part. 
@@ -417,6 +423,18 @@ Model the material of the support, such as the canvas in a separate part.
 @TBD Add common AAT terms
 URI | Label
 --- | -----
+http://vocab.getty.edu/aat/300014109 | paper
+http://vocab.getty.edu/aat/300014078 | canvas
+http://vocab.getty.edu/aat/300014657 | panel
+http://vocab.getty.edu/aat/300014184 | laid paper
+http://vocab.getty.edu/aat/300014187 | wove paper
+http://vocab.getty.edu/aat/300014170 | watercolor paper
+http://vocab.getty.edu/aat/300162474 | pasteboard
+http://vocab.getty.edu/aat/300014224 | cardboard
+http://vocab.getty.edu/aat/300014067 | cotton
+http://vocab.getty.edu/aat/300053013 | pasting
+http://vocab.getty.edu/aat/300014205 | Masonite (TM)
+http://vocab.getty.edu/aat/300014076 | burlap
 
 ### Subject classification
 For the subject matter we only ask you to probide the type of the subject, such as landscape or portrait. You are free to provide the depicted content as well, but these are currently not shown on the VGW platform.
@@ -445,6 +463,15 @@ For the subject matter we only ask you to probide the type of the subject, such 
 @TBD Add common AAT terms
 URI | Label
 --- | -----
+http://vocab.getty.edu/aat/300015638 | still lifes
+http://vocab.getty.edu/aat/300189808 | figures
+http://vocab.getty.edu/aat/300015636 | landscapes
+http://vocab.getty.edu/aat/300015571 | cityscapes
+http://vocab.getty.edu/aat/300015637 | portraits
+http://vocab.getty.edu/aat/300124534 | self-portraits
+http://vocab.getty.edu/aat/300189568 | nudes
+http://vocab.getty.edu/aat/300117546 | seascapes
+http://vocab.getty.edu/aat/300139140 | genre
 
 ### Digital representation
 The digital representation of the artwork is an image that is available online. 
