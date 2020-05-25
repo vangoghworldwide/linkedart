@@ -9,6 +9,7 @@
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300312355",
+          "type": "Type",
           "_label": "accession numbers"
         }
       ]
@@ -19,6 +20,7 @@
       "classified_as": [
         {
           "id": "https://vangoghworldwide.org/data/concept/f_number",
+          "type": "Type",
           "_label": "De La Faille number"
         }
       ]
@@ -29,6 +31,7 @@
       "classified_as": [
         {
           "id": "https://vangoghworldwide.org/data/concept/jh_number",
+          "type": "Type",
           "_label": "Jan Hulsker number"
         }
       ]

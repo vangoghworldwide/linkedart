@@ -8,7 +8,8 @@
       "type": "Activity",
       "classified_as": [
         {
-          "@id": "http://vocab.getty.edu/aat/300054766",
+          "id": "http://vocab.getty.edu/aat/300054766",
+          "type": "Type",
           "_label": "exhibitions"
         }
       ],
@@ -20,7 +21,8 @@
       ],
       "carried_out_by": [
         {
-          "@id": "http://vangoghmuseum.nl/data/person/8045",
+          "id": "http://vangoghmuseum.nl/data/person/8045",
+          "type": "Group",
           "_label": "Stedelijk Museum Amsterdam"
         }
       ],

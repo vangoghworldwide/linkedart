@@ -8,18 +8,21 @@
     "carried_out_by": [
       {
         "id": "http://vocab.getty.edu/ulan/500115588",
+        "type": "Actor",
         "_label": "Gogh, Vincent van"
       }
     ],
     "technique": [
       {
         "id": "http://vocab.getty.edu/aat/300054216",
+        "type": "Type",
         "_label": "painting"
       }
     ],
     "took_place_at": [
       {
         "id": "http://vocab.getty.edu/tgn/7006810",
+        "type": "Place",
         "_label": "'s-Gravenhage"
       }
     ],

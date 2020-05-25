@@ -4,30 +4,36 @@
   "type": "HumanMadeObject",
   "dimension": [
     {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/width",
       "type": "Dimension",
       "value": "51.9",
       "classified_as": [
         {
-          "@id": "http://vocab.getty.edu/aat/300055647",
+          "id": "http://vocab.getty.edu/aat/300055647",
+          "type": "Type",
           "_label": "width"
         }
       ],
       "unit": {
-        "@id": "http://vocab.getty.edu/aat/300379098",
+        "id": "http://vocab.getty.edu/aat/300379098",
+        "type": "MeasurementUnit",
         "_label": "centimeters"
       }
     },
     {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/height",
       "type": "Dimension",
       "value": "36.4",
       "classified_as": [
         {
-          "@id": "http://vocab.getty.edu/aat/300055644",
+          "id": "http://vocab.getty.edu/aat/300055644",
+          "type": "Type",
           "_label": "height"
         }
       ],
       "unit": {
-        "@id": "http://vocab.getty.edu/aat/300379098",
+        "id": "http://vocab.getty.edu/aat/300379098",
+        "type": "MeasurementUnit",
         "_label": "centimeters"
       }
     }

@@ -4,7 +4,7 @@
   "type": "HumanMadeObject",
   "has_phase": [
     {
-      "@id": "http://vangoghmuseum.nl/data/artwork_lifetime/2106",
+      "id": "http://vangoghmuseum.nl/data/artwork_lifetime/2106",
       "type": "Phase",
       "_label": "Lifetime of s0416M1990",
       "part": [

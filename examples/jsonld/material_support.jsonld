@@ -8,12 +8,14 @@
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300014844",
-          "_label": "supports"
+          "type": "HumanMadeObject",
+          "_label": "Canvast Support"
         }
       ],
       "made_of": [
         {
-          "@id": "http://vocab.getty.edu/aat/300014078",
+          "id": "http://vocab.getty.edu/aat/300014078",
+          "type": "Material",
           "_label": "canvas"
         }
       ]
