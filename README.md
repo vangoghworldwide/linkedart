@@ -298,7 +298,7 @@ Relate the technique used in the production event.
 Relevant AAT-concepts:
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300054216: painting 
+http://vocab.getty.edu/aat/300054216 | painting 
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
 <!-- IZ: deze heb ik tot nu toe steeds gemist :-( -->
@@ -444,7 +444,7 @@ For the subject matter we only ask you to probide the type of the subject, such 
   ]
 }
 ```
-[JSON-LD playground(https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld)
 
 @TBD Add common AAT terms
 URI | Label
@@ -498,10 +498,61 @@ In case you provide images via your own IIIF server use the following pattern:
 ```
 
 ### Provenance
-Model a lifetime object. Phases within this lifetime. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
-<!-- IZ: MUST have its own uri -->
+Provide the lifetime of the object by providing the different owners. We start with a phase for the entire lifetime, and add parts for each phases in which it a different owner. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "has_phase": [
+    {
+      "type": "Phase",
+      "carried_out_by": [
+        {
+          "id": "{URI_OF_OWNER}", 
+          "type": "{PERSON or GROUP}", 
+          "_label": "{NAME_OF_OWNER}", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300312281", 
+              "type": "Type", 
+              "_label": "Museum"
+            }
+          ]
+        }
+      ], 
+      "took_place_at": [
+        {
+          "id": "http://vocab.getty.edu/tgn/7006952",
+          "type": "Place",
+          "_label": "Amsterdam"
+        }
+      ],
+      "timespan": [
+        {
+          "type": "TimeSpan",
+          "end_of_the_end": "1990-12-31",
+          "begin_of_the_begin": "1949-01-01"
+        }
+      ],
+      "initiated_by": [
+        {
+          "type": "Acquisition",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300417645",
+              "type": "Type",
+              "_label": "loan"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
 
-https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld)
 
 @TBD Add AAT terms for acquisition types.
 URI | Label
