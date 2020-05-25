@@ -29,10 +29,10 @@ To further specify the object type Linked Art provides a classification pattern.
 See [example](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld).
 
 The AAT concepts that are relevant for the oeuvre of Vincent van Gogh are:
-* http://vocab.getty.edu/aat/300033618: Paintings 
-* http://vocab.getty.edu/aat/300033973: Drawings
-* http://vocab.getty.edu/aat/300015617: Sketches
-* http://vocab.getty.edu/aat/300041273: Prints
+| http://vocab.getty.edu/aat/300033618 | Paintings |
+| http://vocab.getty.edu/aat/300033973 | Drawings |
+| http://vocab.getty.edu/aat/300015617 | Sketches |
+| http://vocab.getty.edu/aat/300041273 | Prints |
 
 ### Link to VGW URI
 To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
