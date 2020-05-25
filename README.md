@@ -7,7 +7,6 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 ## General guidelines
 
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
-<!-- IZ: All these patterns are "MUST HAVES" for participating in the platform unless stated otherwise. -->
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
 * Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. Please do so, but be aware that VGW ignores the \_labels and uses the preferred labels from the Getty vocabularies instead.
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
@@ -160,7 +159,7 @@ In Linked Art titles are also considered identifiers. We thus use the same patte
         {
           "id": "http://vocab.getty.edu/aat/300404670",
           "type": "Type",
-          "_label": "Primary name"
+          "_label": "Preferred terms"
         }
       ]
     }
@@ -174,7 +173,6 @@ As a classification use
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300404670 | Preferred name
-<!-- IZ: je gebruikt "Primary Name" ipv "Preferred Name" als label in je voorbeeld. Is dat bewust? -->
 <!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands. Zullen we die ook toevoegen aan de json? -->
 
 Multiple titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English.
@@ -300,8 +298,6 @@ URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300054216 | painting 
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
-
-<!-- IZ: deze heb ik tot nu toe steeds gemist :-( -->
 
 ### Dimensions
 Dimension consist of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
