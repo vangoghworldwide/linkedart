@@ -380,7 +380,6 @@ The artwork is constructed out of various materials. Model the material that is 
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld)
 
-@TBD Add common AAT terms
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300015050 | oil paint
@@ -420,7 +419,6 @@ Model the material of the support, such as the canvas in a separate part.
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld)
 
-@TBD Add common AAT terms
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300014109 | paper
@@ -460,7 +458,6 @@ For the subject matter we only ask you to probide the type of the subject, such 
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld)
 
-@TBD Add common AAT terms
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300015638 | still lifes
