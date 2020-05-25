@@ -1,0 +1,58 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/22", 
+  "type": "LinguisticObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028051", 
+      "type": "Type", 
+      "_label": "Book"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name", 
+      "content": "The complete works of Vincent van Gogh"
+    }
+  ], 
+  "created_by": {
+    "type": "Creation", 
+    "_label": "Creation of the Article Content", 
+    "carried_out_by": [
+      {
+        "type": "Person", 
+        "_label": "Hulsker, Jan"
+      }
+    ],
+    "timespan": [
+      {
+
+      }
+    ]
+  },
+  "used_for": [
+    {
+      "type": "Activity", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054686", 
+          "type": "Type", 
+          "_label": "Publishing"
+        }
+      ], 
+      "carried_out_by": [
+        {
+          "type": "Group", 
+          "_label": "Kodansha"
+        }
+      ],
+      "took_place_at": [
+        {
+          "id": "",
+          "type": "Place",
+          "_label": "Tokyo"
+        }
+      ]
+    }
+  ]
+}
