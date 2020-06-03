@@ -315,7 +315,8 @@ Relate the technique used in the production event.
 Relevant AAT-concepts:
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300054216 | painting 
+http://vocab.getty.edu/aat/300054216 | painting
+
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
 ### Dimensions
@@ -544,13 +545,13 @@ The provenance defines the differnet owners of the artwork and how the acquired 
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
   "has_phase": [
-    {
+     {
       "type": "Phase",
       "carried_out_by": [
         {
-          "id": "{URI_OF_OWNER}", 
-          "type": "{PERSON or GROUP}", 
-          "_label": "{NAME_OF_OWNER}", 
+          "id": "http://vocab.getty.edu/ulan/500275558", 
+          "type": "Actor", 
+          "_label": "Van Gogh Museum", 
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300312281", 
