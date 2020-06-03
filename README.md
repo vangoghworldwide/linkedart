@@ -11,10 +11,10 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 * Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. Please do so, but be aware that VGW ignores the \_labels and uses the preferred labels from the Getty vocabularies instead.
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
-<!-- * Provide provenance information about the artwork's current and previous owners.
+* Provide provenance information about the artwork's current and previous owners.
 * Provide information about the exhibitions the artworks were used in.
 * Provide information about relevant literature.
-* Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports. -->
+* Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports.
 
 ## VGW Patterns
 ### Artworks
@@ -163,6 +163,26 @@ In Linked Art titles are also considered identifiers. We thus use the same patte
         }
       ]
     }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Zeezicht in Scheveningen",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388256",
+          "type": "Language",
+          "_label": "Dutch"
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Preferred terms"
+        }
+      ]
+    }
   ]
 }
 ```
@@ -173,7 +193,6 @@ As a classification use
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300404670 | Preferred name
-<!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands. Zullen we die ook toevoegen aan de json? -->
 
 Multiple titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English.
 
