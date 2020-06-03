@@ -1,0 +1,16 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "{BASE_URL_TO_IMAGE_ON_IIIF_SERVER}",
+      "type": "VisualItem",
+      "conforms_to": [
+        {
+          "id": "http://iiif.io/api/image"
+        }
+      ]
+    }
+  ]
+}
