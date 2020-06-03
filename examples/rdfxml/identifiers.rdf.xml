@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
     <crm:P1_is_identified_by>
@@ -19,7 +18,7 @@
           	<rdfs:label>De La Faille number</rdfs:label>
           </crm:E55_Type>
         </crm:P2_has_type>
-        <crm:P190_has_symbolic_content>F 21</crm:P190_has_symbolic_content>
+        <crm:P190_has_symbolic_content>F21</crm:P190_has_symbolic_content>
       </crm:E42_Identifier>
     </crm:P1_is_identified_by>
     <crm:P1_is_identified_by>
@@ -29,7 +28,7 @@
           	<rdfs:label>Jan Hulsker number</rdfs:label>
           </crm:E55_Type>
         </crm:P2_has_type>
-        <crm:P190_has_symbolic_content>JH 415</crm:P190_has_symbolic_content>
+        <crm:P190_has_symbolic_content>JH415</crm:P190_has_symbolic_content>
       </crm:E42_Identifier>
     </crm:P1_is_identified_by>
    </crm:E22_Human-Made_Object>

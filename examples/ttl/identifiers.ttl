@@ -9,11 +9,11 @@
         crm:P2_has_type <http://vocab.getty.edu/aat/300312355> ;
         a crm:E42_Identifier
     ], [
-        crm:P190_has_symbolic_content "F 21" ;
+        crm:P190_has_symbolic_content "F21" ;
         crm:P2_has_type <https://vangoghworldwide.org/data/concept/f_number> ;
         a crm:E42_Identifier
     ], [
-        crm:P190_has_symbolic_content "JH 415" ;
+        crm:P190_has_symbolic_content "JH415" ;
         crm:P2_has_type <https://vangoghworldwide.org/data/concept/jh_number> ;
         a crm:E42_Identifier
     ] ;
