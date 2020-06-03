@@ -599,7 +599,7 @@ URI | Label
 --- | -----
 
 ### Exhibitions
-Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place.
+Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.
 
 ```json
 {
@@ -626,7 +626,7 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
       "carried_out_by": [
         {
           "id": "http://vangoghmuseum.nl/data/person/8045",
-          "type": "Group",
+          "type": "Actor",
           "_label": "Stedelijk Museum Amsterdam"
         }
       ],
