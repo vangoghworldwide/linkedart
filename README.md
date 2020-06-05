@@ -540,6 +540,13 @@ In case you provide images via your own IIIF server use the following pattern:
         {
           "id": "http://iiif.io/api/image"
         }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
       ]
     }
   ]
