@@ -1,14 +1,17 @@
 # Providing data to the vangoghworldwide.org platform
-In this repo we provide documentation and examples of the way we expect metadata about Van Gogh to be used in https://vangoghworldwide.org/. 
+In this repo we explain how to provide information to https://vangoghworldwide.org/. Van Gogh Worldwide (VGW) brings together (professional) information about all artworks created by Vincent van Gogh. This documentation is intented for institutions that own or maintain artworks created by Vincent van Gogh and want to contribute. 
+
+The starting point of Van Gogh Worldwide is the set of artworks defined in *The Works of Vincent van Gogh: His Paintings and Drawings* by Jacob Baart de la Faille. Basic metadata of all artworks in de la Faille are provided as [open data](https://github.com/vangoghworldwide/delafaille). You can help extend this basic metadata with information about the production, titles, materials, exhibitions, literature, research and more. 
 
 ## Linked Art
-We use [Linked Art](https://linked.art), a profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We prefer JSON-LD (obviously as it is the standard) but accept other RDF-serializations, like RDF/XML or Turtle, as well. We encourage you to get acquinted with the [fundemantals of linked art](https://linked.art/model/) and it's [basic patterns](https://linked.art/model/base/). 
+Van Gogh Worldwide builds upon the shared data model provided by the [Linked Art](https://linked.art) community. Socially speaking Linked Art is a growing community of cultural heritiage professionals that are dedicated to sharing information about art as *complete* and *simple* as possible. Technically speaking Linked Art is an application profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We encourage you to get acquinted with the [fundemantals of linked art](https://linked.art/model/) and it's [basic patterns](https://linked.art/model/base/). 
+
+We prefer JSON-LD (obviously as it is the standard) but accept other RDF-serializations, like RDF/XML or Turtle, as well. 
 
 ## General guidelines
-
 * Provide metadata about the artworks made by Vincent van Gogh in your collection using the patterns described below.
 * Add a link to the VGW URI for the artwork. The VGW URI is based on the De La Faile number when available, for example https://vangoghworldwide.org/data/artwork/F4.
-* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. Please do so, but be aware that VGW ignores the \_labels and uses the preferred labels from the Getty vocabularies instead.
+* Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. Please do so, but be aware that VGW ignores the \_label and uses the preferred labels from the Getty vocabularies instead.
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
 <!-- * Provide provenance information about the artwork's current and previous owners.
@@ -17,8 +20,8 @@ We use [Linked Art](https://linked.art), a profile for encoding metadata as Link
 * Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports. -->
 
 ## VGW Patterns
-### Artworks
-In Linked Art artworks are typed as HumanMadeObjects.
+### Artwork
+Your artwork needs to be identified by an http URI. In Linked Art an artwork is typed as a [HumanMadeObject](https://linked.art/model/base/#types-and-classifications).
 
 ```javascript
 {
@@ -29,7 +32,7 @@ In Linked Art artworks are typed as HumanMadeObjects.
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/artwork.rdf.xml)
 
-### Object types
+### Object classification
 To further specify the object type Linked Art provides a classification pattern. Use a concept from AAT to define the object type.
 
 ```json
@@ -58,8 +61,7 @@ http://vocab.getty.edu/aat/300015617 | Sketches
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-<!-- MH Should we ask this from the contributors or should there be a VGW process that creates these links> -->
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
 @TBD sameAs does not exist in Linked Art
 ```json
@@ -168,14 +170,12 @@ In Linked Art titles are also considered identifiers. We thus use the same patte
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld).
 
-
 As a classification use
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300404670 | Preferred name
-<!-- IZ: ik heb in mijn voorbeeld een extra titel in het Nederlands. Zullen we die ook toevoegen aan de json? -->
 
-Multiple titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English.
+Multiple titles in various languages can be added, but only one preferred name per language is allowed. We expect at least one title in English. Note, that linked art does not use language tags as we know them in other RDF serializations. Instead the language is modelled as a relation to a Language object identified by an AAT concept for this language.
 
 The AAT concepts that are relevant for languages are:
 URI | Label
@@ -258,7 +258,11 @@ URI | Label
 --- | -----
 http://vocab.getty.edu/ulan/500115588 | Vincent van Gogh
 
-Sometimes artworks are previously attributed to Van Gogh. Creating a pattern for this situation is to be decided on.
+Sometimes artworks are previously attributed to Van Gogh. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). Feel free to model these, but for simplicity reasons we ask you to add the 'previous attribution' concept from the VGW vocabulary:
+
+URI | Label
+--- | -----
+https://vangoghworldwide.org/data/concept/previous_attribution | Previously attributed to Vincent van Gogh
 
 #### Location
 Use a URI from TGN for the production location
@@ -470,6 +474,10 @@ http://vocab.getty.edu/aat/300189568 | nudes
 http://vocab.getty.edu/aat/300117546 | seascapes
 http://vocab.getty.edu/aat/300139140 | genre
 
+<!--### Parts
+Some objects are composed of multiple smaller parts.
+-->
+
 ### Digital representation
 The digital representation of the artwork is an image that is available online. 
 ```json
@@ -579,7 +587,9 @@ URI | Label
 --- | -----
 
 ### Exhibitions
-Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place.
+Exhibitions are activities in which an artwork is used. The exhibition is identified by a name, the organisation that carried it out and the time that it took place. The example below shows how the exhibition is modeled and related to the artwork via the "user_for" relation.
+
+@TBD explain integration of exhibitions
 
 ```json
 {
