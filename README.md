@@ -14,10 +14,10 @@ We prefer JSON-LD (obviously as it is the standard) but accept other RDF-seriali
 * Use concepts from the Getty vocabularies (AAT, ULAN and TGN) to describe the medata values, such as the materials, locations, and museums. You can also use the terms from own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Linked Art prescribes to add your own \_label, to increase human readability of the data. Please do so, but be aware that VGW ignores the \_label and uses the preferred labels from the Getty vocabularies instead.
 * Model dates according to the xsd:dateTime. With machine processable dates we can for example sort artworks by their production date.
 * Add a link to a digital representation of the artwork (image).
-<!-- * Provide provenance information about the artwork's current and previous owners.
+* Provide provenance information about the artwork's current and previous owners.
 * Provide information about the exhibitions the artworks were used in.
 * Provide information about relevant literature.
-* Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports. -->
+* Provide metadata about technical documents. We mean 'documents' in the broader sense of the word, eg. paint-samples, x-ray images, reports.
 
 ## VGW Patterns
 ### Artwork
@@ -50,7 +50,7 @@ To further specify the object type Linked Art provides a classification pattern.
 }
 ```
 
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld) 
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fclassification.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/classification.rdf.xml) 
 
 The AAT concepts that are relevant for the oeuvre of Vincent van Gogh are:
 URI | Label
@@ -76,7 +76,7 @@ To identify how your artwork relates to Van Gogh Worldwide provide a link to a V
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/vgw_uri.rdf.xml)
 
 ### Identifiers
 Apart from the VGW-URI the artwork can be identified with identifiers used in the context of a current owner or in oeuvre catalogues.
@@ -123,7 +123,7 @@ Apart from the VGW-URI the artwork can be identified with identifiers used in th
 }
 ```
 
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fidentifiers.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/identifiers.rdf.xml)
 
 As a classification use 
 URI | Label
@@ -165,10 +165,30 @@ In Linked Art titles are also considered identifiers. We thus use the same patte
         }
       ]
     }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Zeezicht in Scheveningen",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388256",
+          "type": "Language",
+          "_label": "Dutch"
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Preferred terms"
+        }
+      ]
+    }
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld).
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftitles.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/identifiers.rdf.xml)
 
 As a classification use
 URI | Label
@@ -200,7 +220,7 @@ Describe the current owner of the artwork by relating it to a museum or person. 
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcurrent_owner.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/current_owner.rdf.xml)
 
 Use concepts from ULAN for the current owner. In case these are not available use your own identifier and label.
 URI | Label
@@ -250,7 +270,7 @@ The production of the artwork is modeled as an activity with an agent, a place, 
   }
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld).
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/production.rdf.xml)
 
 #### Creator
 Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN URI to model the relation.
@@ -300,7 +320,8 @@ Relate the technique used in the production event.
 Relevant AAT-concepts:
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300054216 | painting 
+http://vocab.getty.edu/aat/300054216 | painting
+
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
 
 ### Dimensions
@@ -348,7 +369,7 @@ Dimension consist of a type (eg. height), a value and a measurement unit (eg. ce
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld).
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdimensions.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/dimensions.rdf.xml)
 
 Relevant AAT-concepts for dimension types:
 URI | Label
@@ -382,7 +403,7 @@ The artwork is constructed out of various materials. Model the material that is 
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/material.rdf.xml)
 
 URI | Label
 --- | -----
@@ -421,7 +442,7 @@ Model the material of the support, such as the canvas in a separate part.
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterial_support.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/material_support.rdf.xml)
 
 URI | Label
 --- | -----
@@ -460,7 +481,7 @@ For the subject matter we only ask you to probide the type of the subject, such 
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fsubject_type.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/subject_type.rdf.xml)
 
 URI | Label
 --- | -----
@@ -501,7 +522,7 @@ The digital representation of the artwork is an image that is available online.
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
 
 Van Gogh Worldwide makes your images available according to the [IIIF standard](https://iiif.io/). This enables various functions such as zooming of high resolition images. Please provide the highest resolution you can share. We take your images and add them to VGWs IIIF server.
 
@@ -525,6 +546,8 @@ In case you provide images via your own IIIF server use the following pattern:
 }
 ```
 
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation_iiif.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation_iiif.rdf.xml)
+
 ### Provenance
 The provenance defines the differnet owners of the artwork and how the acquired the work. Each ownership is modeled as a phase. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
 ```json
@@ -533,13 +556,13 @@ The provenance defines the differnet owners of the artwork and how the acquired 
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
   "has_phase": [
-    {
+     {
       "type": "Phase",
       "carried_out_by": [
         {
-          "id": "{URI_OF_OWNER}", 
-          "type": "{PERSON or GROUP}", 
-          "_label": "{NAME_OF_OWNER}", 
+          "id": "http://vocab.getty.edu/ulan/500275558", 
+          "type": "Actor", 
+          "_label": "Van Gogh Museum", 
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300312281", 
@@ -580,16 +603,14 @@ The provenance defines the differnet owners of the artwork and how the acquired 
 }
 ```
 
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance.rdf.xml)
 
 @TBD Add AAT terms for acquisition types.
 URI | Label
 --- | -----
 
 ### Exhibitions
-Exhibitions are activities in which an artwork is used. The exhibition is identified by a name, the organisation that carried it out and the time that it took place. The example below shows how the exhibition is modeled and related to the artwork via the "user_for" relation.
-
-@TBD explain integration of exhibitions
+Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.
 
 ```json
 {
@@ -616,7 +637,7 @@ Exhibitions are activities in which an artwork is used. The exhibition is identi
       "carried_out_by": [
         {
           "id": "http://vangoghmuseum.nl/data/person/8045",
-          "type": "Group",
+          "type": "Actor",
           "_label": "Stedelijk Museum Amsterdam"
         }
       ],
@@ -631,7 +652,7 @@ Exhibitions are activities in which an artwork is used. The exhibition is identi
   ]
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/exhibition.rdf.xml)
 
 ### Literature
 <!-- IZ: MUST have its own uri -->

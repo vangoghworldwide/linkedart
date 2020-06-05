@@ -7,9 +7,9 @@
       "type": "Phase",
       "carried_out_by": [
         {
-          "id": "{URI_OF_OWNER}", 
-          "type": "{PERSON or GROUP}", 
-          "_label": "{NAME_OF_OWNER}", 
+          "id": "http://vocab.getty.edu/ulan/500275558", 
+          "type": "Actor", 
+          "_label": "Van Gogh Museum", 
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300312281", 
