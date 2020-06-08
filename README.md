@@ -325,14 +325,14 @@ Sometimes artworks were assigned to Vincent van Gogh, but later is was discovere
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0076V1962",
   "type": "HumanMadeObject",
   "produced_by": {
-    "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990",
+    "id": "http://vangoghmuseum.nl/data/artwork_production/s0076V1962",
     "type": "Production",
     "assigned_by": [
       {
-        "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990/assignment", 
+        "id": "http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment", 
         "type": "AttributeAssignment", 
         "classified_as": [
           {
@@ -344,8 +344,7 @@ Sometimes artworks were assigned to Vincent van Gogh, but later is was discovere
         "timespan": {
           "id": "https://linked.art/example/time/19", 
           "type": "TimeSpan", 
-          "begin_of_the_begin": "1923-07-20", 
-          "end_of_the_end": "1923-07-21"
+          "end_of_the_end": "2016-01-01"
         }, 
         "carried_out_by": [
           {
