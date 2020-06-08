@@ -320,7 +320,7 @@ http://vocab.getty.edu/aat/300054216 | painting
 
 ### Previous attribution
 
-Sometimes artworks were assigned to Vincent van Gogh, but later is was discovered that it was created by someone else. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). You model the production activity in the same way as described above, but instead of providing the *carried_out_by* directly we use an attribute assignment and classify it as obsolete. In the assignment the timespan is used to indicate untill when it was believed van Gogh was the creator.
+Sometimes artworks were assigned to Vincent van Gogh, but later is was discovered that it was created by someone else. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). You model the production activity in the same way as described above, but instead of providing the *carried_out_by* directly we use an attribute assignment. Classify the assignment with the concept from the VGW vocabulary *Previously attributed to Vincent van Gogh*. In the assignment the timespan is used to indicate untill when it was believed van Gogh was the creator.
 
 ```json
 {
@@ -336,9 +336,9 @@ Sometimes artworks were assigned to Vincent van Gogh, but later is was discovere
         "type": "AttributeAssignment", 
         "classified_as": [
           {
-            "id": "http://vocab.getty.edu/aat/300404908", 
+            "id": "https://vangoghworldwide.org/data/concept/previous_attribution", 
             "type": "Type", 
-            "_label": "Obsolete"
+            "_label": "Previously attributed to Vincent van Gogh"
           }
         ], 
         "timespan": {

@@ -11,9 +11,9 @@
         "type": "AttributeAssignment", 
         "classified_as": [
           {
-            "id": "http://vocab.getty.edu/aat/300404908", 
+            "id": "https://vangoghworldwide.org/data/concept/previous_attribution", 
             "type": "Type", 
-            "_label": "Obsolete"
+            "_label": "Previously attributed to Vincent van Gogh"
           }
         ], 
         "timespan": {
