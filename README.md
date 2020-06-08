@@ -710,6 +710,115 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/exhibition.rdf.xml)
 
 ### Inscriptions
+In Linked Art an inscription such as a signature is a linguistic object that is carried by the artwork. As we might want to capture the physical charactersitcs of an inscription, such as the material or color, we first model a part of the artwork. The part then carries the actual inscription. All the properties that apply to [LinguisticObjects](https://linked.art/model/document/#physical-objects-conceptual-texts) are available to provide additional information, such as the creator.
+```json  
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0100V1962",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "carries": [
+        {
+          "type": "LinguisticObject", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300028705",
+              "type": "Type",
+              "_label": "signatures"
+            }
+          ],
+          "content": "Vincent",
+          "created_by": {
+            "type": "Creation", 
+            "carried_out_by": [
+              {
+                "id": "http://vocab.getty.edu/ulan/500115588",
+                "type": "Actor",
+                "_label": "Gogh, Vincent van"
+              }
+            ]
+          } 
+        }
+      ],
+      "made_of": [
+        {
+          "id": "http://vocab.getty.edu/aat/300015012",
+          "type": "Material",
+          "_label": "ink"
+        }
+      ],
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Finscription.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/inscription.rdf.xml)
+
+URI | Label
+http://vocab.getty.edu/aat/300028705 | signatures
+http://vocab.getty.edu/aat/300028702 | inscriptions
+
+### Labels
+The same pattern is used to model the content of labels added to the arwork, such as stickers or watermarks. Often these labels are on the back side of the object. This is captured by modeling the back as a part of the artwork.
+```json  
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://rkd.nl/explore/images/52947",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300190692",
+          "type": "Type",
+          "_label": "backs"
+        }
+      ],
+      "part": [
+        {
+          "type": "HumanMadeObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300207379",
+              "type": "Type",
+              "_label": "stickers"
+            }
+          ],  
+          "carries": [
+            {
+              "id": "https://linked.art/example/text/15", 
+              "type": "LinguisticObject",
+              "content": "Kunsthandel Oldenzeel Rotterdam" 
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Flabels.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/labels.rdf.xml)
+
+Relvant parts of artwork
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300190692	| backs	
+http://vocab.getty.edu/aat/300190703	| fronts	
+http://vocab.getty.edu/aat/300190710	| tops	
+http://vocab.getty.edu/aat/300190695	| bottoms	
+http://vocab.getty.edu/aat/300190706	| sides	
+http://vocab.getty.edu/aat/300014844	| supports
+http://vocab.getty.edu/aat/300014657	| panel	
+http://vocab.getty.edu/aat/300404391	| frames	
+http://vocab.getty.edu/aat/300131087	| mounts
+
+Relevant concepts to classify labels
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300207379 | stickers
+http://vocab.getty.edu/aat/300028749 | watermark
 
 ### Literature
 <!-- IZ: MUST have its own uri -->

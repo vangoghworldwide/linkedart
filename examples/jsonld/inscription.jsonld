@@ -1,0 +1,40 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0100V1962",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "carries": [
+        {
+          "type": "LinguisticObject", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300028705",
+              "type": "Type",
+              "_label": "signatures"
+            }
+          ],
+          "content": "Vincent",
+          "created_by": {
+            "type": "Creation", 
+            "carried_out_by": [
+              {
+                "id": "http://vocab.getty.edu/ulan/500115588",
+                "type": "Actor",
+                "_label": "Gogh, Vincent van"
+              }
+            ]
+          } 
+        }
+      ],
+      "made_of": [
+        {
+          "id": "http://vocab.getty.edu/aat/300015012",
+          "type": "Material",
+          "_label": "ink"
+        }
+      ],
+    }
+  ]
+}
