@@ -1,0 +1,47 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "produced_by": {
+    "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990",
+    "type": "Production",
+    "assigned_by": [
+      {
+        "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990/assignment", 
+        "type": "AttributeAssignment", 
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300404908", 
+            "type": "Type", 
+            "_label": "Obsolete"
+          }
+        ], 
+        "timespan": {
+          "id": "https://linked.art/example/time/19", 
+          "type": "TimeSpan", 
+          "begin_of_the_begin": "1923-07-20", 
+          "end_of_the_end": "1923-07-21"
+        }, 
+        "carried_out_by": [
+          {
+            "id": "https://linked.art/example/person/30", 
+            "type": "Person", 
+            "_label": "Paintings Curator"
+          }
+        ], 
+        "assigned": {
+          "id": "https://linked.art/example/activity/48", 
+          "type": "Production", 
+          "carried_out_by": [
+            {
+              "id": "http://vocab.getty.edu/ulan/500115588",
+              "type": "Actor",
+              "_label": "Gogh, Vincent van"
+            }
+          ]
+        }, 
+        "assigned_property": "part_of"
+      }
+    ]
+  }
+}

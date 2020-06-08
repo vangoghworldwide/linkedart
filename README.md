@@ -278,12 +278,6 @@ URI | Label
 --- | -----
 http://vocab.getty.edu/ulan/500115588 | Vincent van Gogh
 
-Sometimes artworks are previously attributed to Van Gogh. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). Feel free to model these, but for simplicity reasons we ask you to add the 'previous attribution' concept from the VGW vocabulary:
-
-URI | Label
---- | -----
-https://vangoghworldwide.org/data/concept/previous_attribution | Previously attributed to Vincent van Gogh
-
 #### Location
 Use a URI from TGN for the production location
 URI | Label
@@ -323,6 +317,61 @@ URI | Label
 http://vocab.getty.edu/aat/300054216 | painting
 
 (NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
+
+### Previous attribution
+
+Sometimes artworks were assigned to Vincent van Gogh, but later is was discovered that it was created by someone else. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). You model the production activity in the same way as described above, but instead of providing the *carried_out_by* directly we use an attribute assignment and classify it as obsolete. In the assignment the timespan is used to indicate untill when it was believed van Gogh was the creator.
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "produced_by": {
+    "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990",
+    "type": "Production",
+    "assigned_by": [
+      {
+        "id": "http://vangoghmuseum.nl/data/artwork_production/s0416M1990/assignment", 
+        "type": "AttributeAssignment", 
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300404908", 
+            "type": "Type", 
+            "_label": "Obsolete"
+          }
+        ], 
+        "timespan": {
+          "id": "https://linked.art/example/time/19", 
+          "type": "TimeSpan", 
+          "begin_of_the_begin": "1923-07-20", 
+          "end_of_the_end": "1923-07-21"
+        }, 
+        "carried_out_by": [
+          {
+            "id": "https://linked.art/example/person/30", 
+            "type": "Person", 
+            "_label": "Paintings Curator"
+          }
+        ], 
+        "assigned": {
+          "id": "https://linked.art/example/activity/48", 
+          "type": "Production", 
+          "carried_out_by": [
+            {
+              "id": "http://vocab.getty.edu/ulan/500115588",
+              "type": "Actor",
+              "_label": "Gogh, Vincent van"
+            }
+          ]
+        }, 
+        "assigned_property": "part_of"
+      }
+    ]
+  }
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprevious_attribution.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/previous_attribution.rdf.xml)
 
 ### Dimensions
 Dimension consist of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
