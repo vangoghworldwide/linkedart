@@ -748,7 +748,7 @@ In Linked Art an inscription such as a signature is a linguistic object that is 
           "type": "Material",
           "_label": "ink"
         }
-      ],
+      ]
     }
   ]
 }
