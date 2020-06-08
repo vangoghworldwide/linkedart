@@ -802,7 +802,7 @@ The same pattern is used to model the content of labels added to the arwork, suc
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Flabels.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/labels.rdf.xml)
 
-Relvant parts of artwork
+Concepts to classify the parts of artwork:
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300190692	| backs	
@@ -815,7 +815,7 @@ http://vocab.getty.edu/aat/300014657	| panel
 http://vocab.getty.edu/aat/300404391	| frames	
 http://vocab.getty.edu/aat/300131087	| mounts
 
-Relevant concepts to classify labels
+Relevant concepts to classify labels:
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300207379 | stickers
