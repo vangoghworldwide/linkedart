@@ -710,6 +710,8 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fexhibition.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/exhibition.rdf.xml)
 
+### Inscriptions
+
 ### Literature
 <!-- IZ: MUST have its own uri -->
 
