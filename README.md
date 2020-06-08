@@ -756,6 +756,7 @@ In Linked Art an inscription such as a signature is a linguistic object that is 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Finscription.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/inscription.rdf.xml)
 
 URI | Label
+--- | -----
 http://vocab.getty.edu/aat/300028705 | signatures
 http://vocab.getty.edu/aat/300028702 | inscriptions
 
