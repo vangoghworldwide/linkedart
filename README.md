@@ -711,7 +711,7 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
 
 ### Inscriptions
 #### Signatures
-In Linked Art the textual content of an inscription, such as a signature, is a linguistic object that is carried by the artwork. We might want to capture physical charactersitcs of an inscription, such as the material or color. Therefore, we first model a part of the artwork to represent the inscription. This part then carries the linguistic content of the inscription.
+In Linked Art the textual content of an inscription, such as a signature, is a linguistic object that is carried by the artwork. As we might want to capture the physical charactersitcs of an inscription, such as the material or color, we first model a part of the artwork to represent the inscription. This part then carries the linguistic content of the inscription.
 ```json  
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -788,9 +788,143 @@ http://vocab.getty.edu/aat/300207379 | stickers
 http://vocab.getty.edu/aat/300028749 | watermark
 
 ### Literature
-<!-- IZ: MUST have its own uri -->
+<!--Artworks are referred to in literature such as scientific publications, books or news articles. The reference between literature and the artwork is captured in Linked Art. 
+
+```json
+crm:P67i_is_referred_to_by [a crm:E33_Linguistic_Object ; 
+crm:P106i_forms_part_of <http://vangoghmuseum.nl/data/document/10326> ; 
+crm:P3_has_note "p. 413"],
+```
+-->
 
 ### Technical research
-<!-- IZ: MUST have is own uri -->
+Artworks are analysed in research activities. The output of this research occurs in the form of technical recordings, such as x-rays, or in the form of research reports.
 
+#### Technical recordings
+Technical recordings are itself human made objects and are thus modelled in a similar way as the artworks. A classification is used to indicate the specific type of object. The production activity describes the creator, the creation dates and the technique that is used to create the object. The production activity also defines that the artwork is used as the source (*used_specified_object*) to produce the technical recording.
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.rkd.nl/technical/5018290",
+  "type": "HumanMadeObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300419325",
+      "type": "Type",
+      "_label": "x-radiographs"
+    }
+  ],
+  "produced_by": {
+    "id": "https://data.rkd.nl/technical/production/5018290",
+    "type": "Production",
+    "_label": "Production of the x-ray",
+    "used_specific_object": [
+      {
+        "id": "https://data.rkd.nl/images/52947",
+        "type": "HumanMadeObject",
+        "_label": "The artwork from which the X-ray is created"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "id": "https://data.rkd.nl/artists/440500",
+        "type": "Actor",
+        "_label": "Gerritsen, René"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2016-01-19",
+        "end_of_the_end": "2016-01-19"
+      }
+    ],
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300419323",
+        "type": "Type",
+        "_label": "x-ray photography"
+      }
+    ]
+  },
+  "representation": [
+    {
+      "id": "{URL_TO_YOUR_IMAGE}",
+      "type": "VisualItem",
+      "format": "image/jpeg",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}
+```
+Relevant objects types
 
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300419325 | x-radiographs
+http://vocab.getty.edu/aat/300046300 | photographs
+
+When a tehnical recording is classified as a photograph the production technique can be used to provide more detail information. 
+
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300051987 | floodlighting
+
+#### Technical reports
+Reports are modelled in a similar way as technical recording. The only difference is that we are not modelling the physical object, but a linguistic object. Therefore use LinguistObject as the type and "created_by" instead of "produced_by". The relation to the artwork is also added 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.rkd.nl/technical/5001263",
+  "type": "LinguisticObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300027323",
+      "type": "Type",
+      "_label": "Technical report"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name", 
+      "content": "{Title of the report}"
+    }
+  ],
+  "created_by": {
+    "id": "https://data.rkd.nl/technical/production/5018290",
+    "type": "Production",
+    "_label": "Production of the report",
+    "used_specific_object": [
+      {
+        "id": "https://data.rkd.nl/images/52953",
+        "type": "HumanMadeObject",
+        "_label": "The artwork investigated in the report"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "id": "https://data.rkd.nl/artists/443078",
+        "type": "Actor",
+        "_label": "Werf, P. van der"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2016-01-19",
+        "end_of_the_end": "2016-01-19"
+      }
+    ]
+  }
+}
+```
+
+URI | Label
+--- | ------
+http://vocab.getty.edu/aat/300027323 | Technical report

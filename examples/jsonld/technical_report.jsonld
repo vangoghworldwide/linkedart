@@ -1,0 +1,44 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.rkd.nl/technical/5001263",
+  "type": "LinguisticObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300027323",
+      "type": "Type",
+      "_label": "Technical report"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name", 
+      "content": "{Title of the report}"
+    }
+  ],
+  "created_by": {
+    "id": "https://data.rkd.nl/technical/production/5018290",
+    "type": "Production",
+    "_label": "Production of the report",
+    "used_specific_object": [
+      {
+        "id": "https://data.rkd.nl/images/52953",
+        "type": "HumanMadeObject",
+        "_label": "The artwork investigated in the report"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "id": "https://data.rkd.nl/artists/443078",
+        "type": "Actor",
+        "_label": "Werf, P. van der"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2016-01-19",
+        "end_of_the_end": "2016-01-19"
+      }
+    ]
+  }
+}

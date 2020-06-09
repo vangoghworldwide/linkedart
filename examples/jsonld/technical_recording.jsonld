@@ -1,0 +1,59 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://data.rkd.nl/technical/5018290",
+  "type": "HumanMadeObject",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300419325",
+      "type": "Type",
+      "_label": "x-radiographs"
+    }
+  ],
+  "produced_by": {
+    "id": "https://data.rkd.nl/technical/production/5018290",
+    "type": "Production",
+    "_label": "Production of the x-ray",
+    "used_specific_object": [
+      {
+        "id": "https://data.rkd.nl/images/52947",
+        "type": "HumanMadeObject",
+        "_label": "The artwork from which the X-ray is created"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "id": "https://data.rkd.nl/artists/440500",
+        "type": "Actor",
+        "_label": "Gerritsen, René"
+      }
+    ],
+    "timespan": [
+      {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2016-01-19",
+        "end_of_the_end": "2016-01-19"
+      }
+    ],
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300419323",
+        "type": "Type",
+        "_label": "x-ray photography"
+      }
+    ]
+  },
+  "representation": [
+    {
+      "id": "{URL_TO_YOUR_IMAGE}",
+      "type": "VisualItem",
+      "format": "image/jpeg",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}
