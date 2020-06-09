@@ -547,33 +547,10 @@ Some objects are composed of multiple smaller parts.
 -->
 
 ### Digital representation
-The digital representation of the artwork is an image that is available online. 
-```json
-{
-  "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
-  "type": "HumanMadeObject",
-  "representation": [
-    {
-      "id": "{URL_TO_YOUR_IMAGE}",
-      "type": "VisualItem",
-      "format": "image/jpeg",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300215302",
-          "type": "Type",
-          "_label": "digital images"
-        }
-      ]
-    }
-  ]
-}
-```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
+Van Gogh Worldwide follows the [IIIF standard](https://iiif.io/) for images. This enables various functions such as zooming and comparison. To support this please provide the highest resolution you can share. We identified three scenarios.
 
-Van Gogh Worldwide makes your images available according to the [IIIF standard](https://iiif.io/). This enables various functions such as zooming of high resolition images. Please provide the highest resolution you can share. We take your images and add them to VGWs IIIF server.
-
-In case you provide images via your own IIIF server use the following pattern:
+#### Your IIIF server
+In case you provide images via your own IIIF server use the following pattern in your data:
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -599,11 +576,38 @@ In case you provide images via your own IIIF server use the following pattern:
   ]
 }
 ```
-
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation_iiif.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation_iiif.rdf.xml)
 
+#### Images via url
+In case your images are available for public download you provide the urls for each image in the data. Van Gogh Worldwide will then pick up these images and make them available to it's own IIIF server. 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "{URL_TO_YOUR_IMAGE}",
+      "type": "VisualItem",
+      "format": "image/jpeg",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
+
+#### Protected space on IIIF server
+In case you do not want to make your high resolution images available for public download we can setup a protected pipeline to make your images available through the IIIF server of Van Gogh Worldwide. The IIIF server has restricted the maximum resolution of images. A high resolution is only available in a tiled version in the image viewer. Please contact us to setup the pipeline.
+
 ### Provenance
-The provenance defines the differnet owners of the artwork and how the acquired the work. Each ownership is modeled as a phase. A phase can be initiated by an acquisition (auction, purchase, gift, loan)
+The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as a phase. A phase is initiated by an acquisition (auction, purchase, gift, loan)
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
