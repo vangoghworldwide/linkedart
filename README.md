@@ -603,8 +603,35 @@ In case your images are available for public download you provide the urls for e
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
 
-#### Protected space on IIIF server
-In case you do not want to make your high resolution images available for public download we can setup a protected pipeline to make your images available through the IIIF server of Van Gogh Worldwide. The IIIF server has restricted the maximum resolution of images. A high resolution is only available in a tiled version in the image viewer. Please contact us to setup the pipeline.
+#### IIIF server Van Gogh Worldwide
+In case you do not want to make your high resolution images available for public download, and you do not have a IIIF server, we can help you to make your images available through the IIIF server of Van Gogh Worldwide. The IIIF server has restricted the maximum resolution of images. A high resolution is only available in a tiled version in the image viewer. 
+
+Contact us to setup a protected pipeline. In your data refer to the IIIF server of Van Gogh Worldwide and the identifier of the image. Also include the name of organistion identifier (ORG_ID) that you received from us.
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "representation": [
+    {
+      "id": "https://data.spinque.com/iiif/2/vangoghworldwide%2F{ORG_ID}%2F{IMAGE_FILENAME}.jp2",
+      "type": "VisualItem",
+      "conforms_to": [
+        {
+          "id": "http://iiif.io/api/image"
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### Provenance
 The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as a phase. A phase is initiated by an acquisition (auction, purchase, gift, loan)
