@@ -10,6 +10,13 @@
         {
           "id": "http://iiif.io/api/image"
         }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300215302",
+          "type": "Type",
+          "_label": "digital images"
+        }
       ]
     }
   ]

@@ -1,0 +1,24 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://rkd.nl/explore/images/52947",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300207379",
+          "type": "Type",
+          "_label": "stickers"
+        }
+      ],  
+      "carries": [
+        {
+          "id": "https://linked.art/example/text/15", 
+          "type": "LinguisticObject",
+          "content": "Kunsthandel Oldenzeel Rotterdam" 
+        }
+      ]
+    }
+  ]
+}
