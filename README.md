@@ -866,6 +866,8 @@ Technical recordings are itself human made objects and are thus modelled in a si
   ]
 }
 ```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftechnical_recording.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/technical_recording.rdf.xml)
+
 Relevant objects types
 
 URI | Label
@@ -927,6 +929,7 @@ Reports are modelled in a similar way as technical recording. The only differenc
   }
 }
 ```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Ftechnical_report.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/technical_report.rdf.xml)
 
 URI | Label
 --- | ------
