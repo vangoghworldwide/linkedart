@@ -3,7 +3,11 @@
 	<crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
 		<crm:P108i_was_produced_by>
 			<crm:E12_Production>
-				<crm:P14_carried_out_by rdf:resource="http://vocab.getty.edu/ulan/500115588"/>
+				<crm:P14_carried_out_by>
+					<crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500115588">
+						<rdfs:label>Gogh, Vincent van</rdfs:label>
+					</crm:E39_Actor>
+				</crm:P14_carried_out_by>
 				<crm:P4_has_time-span>
 					<crm:E52_Time-Span>
 						<crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1882-08-21T00:00:00</crm:P82a_begin_of_the_begin>

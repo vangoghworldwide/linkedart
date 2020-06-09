@@ -26,3 +26,7 @@
     a crm:E53_Place ;
     rdfs:label "'s-Gravenhage" .
 
+<http://vocab.getty.edu/ulan/500115588>
+    a crm:E39_Actor ;
+    rdfs:label "Gogh, Vincent van" .
+

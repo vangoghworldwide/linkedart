@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:la="https://linked.art/ns/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
+		<crm:P108i_was_produced_by>
+			<crm:E12_Production rdf:about="http://vangoghmuseum.nl/data/artwork_production/s0076V1962">
+				<crm:P141i_was_assigned_by>
+					<crm:E13_Attribute_Assignment rdf:about="http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment">
+						<crm:P4_has_time-span>
+							<crm:E52_Time-Span>
+								<crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00</crm:P82b_end_of_the_end>
+							</crm:E52_Time-Span>
+						</crm:P4_has_time-span>
+						<crm:P14_carried_out_by>
+							<crm:E39_Actor rdf:about="https://example.org/uri_curator_researcher">
+								<rdfs:label>{Name of the curator/researcher}</rdfs:label>
+							</crm:E39_Actor>
+						</crm:P14_carried_out_by>
+						<crm:P141_assigned>
+							<crm:E12_Production>
+								<crm:P14_carried_out_by>
+									<crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500115588">
+										<rdfs:label>Gogh, Vincent van</rdfs:label>
+									</crm:E39_Actor>
+								</crm:P14_carried_out_by>
+							</crm:E12_Production>
+						</crm:P141_assigned>
+					</crm:E13_Attribute_Assignment>
+				</crm:P141i_was_assigned_by>
+			</crm:E12_Production>
+		</crm:P108i_was_produced_by>
+	</crm:E22_Human-Made_Object>
+</rdf:RDF>
