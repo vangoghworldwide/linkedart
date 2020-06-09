@@ -363,8 +363,7 @@ Sometimes artworks were falsely assigned to Vincent van Gogh. Linked Art provide
               "_label": "Gogh, Vincent van"
             }
           ]
-        }, 
-        "assigned_property": "part_of"
+        }
       }
     ]
   }
