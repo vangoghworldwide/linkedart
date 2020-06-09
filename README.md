@@ -332,7 +332,7 @@ Sometimes artworks were falsely assigned to Vincent van Gogh. Linked Art provide
     "type": "Production",
     "assigned_by": [
       {
-        "id": "http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment", 
+        "id": "http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1", 
         "type": "AttributeAssignment", 
         "classified_as": [
           {
