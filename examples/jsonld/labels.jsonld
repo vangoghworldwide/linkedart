@@ -7,28 +7,16 @@
       "type": "HumanMadeObject",
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300190692",
+          "id": "http://vocab.getty.edu/aat/300207379",
           "type": "Type",
-          "_label": "backs"
+          "_label": "stickers"
         }
-      ],
-      "part": [
+      ],  
+      "carries": [
         {
-          "type": "HumanMadeObject",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300207379",
-              "type": "Type",
-              "_label": "stickers"
-            }
-          ],  
-          "carries": [
-            {
-              "id": "https://linked.art/example/text/15", 
-              "type": "LinguisticObject",
-              "content": "Kunsthandel Oldenzeel Rotterdam" 
-            }
-          ]
+          "id": "https://linked.art/example/text/15", 
+          "type": "LinguisticObject",
+          "content": "Kunsthandel Oldenzeel Rotterdam" 
         }
       ]
     }

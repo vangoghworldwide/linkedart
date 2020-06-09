@@ -15,17 +15,7 @@
               "_label": "signatures"
             }
           ],
-          "content": "Vincent",
-          "created_by": {
-            "type": "Creation", 
-            "carried_out_by": [
-              {
-                "id": "http://vocab.getty.edu/ulan/500115588",
-                "type": "Actor",
-                "_label": "Gogh, Vincent van"
-              }
-            ]
-          } 
+          "content": "Vincent"
         }
       ],
       "made_of": [
