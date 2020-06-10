@@ -10,7 +10,7 @@
     }
   ],
   "produced_by": {
-    "id": "https://data.rkd.nl/technical/production/5018290",
+    "id": "https://data.rkd.nl/technical/5018290/production/",
     "type": "Production",
     "_label": "Production of the x-ray",
     "used_specific_object": [
