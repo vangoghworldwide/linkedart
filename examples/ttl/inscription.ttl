@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0100V1962>
+    crm:P9_consists_of [
+        crm:P128_carries [
+            crm:P190_has_symbolic_content "Vincent" ;
+            crm:P2_has_type <http://vocab.getty.edu/aat/300028705> ;
+            a crm:E33_Linguistic_Object
+        ] ;
+        crm:P45_consists_of <http://vocab.getty.edu/aat/300015012> ;
+        a crm:E22_Human-Made_Object
+    ] ;
+    a crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300015012>
+    a crm:E57_Material ;
+    rdfs:label "ink" .
+
+<http://vocab.getty.edu/aat/300028705>
+    a crm:E55_Type ;
+    rdfs:label "signatures" .
+
