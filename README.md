@@ -11,8 +11,8 @@ We prefer JSON-LD (obviously as it is the standard) but accept other RDF-seriali
 ## General guidelines
 
 Provide information about the artworks made by Vincent van Gogh in your collection according to the following patterns:
-* [Artwork URI](#artwork)
-* [Artwork type](#object-type)
+* [Artwork](#artwork)
+* [Specific object type](#object-type)
 * [Link to Van Gogh Worldwide URI](#link-to-vgw-uri)
 * [Identifiers](#identifiers) (e.g. de la faille number and catalogue numbers)
 * [Titles](#titles)
@@ -41,18 +41,19 @@ Model dates according to the xsd:dateTime standard. With machine processable dat
 
 ## VGW Patterns
 ### Artwork URI
-Your artwork needs to be identified by an http URI. In jsonld this is provided as the *id*.
+Your artwork needs to be identified by an http URI. In jsonld this is provided as the *id*. In Linked Art an artwork is typed as a [HumanMadeObject](https://linked.art/model/base/#types-and-classifications). 
 
 ```javascript
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990"
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/artwork.rdf.xml)
 
 ### Object type
-In Linked Art an artwork is typed as a [HumanMadeObject](https://linked.art/model/base/#types-and-classifications). Add a more specific object type by [classifing](https://linked.art/model/base/#types-and-classifications) the artwork with a concept from AAT.
+Add a more specific object type by [classifing](https://linked.art/model/base/#types-and-classifications) the artwork with a concept from AAT.
 
 ```json
 {
