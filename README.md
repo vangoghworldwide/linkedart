@@ -12,7 +12,7 @@ We prefer JSON-LD (obviously as it is the standard) but accept other RDF-seriali
 
 Provide information about the artworks made by Vincent van Gogh in your collection according to the following patterns:
 * [Artwork](#artwork)
-* [Specific object type](#object-type)
+* [Specific artwork type](#specific-artwork-type)
 * [Link to Van Gogh Worldwide URI](#link-to-vgw-uri)
 * [Identifiers](#identifiers) (e.g. de la faille number and catalogue numbers)
 * [Titles](#titles)
@@ -40,7 +40,7 @@ Linked Art prescribes to use of \_label (rdfs:label), to increase human readabil
 Model dates according to the xsd:dateTime standard. With machine processable dates we can for example sort artworks by their production date.
 
 ## VGW Patterns
-### Artwork URI
+### Artwork
 Your artwork needs to be identified by an http URI. In jsonld this is provided as the *id*. In Linked Art an artwork is typed as a [HumanMadeObject](https://linked.art/model/base/#types-and-classifications). 
 
 ```javascript
@@ -52,7 +52,7 @@ Your artwork needs to be identified by an http URI. In jsonld this is provided a
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/artwork.rdf.xml)
 
-### Object type
+### Specific artwork type
 Add a more specific object type by [classifing](https://linked.art/model/base/#types-and-classifications) the artwork with a concept from AAT.
 
 ```json
@@ -624,7 +624,7 @@ In case your images are available for public download you provide the urls for e
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
 
 #### IIIF server Van Gogh Worldwide
-For some institutions it is not possible to make high resolution images available for public download. A IIIF server provides a solution in this case. The IIIF server of Van Gogh Worldwide restricts the download of images to a maximum resolution of 640000px (800px\*800px). But at the same time images are available in the VGW image viewer in full detail using the tiling mechanism of IIIF. 
+For some institutions it is not possible to make high resolution images available for public download. A IIIF server provides a solution in this case. The IIIF server of Van Gogh Worldwide restricts the download of images to a maximum area of 640000 pixels per request (800px\*800px). But at the same time images are available in the VGW image viewer in full detail using the tiling mechanism of IIIF. 
 
 If this case applies to you please contact us. We will make your images available via the IIIF server of Van Gogh Worldwide. 
 
