@@ -4,7 +4,7 @@
 		<crm:P108i_was_produced_by>
 			<crm:E12_Production rdf:about="http://vangoghmuseum.nl/data/artwork_production/s0076V1962">
 				<crm:P141i_was_assigned_by>
-					<crm:E13_Attribute_Assignment rdf:about="http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment">
+					<crm:E13_Attribute_Assignment rdf:about="http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1">
 						<crm:P4_has_time-span>
 							<crm:E52_Time-Span>
 								<crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-01T00:00:00</crm:P82b_end_of_the_end>

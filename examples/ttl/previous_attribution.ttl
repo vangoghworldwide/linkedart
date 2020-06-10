@@ -9,10 +9,10 @@
     a crm:E22_Human-Made_Object .
 
 <http://vangoghmuseum.nl/data/artwork_production/s0076V1962>
-    crm:P141i_was_assigned_by <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment> ;
+    crm:P141i_was_assigned_by <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1> ;
     a crm:E12_Production .
 
-<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment>
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
     crm:P141_assigned [
         crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500115588> ;
         a crm:E12_Production
