@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    crm:P45_consists_of <http://vangoghmuseum.nl/data/thesaurus/exampleid92389402380> ;
+    a crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/thesaurus/exampleid92389402380>
+    a crm:E57_Material, skos:Concept ;
+    rdfs:label "oil paint" ;
+    skos:altLabel "olieverf"@nl ;
+    skos:exactMatch <http://vocab.getty.edu/aat/300015050> ;
+    skos:prefLabel "oil paint"@en .
+
