@@ -30,12 +30,14 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 ### Getty vocabularies
 Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu/) (AAT, ULAN and TGN) to describe the metadata values, such as the materials, locations, and museums. Van Gogh Worldwide follows this best practice. This means that you provide the URIs of concepts from the Getty vocabularies in your artwork metadata. The documentation below includes the URIs of Getty concepts that are relevant for Vincent van Gogh. Please feel free to share additional URIs of Getty concepts where needed.
 
-In your data you can use the URI of a Getty Concept without adding information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all the relevant information about the Getty concepts. You can also use the terms from your own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies. Various functions of [vangoghworldwide.org](https://vangoghworldwide.org) build upon the concepts from the Getty vocabularies. For example, the facet filters only show concepts from AAT, TGN and ULAN. And some use the hierarchical relations in these vocabularies to improve the selection of filter options. In case you use the terms from your own thesauri *without* links to the Getty vocabularies your metadata will not show up in these filters.
+In your data you can directly use the URIs of Getty Concept. There is no need to add information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all iformation about the Getty concepts. 
+
+You can also use the terms from your own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies (See for an example: [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). In case you do not provide links to the Getty vocabularies your data is still accepted, but be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website builds upon the concepts from the Getty vocabularies to provide an integrated view over the distributed data. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
 
 Linked Art prescribes to use of \_label (rdfs:label), to increase human readability of data. Please do so, but be aware that VGW ignores the \_label and uses the preferred labels from the Getty vocabularies instead.
 
 ### Dates
-Model dates according to the [xsd:dateTime standard](). With machine processable dates we can for example sort artworks by their production date.
+Model dates according to the xsd:dateTime standard. With machine processable dates we can for example sort artworks by their production date.
 
 ## VGW Patterns
 ### Artwork URI
