@@ -1,10 +1,10 @@
 # Providing data to the vangoghworldwide.org platform
 In this repo we explain how to provide information to https://vangoghworldwide.org/. Van Gogh Worldwide (VGW) brings together (professional) information about all artworks created by Vincent van Gogh. This documentation is intented for institutions that own or maintain artworks created by Vincent van Gogh and want to contribute. 
 
-The starting point of Van Gogh Worldwide is the set of artworks defined in *The Works of Vincent van Gogh: His Paintings and Drawings* by Jacob Baart de la Faille. Basic metadata of all artworks in de la Faille is provided as [open data](https://github.com/vangoghworldwide/delafaille). You can help extend this basic metadata with information about the production, titles, materials, exhibitions, literature, research and more. 
+The starting point of Van Gogh Worldwide is the set of artworks defined in *The Works of Vincent van Gogh: His Paintings and Drawings* by Jacob Baart de la Faille (1970). Basic metadata of all artworks in de la Faille is provided as [open data](https://github.com/vangoghworldwide/delafaille). You can help extend this basic metadata with information about the production, titles, materials, exhibitions, literature, research and more. 
 
 ## Linked Art
-Van Gogh Worldwide builds upon the shared data model provided by the [Linked Art](https://linked.art) community. Socially speaking Linked Art is a growing community of cultural heritiage professionals that are dedicated to sharing information about art as *complete* and *simple* as possible. Technically speaking Linked Art is an application profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We encourage you to get acquinted with the [fundemantals of linked art](https://linked.art/model/) and it's [basic patterns](https://linked.art/model/base/). 
+Van Gogh Worldwide builds upon the shared data model provided by the [Linked Art](https://linked.art) community. Socially speaking Linked Art is a growing community of cultural heritiage professionals that are dedicated to sharing information about art as *complete* and *simple* as possible. Technically speaking Linked Art is an application profile for encoding metadata as Linked Data with the CIDOC-CRM ontology, serialized as JSON-LD. We encourage you to get acquinted with the [fundamentals of linked art](https://linked.art/model/) and its [basic patterns](https://linked.art/model/base/). 
 
 We prefer JSON-LD (obviously as it is the standard) but accept other RDF-serializations, like RDF/XML or Turtle, as well. 
 
@@ -16,7 +16,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Link to Van Gogh Worldwide URI](#link-to-vgw-uri)
 * [Identifiers](#identifiers) (e.g. de la faille number and catalogue numbers)
 * [Titles](#titles)
-* [Current owner](#current-owner) of the arwork
+* [Current owner](#current-owner) of the artwork
 * [Production](#production) (creator, location, period and technique)
 * [Dimensions](#dimensions) (width and height)
 * [Material](#material) (e.g. oil paint)
@@ -30,7 +30,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 ### Getty vocabularies
 Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu/) (AAT, ULAN and TGN) to describe the metadata values, such as the materials, locations, and museums. Van Gogh Worldwide follows this best practice. This means that you provide the URIs of concepts from the Getty vocabularies in your artwork metadata. The documentation below includes the URIs of Getty concepts that are relevant for Vincent van Gogh. Please feel free to share additional URIs of Getty concepts where needed.
 
-In your data you can directly use the URIs of Getty Concept. There is no need to add information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all iformation about the Getty concepts. 
+In your data you can directly use the URIs of Getty Concepts. There is no need to add information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all information about the Getty concepts. 
 
 You can also use the terms from your own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies (See for an example: [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). In case you do not provide links to the Getty vocabularies your data is still accepted, but be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website builds upon the concepts from the Getty vocabularies to provide an integrated view over the distributed data. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
 
@@ -53,7 +53,7 @@ Your artwork needs to be identified by an http URI. In jsonld this is provided a
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fartwork.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/artwork.rdf.xml)
 
 ### Specific artwork type
-Add a more specific object type by [classifing](https://linked.art/model/base/#types-and-classifications) the artwork with a concept from AAT.
+Add a more specific object type by [classifying](https://linked.art/model/base/#types-and-classifications) the artwork with a concept from AAT.
 
 ```json
 {
@@ -81,7 +81,7 @@ http://vocab.getty.edu/aat/300015617 | Sketches
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
 
 @TBD sameAs does not exist in Linked Art
 ```json
@@ -150,7 +150,7 @@ URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300312355 | accession number
 
-Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in catalogue, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). For F-numbers and JH-numbers we recommend the format F4. Do not use F0004, F 4 or f4.
+Two identifiers take a special role in the oeuvre of Vincent van Gogh. The F-number provided by De La Faille in his catalogue mentioned above, and the JH-number provided by Jan Hulsker in [The complete Van Gogh](http://www.worldcat.org/oclc/541422596). For F-numbers and JH-numbers we recommend the format F4. Do not use F0004, F 4 or f4.
 
 The concepts to classify identifiers are defined in the VGW vocabulary:
 URI | Label
@@ -224,7 +224,7 @@ http://vocab.getty.edu/aat/300388277 | English
 http://vocab.getty.edu/aat/300388256 | Dutch
 
 ### Current owner
-Describe the [current owner](https://linked.art/model/object/ownership/#ownership) of the artwork by relating it to a museum or person. Use the Linked Art type Group for a Museum and the Linked art type Person for an individuel.
+Describe the [current owner](https://linked.art/model/object/ownership/#ownership) of the artwork by relating it to a museum or person. Use the Linked Art type Group for a Museum and the Linked art type Person for an individual. You're allowed to use the Linked Art type Actor if you're uncertain about the type.
 
 ```javascript
 {
@@ -340,7 +340,7 @@ http://vocab.getty.edu/aat/300054216 | painting
 
 ### Previous attribution
 
-Sometimes artworks were falsely assigned to Vincent van Gogh. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). You model the production activity in the same way as described above, but instead of providing the *carried_out_by* directly we use an attribute assignment. Classify the assignment with the concept from the VGW vocabulary *Previously attributed to Vincent van Gogh*. In the assignment the timespan is used to indicate when the attribution was believed to be valid, thus van Gogh being the creator. 
+Sometimes artworks were falsely assigned to Vincent van Gogh. Linked Art provides a mechanism to model [uncertain and changing attributions](https://linked.art/model/object/production/#uncertain-or-changing-attributions). You model the production activity in the same way as described above, but instead of providing the *carried_out_by* directly we use an attribute assignment. Classify the assignment with the concept from the VGW vocabulary *Previously attributed to Vincent van Gogh*. In the assignment the timespan is used to indicate when the attribution was believed to be valid, thus Van Gogh being the creator. 
 
 ```json
 {
@@ -392,7 +392,7 @@ Sometimes artworks were falsely assigned to Vincent van Gogh. Linked Art provide
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprevious_attribution.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/previous_attribution.rdf.xml)
 
 ### Dimensions
-[Dimension](https://linked.art/model/object/physical/#dimensions) consist of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
+A [Dimension](https://linked.art/model/object/physical/#dimensions) consists of a type (eg. height), a value and a measurement unit (eg. centimeters). There must be at least two dimensions (height and width).
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -454,7 +454,7 @@ http://vocab.getty.edu/aat/300379101 | feet
 http://vocab.getty.edu/aat/300379100 | inches	
 
 ### Material
-The artwork is constructed out of various materials. Model the [material](https://linked.art/model/object/physical/#materials) that is used to create the art itself (eg. paint) as a property of the artwork. For the support material (eg. the canvas) see the pattern Support material.
+The artwork is constructed out of various materials. Model the [material](https://linked.art/model/object/physical/#materials) that is used to create the art itself (eg. paint) as a property of the artwork. For the support material (eg. the canvas) see the pattern [Support material](#support-material).
 
 ```json
 {
@@ -527,7 +527,7 @@ http://vocab.getty.edu/aat/300014205 | Masonite (TM)
 http://vocab.getty.edu/aat/300014076 | burlap
 
 ### Subject type
-For the subject matter we only ask you to probide the [type of the subject](https://linked.art/model/object/aboutness/#other-classifications), such as landscape or portrait. You are free to provide the depicted content as well, but these are currently not shown on the VGW platform.
+For the subject matter we only ask you to provide the [type of the subject](https://linked.art/model/object/aboutness/#other-classifications), such as landscape or portrait. You are free to provide the depicted content as well, but these are currently not shown on the VGW platform.
 
 ```json
 {
@@ -628,7 +628,7 @@ For some institutions it is not possible to make high resolution images availabl
 
 If this case applies to you please contact us. We will make your images available via the IIIF server of Van Gogh Worldwide. 
 
-In your data refer to the IIIF server of Van Gogh Worldwide and the identifier of the image. Also include the name of organistion identifier (ORG_ID) that you received from us.
+In your data refer to the IIIF server of Van Gogh Worldwide and the identifier of the image. Also include the name of organisation identifier (ORG_ID) that you received from us.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -715,6 +715,7 @@ The provenance defines the different owners of the artwork and how they acquired
 @TBD Add AAT terms for acquisition types.
 URI | Label
 --- | -----
+http://vocab.getty.edu/aat/300417645 | Loan
 
 ### Exhibitions
 Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.
@@ -763,7 +764,7 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
 
 ### Inscriptions
 #### Signatures
-In Linked Art the textual content of an inscription, such as a signature, is a linguistic object that is carried by the artwork. As we might want to capture the physical charactersitcs of an inscription, such as the material or color, we first model a part of the artwork to represent the inscription. This part then carries the linguistic content of the inscription.
+In Linked Art the textual content of an inscription, such as a signature, is a linguistic object that is carried by the artwork. As we might want to capture the physical characteristics of an inscription, such as the material or color, we first model a part of the artwork to represent the inscription. This part then carries the linguistic content of the inscription.
 ```json  
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -924,14 +925,14 @@ URI | Label
 http://vocab.getty.edu/aat/300419325 | x-radiographs
 http://vocab.getty.edu/aat/300046300 | photographs
 
-When a tehnical recording is classified as a photograph the production technique can be used to provide more detail information. 
+When a technical recording is classified as a photograph the production technique can be used to provide more detailed information. 
 
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300051987 | floodlighting
 
 #### Technical reports
-Reports are modelled in a similar way as technical recording. The only difference is that we are not modelling the physical object, but a linguistic object. Therefore use LinguistObject as the type and "created_by" instead of "produced_by". The relation to the artwork is also added 
+Reports are modelled in a similar way as technical recording. The only difference is that we are not modelling the physical object, but a linguistic object. Therefore use LinguistObject as the type and "created_by" instead of "produced_by". The relation to the artwork is also added. 
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
