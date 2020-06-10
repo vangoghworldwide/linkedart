@@ -547,9 +547,9 @@ Some objects are composed of multiple smaller parts.
 -->
 
 ### Digital representation
-Van Gogh Worldwide follows the [IIIF standard](https://iiif.io/) for images. This enables various functions such as zooming and comparison. To support this please provide the highest resolution you can share. We identified three scenarios.
+Van Gogh Worldwide follows the [IIIF standard](https://iiif.io/) for images. This enables various functions such as zooming and comparison. To support this please provide the highest resolution you can share. We identified three scenarios to share your images and model the metadata about them.
 
-#### Your IIIF server
+#### Your own IIIF server
 In case you provide images via your own IIIF server use the following pattern in your data:
 ```json
 {
@@ -579,7 +579,7 @@ In case you provide images via your own IIIF server use the following pattern in
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation_iiif.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation_iiif.rdf.xml)
 
 #### Images via url
-In case your images are available for public download you provide the urls for each image in the data. Van Gogh Worldwide will then pick up these images and make them available to it's own IIIF server. 
+In case your images are available for public download you provide the urls for each image in the data. Van Gogh Worldwide will then pick up these images and make them available through its IIIF server. 
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -604,9 +604,11 @@ In case your images are available for public download you provide the urls for e
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fdigital_representation.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/digital_representation.rdf.xml)
 
 #### IIIF server Van Gogh Worldwide
-In case you do not want to make your high resolution images available for public download, and you do not have a IIIF server, we can help you to make your images available through the IIIF server of Van Gogh Worldwide. The IIIF server has restricted the maximum resolution of images. A high resolution is only available in a tiled version in the image viewer. 
+For some institutions it is not possible to make high resolution images available for public download. A IIIF server provides a solution in this case. The IIIF server of Van Gogh Worldwide restricts the download of images to a maximum resolution of 640000px (800px\*800px). But at the same time images are available in the VGW image viewer in full detail using the tiling mechanism of IIIF. 
 
-Contact us to setup a protected pipeline. In your data refer to the IIIF server of Van Gogh Worldwide and the identifier of the image. Also include the name of organistion identifier (ORG_ID) that you received from us.
+If this case applies to you please contact us. We will make your images available via the IIIF server of Van Gogh Worldwide. 
+
+In your data refer to the IIIF server of Van Gogh Worldwide and the identifier of the image. Also include the name of organistion identifier (ORG_ID) that you received from us.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
