@@ -28,16 +28,20 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Technical information](#technical-information) (e.g. x-rays, technical reports)
 
 ### Getty vocabularies
-Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu/) (AAT, ULAN and TGN) to describe the metadata values, such as the materials, locations, and museums. Van Gogh Worldwide follows this best practice. This means that you provide the URIs of concepts from the Getty vocabularies in your artwork metadata. The documentation below includes the URIs of Getty concepts that are relevant for Vincent van Gogh. Please feel free to share additional URIs of Getty concepts where needed.
+Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu/) (AAT, ULAN and TGN) to describe the metadata values, such as the artwork types, materials, locations, and museums. Van Gogh Worldwide follows this best practice. This means that you provide the URIs of concepts from the Getty vocabularies in your artwork metadata. The documentation below includes the URIs of Getty concepts that are relevant for Vincent van Gogh. Please feel free to share additional URIs of Getty concepts where needed.
 
-In your data you can directly use the URIs of Getty Concepts. There is no need to add information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all information about the Getty concepts. 
-
-You can also use the terms from your own thesauri provided they contain links (skos:exactMatch) to the Getty vocabularies (See for an example: [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). In case you do not provide links to the Getty vocabularies your data is still accepted, but be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website builds upon the concepts from the Getty vocabularies to provide an integrated view over the distributed data. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
+We identified four scenarios to include the Getty URIs in your metadata, in order of preference:
+1. Directly use the URI of a Getty concept in your data. There is no need to add information about these concepts such as the pref and alt labels. Van Gogh Worldwide already contains all information about the Getty concepts.
+2. Use a term from your own thesaurus and include a skos:exactMatch link to the URI of a Getty concept (for example [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). 
+3. When there is no exactMatch to a getty Concept available there might be broader concept. In this case use a term from your own thesaurus and include a skos:broadMatch link to the URI of the broader Getty concept (for example [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos_broadmatch.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos_broadmatch.rdf.xml)). 
+4. In case you do not provide links to the Getty vocabularies your data is still accepted, but be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website builds upon the concepts from the Getty vocabularies to provide an integrated view over the distributed data. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
 
 Linked Art prescribes to use of \_label (rdfs:label), to increase human readability of data. Please do so, but be aware that VGW ignores the \_label and uses the preferred labels from the Getty vocabularies instead.
 
 ### Dates
-Model dates according to the xsd:dateTime standard. With machine processable dates we can for example sort artworks by their production date.
+In Linked Art all dates are modelled as timespans. Please study the [linked art documentation on timespans](https://linked.art/model/base/#events-and-activities). Within the timespan the dates should be modelled according to the xsd:dateTime standard. For [vangoghworldwide.org](https://vangoghworldwide.org) this is important as only with machine processable dates we can sort on dates, for example to artworks by their production date. 
+
+Optionally a textual description of the date can be included in the timespan.
 
 ## VGW Patterns
 ### Artwork
@@ -284,7 +288,20 @@ The [production](https://linked.art/model/object/production/) of the artwork is 
       {
         "type": "TimeSpan",
         "end_of_the_end": "1882-08-21T00:00:00",
-        "begin_of_the_begin": "1882-08-21T23:59:59"
+        "begin_of_the_begin": "1882-08-21T23:59:59",
+        "identified_by": [
+          {
+            "type": "Name", 
+            "content": "Probably on August 21 1882",
+            "language": [
+              {
+                "id": "http://vocab.getty.edu/aat/300388277",
+                "type": "Language",
+                "_label": "English"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
@@ -326,7 +343,7 @@ http://vocab.getty.edu/tgn/7016995 | Laken
 #### Timespan
 Time is modeled as timespan with a start and an end date. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). When the date is not known exactly model the first possible begin and the latest possible end. 
 
-These machine readable dates are important, for example to sort artworks on date of production.
+These machine readable dates are important, for example to sort artworks on date of production. Optionally a textual description of the date can be provided with an *identified_by* relation on the timespan.
 
 #### Technique
 Relate the technique used in the production event.
