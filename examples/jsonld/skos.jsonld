@@ -1,0 +1,24 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "made_of": [
+    {
+      "id": "http://vocab.getty.edu/aat/300015050",
+      "_label": "oil paint",
+      "type": "Material"
+    },
+    {
+      "id": "http://vangoghmuseum.nl/data/term/1174",
+      "_label": "oil paint",
+      "type": "Material",
+      "exactMatch": "http://vocab.getty.edu/aat/300015050"
+    },
+    {
+      "id": "http://vangoghmuseum.nl/data/term/1174x",
+      "_label": "brown oil paint",
+      "type": "Material",
+      "broadMatch": "http://vocab.getty.edu/aat/300015050"
+    }
+  ]
+}
