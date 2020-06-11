@@ -10,13 +10,12 @@
 
 <https://data.rkd.nl/images/52947>
     crm:P9_consists_of [
-        crm:P128_carries <https://linked.art/example/text/15> ;
+        crm:P128_carries [
+            crm:P190_has_symbolic_content "Kunsthandel Oldenzeel Rotterdam" ;
+            a crm:E33_Linguistic_Object
+        ] ;
         crm:P2_has_type <http://vocab.getty.edu/aat/300207379> ;
         a crm:E22_Human-Made_Object
     ] ;
     a crm:E22_Human-Made_Object .
-
-<https://linked.art/example/text/15>
-    crm:P190_has_symbolic_content "Kunsthandel Oldenzeel Rotterdam" ;
-    a crm:E33_Linguistic_Object .
 

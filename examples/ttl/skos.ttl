@@ -4,13 +4,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    crm:P45_consists_of <http://vangoghmuseum.nl/data/thesaurus/exampleid92389402380> ;
+    crm:P45_consists_of <http://vangoghmuseum.nl/data/term/1174>, <http://vangoghmuseum.nl/data/term/1174x>, <http://vangoghmuseum.nl/data/term/123xyz>, <http://vocab.getty.edu/aat/300015050> ;
     a crm:E22_Human-Made_Object .
 
-<http://vangoghmuseum.nl/data/thesaurus/exampleid92389402380>
+<http://vangoghmuseum.nl/data/term/1174>
     a crm:E57_Material, skos:Concept ;
     rdfs:label "oil paint" ;
     skos:altLabel "olieverf"@nl ;
     skos:exactMatch <http://vocab.getty.edu/aat/300015050> ;
     skos:prefLabel "oil paint"@en .
+
+<http://vangoghmuseum.nl/data/term/1174x>
+    a crm:E57_Material, skos:Concept ;
+    rdfs:label "oil paint" ;
+    skos:altLabel "olieverf"@nl ;
+    skos:broader <http://vocab.getty.edu/aat/300015050> ;
+    skos:prefLabel "oil paint"@en .
+
+<http://vangoghmuseum.nl/data/term/123xyz>
+    a crm:E57_Material ;
+    rdfs:label "very weird material that is not in AAT" .
+
+<http://vocab.getty.edu/aat/300015050>
+    a crm:E57_Material ;
+    rdfs:label "oil paint" .
 

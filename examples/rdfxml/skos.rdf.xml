@@ -2,13 +2,32 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
     <crm:P45_consists_of>
-      <crm:E57_Material rdf:about="http://vangoghmuseum.nl/data/thesaurus/exampleid92389402380">
-      	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <crm:E57_Material rdf:about="http://vocab.getty.edu/aat/300015050">
+        <rdfs:label>oil paint</rdfs:label>
+      </crm:E57_Material>
+    </crm:P45_consists_of>
+    <crm:P45_consists_of>
+      <crm:E57_Material rdf:about="http://vangoghmuseum.nl/data/term/1174">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>oil paint</rdfs:label>
         <skos:prefLabel xml:lang="en">oil paint</skos:prefLabel>
         <skos:altLabel xml:lang="nl">olieverf</skos:altLabel>
         <skos:exactMatch rdf:resource="http://vocab.getty.edu/aat/300015050"/>
       </crm:E57_Material>
     </crm:P45_consists_of>
-  </crm:E22_Human-Made_Object>
+        <crm:P45_consists_of>
+      <crm:E57_Material rdf:about="http://vangoghmuseum.nl/data/term/1174x">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>oil paint</rdfs:label>
+        <skos:prefLabel xml:lang="en">oil paint</skos:prefLabel>
+        <skos:altLabel xml:lang="nl">olieverf</skos:altLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300015050"/>
+      </crm:E57_Material>
+    </crm:P45_consists_of>
+    <crm:P45_consists_of>
+      <crm:E57_Material rdf:about="http://vangoghmuseum.nl/data/term/123xyz">
+        <rdfs:label>very weird material that is not in AAT</rdfs:label>
+      </crm:E57_Material>
+    </crm:P45_consists_of>
+      </crm:E22_Human-Made_Object>
 </rdf:RDF>
