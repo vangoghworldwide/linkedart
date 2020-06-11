@@ -18,7 +18,7 @@
       "id": "http://vangoghmuseum.nl/data/term/1174x",
       "_label": "brown oil paint",
       "type": "Material",
-      "broadMatch": "http://vocab.getty.edu/aat/300015050"
+      "broader": "http://vocab.getty.edu/aat/300015050"
     }
   ]
 }

@@ -33,7 +33,7 @@ Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu
 We identified three methods to provide the Getty URIs in your metadata:
 1. Directly use the URI of a Getty concept in your data. 
 2. Use a term from your own thesaurus and include a skos:exactMatch link to the URI of a Getty concept.
-3. When there is no exactMatch to a getty Concept include a skos:broadMatch link to a broader getty Concept.
+3. When there is no exactMatch to a getty Concept include a skos:broader relation to a broader getty Concept.
 
 Linked Art prescribes to use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
 
