@@ -14,7 +14,6 @@
       ],  
       "carries": [
         {
-          "id": "https://linked.art/example/text/15", 
           "type": "LinguisticObject",
           "content": "Kunsthandel Oldenzeel Rotterdam" 
         }
