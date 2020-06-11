@@ -35,11 +35,11 @@ We identified three methods to provide the Getty URIs in your metadata:
 2. Use a term from your own thesaurus and include a skos:exactMatch link to the URI of a Getty concept.
 3. When there is no exactMatch to a getty Concept include a skos:broadMatch link to a broader getty Concept.
 
+(Examples [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). 
+
 Linked Art prescribes to use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
 
 In case you use concepts from your own thesauri and do not provide links to the Getty vocabularies your data is still accepted. However, be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website uses the Getty concepts to provide an integrated view. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
-
-(Examples [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). 
 
 ### Dates
 In Linked Art all dates are modelled as timespans. Please study the [linked art documentation on timespans](https://linked.art/model/base/#events-and-activities). Within the timespan the dates should be modelled according to the xsd:dateTime standard. For [vangoghworldwide.org](https://vangoghworldwide.org) this is important as only with machine processable dates we can sort on dates, for example to artworks by their production date. 
