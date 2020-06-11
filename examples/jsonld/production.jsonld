@@ -30,7 +30,20 @@
       {
         "type": "TimeSpan",
         "end_of_the_end": "1882-08-21T00:00:00",
-        "begin_of_the_begin": "1882-08-21T23:59:59"
+        "begin_of_the_begin": "1882-08-21T23:59:59",
+        "identified_by": [
+          {
+            "type": "Name", 
+            "content": "Probably on August 21 1882",
+            "language": [
+              {
+                "id": "http://vocab.getty.edu/aat/300388277",
+                "type": "Language",
+                "_label": "English"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

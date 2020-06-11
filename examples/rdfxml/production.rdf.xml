@@ -12,6 +12,13 @@
 					<crm:E52_Time-Span>
 						<crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1882-08-21T00:00:00</crm:P82a_begin_of_the_begin>
 						<crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1882-08-21T23:59:59</crm:P82b_end_of_the_end>
+						<crm:P1_is_identified_by>
+							<crm:E33_E41_Linguistic_Appellation>
+								<crm:P190_has_symbolic_content>Probably on 21 August 1882</crm:P190_has_symbolic_content>
+								<crm:E56_Language rdf:about="http://vocab.getty.edu/aat/300388277">
+            			<rdfs:label>English (language)</rdfs:label>
+          			</crm:E56_Language>
+							</crm:E33_E41_Linguistic_Appellation>
 					</crm:E52_Time-Span>
 				</crm:P4_has_time-span>
 				<crm:P7_took_place_at>
