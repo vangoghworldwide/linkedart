@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:la="https://linked.art/ns/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/technical/5018290">
+  <crm:E33_Linguistic_Object rdf:about="https://data.rkd.nl/technical/5001263">
     <crm:P2_has_type>
-      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300419325">
-        <rdfs:label>x-radiographs</rdfs:label>
+      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300027323">
+        <rdfs:label>Technical report</rdfs:label>
       </crm:E55_Type>
     </crm:P2_has_type>
+    <crm:P1_is_identified_by>
+      <crm:E33_E41_Linguistic_Appellation>
+        <crm:P190_has_symbolic_content xml:lang="nl">Title of the report</crm:P190_has_symbolic_content>
+      </crm:E33_E41_Linguistic_Appellation>
+    </crm:P1_is_identified_by>
     <crm:P108i_was_produced_by>
       <crm:E12_Production rdf:about="https://data.rkd.nl/technical/5018290/production/">
-        <crm:P16_used_specific_object>
-          <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52947">
-            <rdfs:label>The peat boat</rdfs:label>
+                <crm:P16_used_specific_object>
+          <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52953">
+            <rdfs:label>Lane of poplars near Nuenen</rdfs:label>
           </crm:E22_Human-Made_Object>
         </crm:P16_used_specific_object>
         <crm:P14_carried_out_by>
-          <crm:E39_Actor rdf:about="https://data.rkd.nl/artists/440500">
-            <rdfs:label>Gerritsen, René</rdfs:label>
+          <crm:E39_Actor rdf:about="https://data.rkd.nl/artists/443078">
+            <rdfs:label>Werf, P. van der</rdfs:label>
           </crm:E39_Actor>
         </crm:P14_carried_out_by>
         <crm:P4_has_time-span>
@@ -24,22 +29,7 @@
             <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-19T23:59:59</crm:P82b_end_of_the_end>
           </crm:E52_Time-Span>
         </crm:P4_has_time-span>
-        <crm:P32_used_general_technique>
-          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300419323">
-            <rdfs:label>x-ray photography</rdfs:label>
-          </crm:E55_Type>
-        </crm:P32_used_general_technique>
       </crm:E12_Production>
     </crm:P108i_was_produced_by>
-    <crm:P138i_has_representation>
-      <crm:E37_Visual_Item rdf:about="{URL_TO_YOUR_IMAGE}">
-        <crm:P2_has_type>
-          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300215302">
-            <rdfs:label>digital images</rdfs:label>
-          </crm:E55_Type>
-        </crm:P2_has_type>
-        <dc:format>image/jpeg</dc:format>
-      </crm:E37_Visual_Item>
-    </crm:P138i_has_representation>
-  </crm:E22_Human-Made_Object>
+  </crm:E33_Linguistic_Object>
 </rdf:RDF>

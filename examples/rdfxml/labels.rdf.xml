@@ -9,7 +9,7 @@
             </crm:E55_Type>
           </crm:P2_has_type>
           <crm:P128_carries>
-            <crm:E33_Linguistic_Object rdf:about="https://linked.art/example/text/15">
+            <crm:E33_Linguistic_Object>
               <crm:P190_has_symbolic_content>Kunsthandel Oldenzeel Rotterdam</crm:P190_has_symbolic_content>
             </crm:E33_Linguistic_Object>
           </crm:P128_carries>

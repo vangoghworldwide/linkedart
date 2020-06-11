@@ -16,14 +16,14 @@
     }
   ],
   "created_by": {
-    "id": "https://data.rkd.nl/technical/production/5018290",
+    "id": "https://data.rkd.nl/technical/5018290/production",
     "type": "Production",
     "_label": "Production of the report",
     "used_specific_object": [
       {
         "id": "https://data.rkd.nl/images/52953",
         "type": "HumanMadeObject",
-        "_label": "The artwork investigated in the report"
+        "_label": "Lane of poplars near Nuenen"
       }
     ],
     "carried_out_by": [
