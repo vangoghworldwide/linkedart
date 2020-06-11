@@ -19,6 +19,11 @@
       "_label": "brown oil paint",
       "type": "Material",
       "broader": "http://vocab.getty.edu/aat/300015050"
+    },
+    {
+      "id": "http://vangoghmuseum.nl/data/term/123xyz",
+      "_label": "very weird material that is not in AAT",
+      "type": "Material"
     }
   ]
 }
