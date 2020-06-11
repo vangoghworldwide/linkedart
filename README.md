@@ -823,7 +823,6 @@ The same pattern is used to model the content of labels added to the arwork, suc
       ],  
       "carries": [
         {
-          "id": "https://linked.art/example/text/15", 
           "type": "LinguisticObject",
           "content": "Kunsthandel Oldenzeel Rotterdam" 
         }
