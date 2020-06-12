@@ -25,7 +25,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Provenance information](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Literature](#literature) about an artwork
-* [Technical information](#technical-information) (e.g. x-rays, technical reports)
+* [Technical research](#technical-research) (e.g. x-rays, technical reports)
 
 ### Getty vocabularies
 Linked Art prescribes the use of the [Getty vocabularies](http://vocab.getty.edu/) (AAT, ULAN and TGN) to describe the metadata values, such as the artwork types, materials, locations, and museums. Van Gogh Worldwide follows this best practice. The modelling patterns below include URIs of Getty concepts that are relevant for Van Gogh Worldwide. Please feel free to share additional URIs of Getty concepts where needed.
