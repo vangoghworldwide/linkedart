@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:la="https://linked.art/ns/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0100V1962">
-    <crm:P9_consists_of>
+    <crm:P46_is_composed_of>
       <crm:E22_Human-Made_Object>
         <crm:P128_carries>
           <crm:E33_Linguistic_Object>
@@ -19,6 +19,6 @@
           </crm:E57_Material>
         </crm:P45_consists_of>
       </crm:E22_Human-Made_Object>
-    </crm:P9_consists_of>
+    </crm:P46_is_composed_of>
   </crm:E22_Human-Made_Object>
 </rdf:RDF>

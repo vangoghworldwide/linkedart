@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0100V1962>
-    crm:P9_consists_of [
+    crm:P46_is_composed_of [
         crm:P128_carries [
             crm:P190_has_symbolic_content "Vincent" ;
             crm:P2_has_type <http://vocab.getty.edu/aat/300028705> ;
