@@ -9,12 +9,12 @@
 	      </crm:E55_Type>
 	    </crm:P2_has_type>
 	    <crm:P1_is_identified_by>
-	      <crm:E33_E41_Linguistic_Appellation>
+	      <crm:E33_E41_Linguistic_Appellation rdf:about="http://vangoghmuseum.nl/data/exhibition/858/titel">
 	        <crm:P190_has_symbolic_content>Eeuwfeest Vincent van Gogh</crm:P190_has_symbolic_content>
 	      </crm:E33_E41_Linguistic_Appellation>
 	    </crm:P1_is_identified_by>
 	    <crm:P4_has_time-span>
-	      <crm:E52_Time-Span>
+	      <crm:E52_Time-Span rdf:about="http://vangoghmuseum.nl/data/exhibition/858/timespan">
 	        <crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-07-23T00:00:00</crm:P82a_begin_of_the_begin>
 	        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-09-20T23:59:59</crm:P82b_end_of_the_end>
 	      </crm:E52_Time-Span>

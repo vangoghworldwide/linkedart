@@ -15,6 +15,7 @@
       ],
       "identified_by": [
         {
+          "id": "http://vangoghmuseum.nl/data/exhibition/858/titel",
           "type": "Name",
           "content": "Eeuwfeest Vincent van Gogh"
         }
@@ -28,6 +29,7 @@
       ],
       "timespan": [
         {
+          "id": "http://vangoghmuseum.nl/data/exhibition/858/timespan",
           "type": "TimeSpan",
           "end_of_the_end": "1953-09-20",
           "begin_of_the_begin": "1953-07-23"

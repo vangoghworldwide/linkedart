@@ -16,5 +16,5 @@
 
 <http://vocab.getty.edu/aat/300014844>
     a crm:E55_Type ;
-    rdfs:label "canvas support" .
+    rdfs:label "supports" .
 
