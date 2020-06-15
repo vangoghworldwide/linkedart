@@ -861,14 +861,127 @@ http://vocab.getty.edu/aat/300207379 | stickers
 http://vocab.getty.edu/aat/300028749 | watermark
 
 ### Literature
-<!--Artworks are referred to in literature such as scientific publications, books or news articles. The reference between literature and the artwork is captured in Linked Art. 
+Artworks are referred to in literature such as scientific publications, books or news articles. In Linked art [publications are modeled as linguistic objects](https://linked.art/model/document). A publication is identified by a title in a similar fashion as an artwork. Instead of a production activity linguistic objects have a creation activity. The publication of a linguistic object is modeled as an activity as well.
 
 ```json
-crm:P67i_is_referred_to_by [a crm:E33_Linguistic_Object ; 
-crm:P106i_forms_part_of <http://vangoghmuseum.nl/data/document/10326> ; 
-crm:P3_has_note "p. 413"],
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+        "id": "http://vangoghmuseum.nl/data/document/11030", 
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028051", 
+          "type": "Type", 
+          "_label": "Book"
+        }
+      ],
+      "identified_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/11030/title",
+          "type": "Name", 
+          "content": "The complete Van Gogh : paintings, drawings, sketches"
+        },
+        {
+          "type": "Identifier",
+          "content": "9780810917019",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300417443", 
+              "type": "Type", 
+              "_label": "ISBN"
+            }
+          ]
+        }
+      ], 
+      "created_by": {
+        "type": "Creation", 
+        "carried_out_by": [
+          {
+            "id": "http://vangoghmuseum.nl/data/document/11030/author1",
+            "type": "Person", 
+            "_label": "Hulsker, Jan"
+          }
+        ]
+      },
+      "used_for": [
+        {
+          "type": "Activity", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300054686", 
+              "type": "Type", 
+              "_label": "Publishing"
+            }
+          ], 
+          "carried_out_by": [
+            {
+              "id": "http://vangoghmuseum.nl/data/document/11030/publisher",
+              "type": "Group", 
+              "_label": "Abrams"
+            }
+          ],
+          "took_place_at": [
+            {
+              "id": "http://vangoghmuseum.nl/data/document/11030/publisher_place",
+              "type": "Place",
+              "_label": "New York"
+            }
+          ],
+          "timespan": [
+            {
+              "type": "TimeSpan",
+              "begin_of_the_begin": "2018-01-01",
+              "end_of_the_end": "2018-12-31"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ```
--->
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fliterature.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/literature.rdf.xml)
+
+Often we want to specificy that a specific part of a publication refers to an artwork, like a set of pages. In this case we add an additional linguistic object that is part of the publication. The pages are captured in a pagination statement. The reference might also contain the actual content.
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1",
+      "type": "LinguisticObject",
+      "part_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/7351"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages",
+          "type": "LinguisticObject", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435440", 
+              "type": "Type", 
+              "_label": "Pagination Statement"
+            }
+          ], 
+          "content": "125-135"
+        }
+      ]
+    }
+  ],
+  "content": "..."
+}
+```
+The actual 
 
 ### Technical research
 Artworks are analysed in research activities. The output of this research occurs in the form of technical recordings, such as x-rays, or in the form of research reports.

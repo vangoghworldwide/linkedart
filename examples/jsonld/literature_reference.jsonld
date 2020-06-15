@@ -1,0 +1,30 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1",
+      "type": "LinguisticObject",
+      "part_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/7351"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages",
+          "type": "LinguisticObject", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435440", 
+              "type": "Type", 
+              "_label": "Pagination Statement"
+            }
+          ], 
+          "content": "125-135"
+        }
+      ]
+    }
+  ]
+}
