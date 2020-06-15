@@ -7,24 +7,26 @@
     a crm:E22_Human-Made_Object .
 
 <http://vangoghmuseum.nl/data/exhibition/858>
-    crm:P1_is_identified_by [
-        crm:P190_has_symbolic_content "Eeuwfeest Vincent van Gogh" ;
-        a crm:E33_E41_Linguistic_Appellation
-    ] ;
+    crm:P14_carried_out_by <http://vangoghmuseum.nl/data/person/8045> ;
+    crm:P1_is_identified_by <http://vangoghmuseum.nl/data/exhibition/858/titel> ;
     crm:P2_has_type <http://vocab.getty.edu/aat/300054766> ;
-    crm:P4_has_time-span [
-        crm:P82a_begin_of_the_begin "1953-07-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        crm:P82b_end_of_the_end "1953-09-20T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        a crm:E52_Time-Span
-    ] ;
-    crm:P7_took_place_at <http://vocab.getty.edu/ulan/500220995> ;
+    crm:P4_has_time-span <http://vangoghmuseum.nl/data/exhibition/858/timespan> ;
     a crm:E7_Activity .
+
+<http://vangoghmuseum.nl/data/exhibition/858/timespan>
+    crm:P82a_begin_of_the_begin "1953-07-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+    crm:P82b_end_of_the_end "1953-09-20T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+    a crm:E52_Time-Span .
+
+<http://vangoghmuseum.nl/data/exhibition/858/titel>
+    crm:P190_has_symbolic_content "Eeuwfeest Vincent van Gogh" ;
+    a crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/person/8045>
+    a crm:E39_Actor ;
+    rdfs:label "Stedelijk Museum Amsterdam" .
 
 <http://vocab.getty.edu/aat/300054766>
     a crm:E55_Type ;
     rdfs:label "exhibitions" .
-
-<http://vocab.getty.edu/ulan/500220995>
-    a crm:E39_Actor ;
-    rdfs:label "Stedelijk Museum Amsterdam" .
 
