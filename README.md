@@ -313,10 +313,11 @@ The [production](https://linked.art/model/object/production/) of the artwork is 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fproduction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/production.rdf.xml)
 
 #### Creator
-Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN URI to model the relation.
+Obviously (most of) the artworks in the platform are created by Vincent van Gogh. Use the ULAN URI or the RKDArtists URI to model the relation.
 URI | Label
 --- | -----
 http://vocab.getty.edu/ulan/500115588 | Vincent van Gogh
+https://data.rkd.nl/artists/32439 | Vincent van Gogh
 
 #### Location
 Use a URI from TGN for the production location
