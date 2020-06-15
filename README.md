@@ -949,7 +949,7 @@ When a technical recording is classified as a photograph the production techniqu
 
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300224399 | http://vocab.getty.edu/aat/300224399
+http://vocab.getty.edu/aat/300224399 | raking light
 
 #### Technical reports
 Reports are modelled in a similar way as technical recording. The only difference is that we are not modelling the physical object, but a linguistic object. Therefore use LinguistObject as the type and "created_by" instead of "produced_by". The relation to the artwork is also added. 
