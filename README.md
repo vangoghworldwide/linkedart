@@ -24,6 +24,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Digital representation](#digital-representation) of the artwork (image)
 * [Provenance information](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
+* [Inscriptions](#inscriptions) on the artwork such as signatures and labels
 * [Literature](#literature) about an artwork
 * [Technical research](#technical-research) (e.g. x-rays, technical reports)
 
