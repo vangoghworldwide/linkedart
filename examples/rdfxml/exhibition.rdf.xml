@@ -19,11 +19,11 @@
 	        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-09-20T23:59:59</crm:P82b_end_of_the_end>
 	      </crm:E52_Time-Span>
 	    </crm:P4_has_time-span>
-	    <crm:P7_took_place_at>
-	      <crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500220995">
+		<crm:P14_carried_out_by>
+	      <crm:E39_Actor rdf:about="http://vangoghmuseum.nl/data/person/8045">
 	        <rdfs:label>Stedelijk Museum Amsterdam</rdfs:label>
 	      </crm:E39_Actor>
-	    </crm:P7_took_place_at>
+		</crm:P14_carried_out_by>
 	  </crm:E7_Activity>
 	</crm:P16i_was_used_for>
   </crm:E22_Human-Made_Object>
