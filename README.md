@@ -981,7 +981,6 @@ Often we want to specificy that a specific part of a publication refers to an ar
   "content": "..."
 }
 ```
-The actual 
 
 ### Technical research
 Artworks are analysed in research activities. The output of this research occurs in the form of technical recordings, such as x-rays, or in the form of research reports.
