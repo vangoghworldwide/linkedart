@@ -85,7 +85,6 @@ URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300033618 | Paintings
 http://vocab.getty.edu/aat/300033973 | Drawings
-http://vocab.getty.edu/aat/300015617 | Sketches
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
