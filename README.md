@@ -981,7 +981,7 @@ Often we want to specificy that a specific part of a publication refers to an ar
   "content": "..."
 }
 ```
-The actual 
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fliterature_reference.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/literature_reference.rdf.xml)
 
 ### Technical research
 Artworks are analysed in research activities. The output of this research occurs in the form of technical recordings, such as x-rays, or in the form of research reports.
