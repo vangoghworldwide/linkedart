@@ -343,6 +343,7 @@ http://vocab.getty.edu/tgn/7012090 | Isleworth
 http://vocab.getty.edu/tgn/7011562 | Ramsgate
 http://vocab.getty.edu/tgn/7006842 | Eindhoven
 http://vocab.getty.edu/tgn/7016995 | Laken
+http://vocab.getty.edu/tgn/7007865 | Borinage
 
 #### Timespan
 Time is modeled as timespan with a start and an end date. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). When the date is not known exactly model the first possible begin and the latest possible end. 
