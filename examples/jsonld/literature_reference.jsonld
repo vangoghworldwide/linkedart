@@ -6,11 +6,6 @@
     {
       "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1",
       "type": "LinguisticObject",
-      "part_of": [
-        {
-          "id": "http://vangoghmuseum.nl/data/document/7351"
-        }
-      ],
       "referred_to_by": [
         {
           "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages",
@@ -23,6 +18,11 @@
             }
           ], 
           "content": "125-135"
+        }
+      ],
+      "part_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/7351"
         }
       ]
     }

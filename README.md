@@ -861,7 +861,7 @@ http://vocab.getty.edu/aat/300207379 | stickers
 http://vocab.getty.edu/aat/300028749 | watermark
 
 ### Literature
-Artworks are referred to in literature such as scientific publications, books or news articles. In Linked art [publications are modeled as linguistic objects](https://linked.art/model/document). A publication is identified by a title in a similar fashion as an artwork. Instead of a production activity linguistic objects have a creation activity. The publication of a linguistic object is modeled as an activity as well.
+Artworks are referred to in literature such as scientific publications, books or news articles. In Linked art publications are modeled as [linguistic objects](https://linked.art/model/document). A publication is identified by a title in a similar fashion as an artwork. Instead of a production activity linguistic objects have a creation activity. The publication of a linguistic object is modeled as an activity as well.
 
 ```json
 {
@@ -946,7 +946,62 @@ Artworks are referred to in literature such as scientific publications, books or
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fliterature.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/literature.rdf.xml)
 
-Often we want to specificy that a specific part of a publication refers to an artwork, like a set of pages. In this case we add an additional linguistic object that is part of the publication. The pages are captured in a pagination statement. The reference might also contain the actual content.
+In other cases the reference to an article is more specific. For example, an article within a book, journal or newspaper. We model the article itself as a Linguistic Object and define that it as part of the book/journal/newspaper. 
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/document/11031",
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300048715", 
+          "type": "Type", 
+          "_label": "articles"
+        }
+      ],
+      "identified_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/11031/title",
+          "type": "Name", 
+          "content": "Een vroege Van Gogh voor Het Noordbrabants Museum : het verhaal van een ambitieuze aankoop"
+        }
+      ], 
+      "created_by": {
+        "type": "Creation", 
+        "carried_out_by": [
+          {
+            "id": "http://vangoghmuseum.nl/data/document/11031/author1",
+            "type": "Person", 
+            "_label": "Berger, Helewise"
+          }
+        ]
+      },
+      "part_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/7351"
+        }
+      ]
+    }
+  ]
+}
+```
+
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300417443 | books
+http://vocab.getty.edu/aat/300048715 | articles
+http://vocab.getty.edu/aat/300026061 | catalogues raisonnés	
+http://vocab.getty.edu/aat/300026096 | exhibition catalogs	
+http://vocab.getty.edu/aat/300026068 | auction catalogs	
+http://vocab.getty.edu/aat/300026074 | sales catalogs	
+http://vocab.getty.edu/aat/300264578 | Web pages
+
+In case the specific part can not be referred to as an article we might be able to still define a set of the pages. In this case we also add an additional linguistic object but use a pagination statement to refer to it. Note that the reference might also contain the actual content.
 
 ```json
 {
