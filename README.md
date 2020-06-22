@@ -947,7 +947,19 @@ Artworks are referred to in literature such as scientific publications, books or
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fliterature.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/literature.rdf.xml)
 
-In other cases the reference to an article is more specific. For example, an article within a book, journal or newspaper. We model the article itself as a Linguistic Object and define that it as part of the book/journal/newspaper. 
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300417443 | books
+http://vocab.getty.edu/aat/300048715 | articles
+http://vocab.getty.edu/aat/300026061 | catalogues raisonnés	
+http://vocab.getty.edu/aat/300026096 | exhibition catalogs	
+http://vocab.getty.edu/aat/300026068 | auction catalogs	
+http://vocab.getty.edu/aat/300026074 | sales catalogs	
+http://vocab.getty.edu/aat/300264578 | Web pages
+
+#### Literature parts
+
+In other cases the reference to an article is more specific. For example, an article within a book, journal or newspaper. We model the article itself as a Linguistic Object and define that it as part of the book/journal/newspaper/... 
 
 ```json
 {
@@ -994,17 +1006,8 @@ In other cases the reference to an article is more specific. For example, an art
 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fliterature_article.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/literature_article.rdf.xml)
 
-URI | Label
---- | -----
-http://vocab.getty.edu/aat/300417443 | books
-http://vocab.getty.edu/aat/300048715 | articles
-http://vocab.getty.edu/aat/300026061 | catalogues raisonnés	
-http://vocab.getty.edu/aat/300026096 | exhibition catalogs	
-http://vocab.getty.edu/aat/300026068 | auction catalogs	
-http://vocab.getty.edu/aat/300026074 | sales catalogs	
-http://vocab.getty.edu/aat/300264578 | Web pages
-
-In case the specific part can not be referred to as an article we might be able to still define a set of the pages. In this case we also add an additional linguistic object but use a pagination statement to refer to it. Note that the reference might also contain the actual content.
+#### Literature pages
+In case the specific part can not be referred to as an article we might be able to still define a set of the pages. In this case we also add an additional linguistic object but use a [pagination statement](https://linked.art/model/document/#pages) to refer to it. 
 
 ```json
 {
