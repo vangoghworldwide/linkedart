@@ -22,7 +22,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Material](#material) (e.g. oil paint)
 * [Subject type](#subject-type) (e.g. landscape, portrait)
 * [Digital representation](#digital-representation) of the artwork (image)
-* [Provenance information](#provenance) about the artwork's current and previous owners
+* [Provenance](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
 * [Literature](#literature) about an artwork
@@ -38,7 +38,7 @@ We identified three methods to provide the Getty URIs in your metadata:
 
 (Examples [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). 
 
-Linked Art prescribes to use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
+Linked Art prescribes the use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
 
 In case you use concepts from your own thesauri and do not provide links to the Getty vocabularies your data is still accepted. However, be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website uses the Getty concepts to provide an integrated view. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
 
@@ -88,7 +88,7 @@ http://vocab.getty.edu/aat/300033973 | Drawings
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](https://vangoghworldwide.org). Use the url of the artwork page, but make sure to include **/data**. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
+To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](https://vangoghworldwide.org). Use the url of the artwork page, but make sure to include **/data**. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
 
 ```json
 {

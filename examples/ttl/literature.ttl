@@ -1,0 +1,62 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    crm:P67i_is_referred_to_by <http://vangoghmuseum.nl/data/document/11030> ;
+    a crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/document/11030>
+    crm:P16i_was_used_for [
+        crm:P14_carried_out_by <http://vangoghmuseum.nl/data/document/11030/publisher> ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300054686> ;
+        crm:P4_has_time-span [
+            crm:P82a_begin_of_the_begin "2018-01-01T00:00:00"^^xsd:dateTime ;
+            crm:P82b_end_of_the_end "2018-12-31T23:59:59"^^xsd:dateTime ;
+            a crm:E52_Time-Span
+        ] ;
+        crm:P7_took_place_at <http://vangoghmuseum.nl/data/document/11030/publisher_place> ;
+        a crm:E7_Activity
+    ] ;
+    crm:P1_is_identified_by <http://vangoghmuseum.nl/data/document/11030/title>, [
+        crm:P190_has_symbolic_content "9780810917019" ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300417443> ;
+        a crm:E42_Identifier
+    ] ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300028051> ;
+    crm:P94i_was_created_by [
+        crm:P14_carried_out_by <http://vangoghmuseum.nl/data/document/11030/author1> ;
+        a crm:E65_Creation
+    ] ;
+    a crm:E33_Linguistic_Object .
+
+<http://vangoghmuseum.nl/data/document/11030/author1>
+    a crm:E21_Person ;
+    rdfs:label "Hulsker, Jan" .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher>
+    a crm:E74_Group ;
+    rdfs:label "Abrams" .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher_place>
+    a crm:E53_Place ;
+    rdfs:label "New York" .
+
+<http://vangoghmuseum.nl/data/document/11030/title>
+    crm:P190_has_symbolic_content "The complete Van Gogh : paintings, drawings, sketches" ;
+    a crm:E33_E41_Linguistic_Appellation .
+
+<http://vocab.getty.edu/aat/300028051>
+    a crm:E55_Type ;
+    rdfs:label "Book" .
+
+<http://vocab.getty.edu/aat/300054686>
+    a crm:E55_Type ;
+    rdfs:label "Publishing" .
+
+<http://vocab.getty.edu/aat/300417443>
+    a crm:E55_Type ;
+    rdfs:label "ISBN" .
+

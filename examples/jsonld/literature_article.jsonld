@@ -1,0 +1,40 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/document/11031",
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300048715", 
+          "type": "Type", 
+          "_label": "articles"
+        }
+      ],
+      "identified_by": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/11031/title",
+          "type": "Name", 
+          "content": "Een vroege Van Gogh voor Het Noordbrabants Museum : het verhaal van een ambitieuze aankoop"
+        }
+      ], 
+      "created_by": {
+        "type": "Creation", 
+        "carried_out_by": [
+          {
+            "id": "http://vangoghmuseum.nl/data/document/11031/author1",
+            "type": "Person", 
+            "_label": "Berger, Helewise"
+          }
+        ]
+      },
+      "part_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/document/7351"
+        }
+      ]
+    }
+  ]
+}
