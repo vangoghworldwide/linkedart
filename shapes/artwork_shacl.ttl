@@ -1,0 +1,194 @@
+@prefix vgw:    <https://vangoghworldwide.org/shapes/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+
+vgw:Artwork 
+  a sh:NodeShape ;
+  #sh:targetClass crm:E22_Human-Made_Object ;
+  sh:targetNode <https://data.kmm.nl/artwork/KMM_36350> ;
+  
+  # Class
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path rdf:type ;
+  #   sh:equals crm:E22_Human-Made_Object 
+  # ] ;
+
+  # Link to VGW URI
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path owl:sameAs ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing VGW-uri for artwork" ;
+    sh:group vgw:VgwUriGroup
+    ];
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path owl:sameAs ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "VGW-uri for artwork is not an IRI" ;
+    sh:group vgw:VgwUriGroup
+    ] ;
+
+  # Specific artwork type
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P2_has_type ;
+  #   sh:minCount 1 ;
+  #   sh:severity sh:Violation ;
+  #   sh:message "Missing specific artwork type" ;
+  #   sh:group vgw:TypeGroup ;
+  #   ];
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P2_has_type ;
+  #   sh:nodeKind sh:IRI ;
+  #   sh:pattern "^http://vocab.getty.edu/aat/" ;
+  #   sh:severity sh:Warning ;
+  #   sh:message "Specific artwork type is not an AAT concept" ;
+  #   sh:group vgw:TypeGroup ;
+  #   ];
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P2_has_type ;
+  #   sh:class crm:E55_Type ;
+  #   sh:severity sh:Warning ;
+  #   sh:message "Specific artwork type misses Type (crm:E55_Type)" ;
+  #   sh:group vgw:TypeGroup 
+  #   ];
+
+  # Identifiers
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P1_is_identified_by ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing an identifier" ;
+    sh:group vgw:IdentifierGroup
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P1_is_identified_by ;
+    sh:or(
+      [
+        sh:class crm:E42_Identifier ;
+        sh:node vgw:Identifier 
+      ]
+      [
+        sh:class crm:E33_E41_Linguistic_Appellation ;
+        sh:node vgw:Name 
+      ]
+    )
+  ] ;
+
+  # Current owner
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P52_has_current_owner ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing a current owner" ;
+    sh:group vgw:OwnerGroup
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P52_has_current_owner ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^http://vocab.getty.edu/ulan/" ;
+    sh:severity sh:Violation ;
+    sh:message "Current owner is not an ULAN concept" ;
+    sh:group vgw:OwnerGroup
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P52_has_current_owner ;
+    sh:class crm:E39_Actor ;
+    sh:severity sh:Warning ;
+    sh:message "Current owner misses type Actor, Person or Group" ;
+    sh:group vgw:TypeGroup 
+    ] .
+
+vgw:ArtworkIdentifier a sh:NodeShape ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P190_has_symbolic_content;
+    sh:minCount 1 ;
+    sh:nodeType "literal" ;
+    sh:severity sh:Violation ;
+    sh:message "Missing content literal"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path  crm:P2_has_type;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing a classification"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
+    sh:nodeKind sh:IRI ;
+    sh:or(
+      [
+        sh:pattern "^http://vocab.getty.edu/aat/" 
+      ]
+      [
+        sh:pattern "^https://vangoghworldwide.org/data/concept/"
+      ]
+    );
+    sh:severity sh:Warning ;
+    sh:message "Classification is not an AAT or VGW concept" 
+    ] .
+
+vgw:ArtworkName a sh:NodeShape ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P190_has_symbolic_content;
+    sh:minCount 1 ;
+    sh:nodeType "literal" ;
+    sh:severity sh:Violation ;
+    sh:message "Missing content literal"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path  crm:P2_has_type;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing a classification"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
+    sh:nodeKind sh:IRI ;
+    sh:pattern "^http://vocab.getty.edu/aat/" ;
+    sh:severity sh:Warning ;
+    sh:message "Classification is not an AAT concept" 
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P72_has_language;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Missing language definition"
+  ] .
+
+    
+
+sh:VgwUriGroup 
+  a sh:PropertyGroup ;
+  rdfs:label "Link to VGW URI" .
+
+sh:TypeGroup 
+  a sh:PropertyGroup ;
+  rdfs:label "Specific type" .
+
+sh:IdentifierGroup 
+  a sh:PropertyGroup ;
+  rdfs:label "Indentifiers" .
