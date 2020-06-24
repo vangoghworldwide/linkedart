@@ -88,15 +88,14 @@ http://vocab.getty.edu/aat/300033973 | Drawings
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](https://vangoghworldwide.org). Use the url of the artwork page, but make sure to include **/data**. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
 
-@TBD sameAs does not exist in Linked Art
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
-  "sameAs": [
+  "see_also": [
     {
       "id": "https://vangoghworldwide.org/data/artwork/F4"
     }
@@ -104,6 +103,8 @@ To identify how your artwork relates to Van Gogh Worldwide provide a link to a V
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fvgw_uri.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/vgw_uri.rdf.xml)
+
+When an artwork was not part of De La Faille because it was attributed to Vincent Van Gogh after 1970 please contact us. 
 
 ### Identifiers
 Apart from the VGW-URI the artwork can be identified with [identifiers](https://linked.art/model/base/#identifiers) used in the context of a current owner or in oeuvre catalogues.
