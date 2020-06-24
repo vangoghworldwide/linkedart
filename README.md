@@ -38,7 +38,7 @@ We identified three methods to provide the Getty URIs in your metadata:
 
 (Examples [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fskos.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/skos.rdf.xml)). 
 
-Linked Art prescribes to use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
+Linked Art prescribes the use of \_label (rdfs:label) to increase human readability of data. Please do so, but be aware that VGW does not use this \_label on [vangoghworldwide.org](https://vangoghworldwide.org). There is no need to add other information about the Getty concepts as Van Gogh Worldwide already contains all relevant information about the Getty concepts. 
 
 In case you use concepts from your own thesauri and do not provide links to the Getty vocabularies your data is still accepted. However, be aware that it will be ignored in various functions of [vangoghworldwide.org](https://vangoghworldwide.org). The website uses the Getty concepts to provide an integrated view. For example, the facet filters only show concepts from AAT, TGN and ULAN. 
 
