@@ -88,7 +88,7 @@ http://vocab.getty.edu/aat/300033973 | Drawings
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille).
+To identify how your artwork relates to Van Gogh Worldwide provide a link to a VGW URI. The VGW URI is based on the Fnumber. A list of the available VGW-URIs is found [here](https://github.com/vangoghworldwide/delafaille). If there is no VGWW URI available, this pattern can be left out.
 
 @TBD sameAs does not exist in Linked Art
 ```json
