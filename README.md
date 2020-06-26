@@ -1,5 +1,5 @@
 # Providing data to the vangoghworldwide.org platform
-In this repo we explain how to provide information to https://vangoghworldwide.org/. Van Gogh Worldwide (VGW) brings together (professional) information about all artworks created by Vincent van Gogh. This documentation is intented for institutions that own or maintain artworks created by Vincent van Gogh and want to contribute. 
+In this repo we explain how to provide information to http://vangoghworldwide.org/. Van Gogh Worldwide (VGW) brings together (professional) information about all artworks created by Vincent van Gogh. This documentation is intented for institutions that own or maintain artworks created by Vincent van Gogh and want to contribute. 
 
 The starting point of Van Gogh Worldwide is the set of artworks defined in *The Works of Vincent van Gogh: His Paintings and Drawings* by Jacob Baart de la Faille (1970). Basic metadata of all artworks in de la Faille is provided as [open data](https://github.com/vangoghworldwide/delafaille). You can help extend this basic metadata with information about the production, titles, materials, exhibitions, literature, research and more. 
 
@@ -88,7 +88,7 @@ http://vocab.getty.edu/aat/300033973 | Drawings
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](https://vangoghworldwide.org). Use the url of the artwork page, but make sure to include **/data**. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
+To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](http://vangoghworldwide.org). Use the url of the artwork page, but make sure to use **https://** and include **/data** in the path. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
 
 ```json
 {
