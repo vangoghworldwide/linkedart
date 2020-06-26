@@ -738,7 +738,12 @@ The provenance defines the different owners of the artwork and how they acquired
 @TBD Add AAT terms for acquisition types.
 URI | Label
 --- | -----
+http://vocab.getty.edu/aat/300417642 | purchase
 http://vocab.getty.edu/aat/300417645 | Loan
+http://vocab.getty.edu/aat/300417644 | transfer
+http://vocab.getty.edu/aat/300417637 | gift
+http://vocab.getty.edu/aat/300417646 | long-term loan
+http://vocab.getty.edu/aat/300417641 | bequest
 
 ### Exhibitions
 Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.
