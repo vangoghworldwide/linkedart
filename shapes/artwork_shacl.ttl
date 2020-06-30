@@ -11,10 +11,12 @@ vgw:Artwork
   a sh:NodeShape ;
   #sh:targetClass crm:E22_Human-Made_Object ;
   sh:targetNode <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+
+  # Class
   sh:class crm:E22_Human-Made_Object ;
   sh:message "Artwork does not have class crm:E22_Human-Made_Object" ;
   
-  ### Link to VGW URI
+  # Link to VGW URI
   sh:property [
     a sh:PropertyShape ;
     sh:path rdfs:seeAlso ;
@@ -34,7 +36,7 @@ vgw:Artwork
     sh:group vgw:VgwUriGroup
   ] ;
     
-  ### Specific artwork type
+  # Specific artwork type
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P2_has_type ;
@@ -56,36 +58,49 @@ vgw:Artwork
     sh:path crm:P2_has_type ;
     sh:node vgw:AATConcept ;
     sh:severity sh:Warning ;
-    sh:message "Specific artwork type needs to be a concept from AAT" ;
+    sh:message "Specific artwork type is advised to be a concept from AAT" ;
     sh:group vgw:TypeGroup 
   ] ;
 
-  ### Identifiers
+  # Identifiers
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P1_is_identified_by ;
+    sh:xor(
+      [ sh:class crm:E42_Identifier ]
+      [ sh:class crm:E33_E41_Linguistic_Appellation ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "Artwork identifier requires a type Identifier (E42_Identifier) or Name (crm:E33_E41_Linguistic_Appellation)" ;
+    sh:group vgw:IdentifierGroup 
+  ] ;
+
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P1_is_identified_by ;
     sh:qualifiedValueShape [
+      sh:class crm:E42_Identifier ;
       sh:property [
         a sh:PropertyShape ;
-        sh:path crm:P2_has_type;
+        sh:path crm:P2_has_type ;
         sh:hasValue <https://vangoghworldwide.org/data/concept/f_number>
       ]
     ];
 		sh:qualifiedMinCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Artwork should have an identifier for the F-number when it exists" ;
+    sh:message "Artwork is advised to have an identifier for the F-number" ;
     sh:group vgw:IdentifierGroup
   ] ;
 
-  ### Titles
+  # Titles
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P1_is_identified_by ;
     sh:qualifiedValueShape [
-			sh:class crm:E33_E41_Linguistic_Appellation ;
+      sh:class crm:E33_E41_Linguistic_Appellation ;
       sh:property [
         a sh:PropertyShape ;
-        sh:path crm:P72_has_language;
+        sh:path crm:P72_has_language ;
         sh:hasValue <http://vocab.getty.edu/aat/300388277>
       ]
     ];
@@ -101,15 +116,19 @@ vgw:Artwork
     sh:path crm:P52_has_current_owner ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a current owner" ;
+    sh:message "Artwork requires a current owner (crm:P52_has_current_owner)" ;
     sh:group vgw:OwnerGroup
   ] ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P52_has_current_owner ;
-    sh:class [crm:E39_Actor crm:E21_Person crm:E74_Group];
+    sh:or(
+      [ sh:class crm:E39_Actor ]
+      [ sh:class crm:E21_Person ]
+      [ sh:class crm:E74_Group ]
+    );
     sh:severity sh:Warning ;
-    sh:message "Current owner misses type Actor, Person or Group" ;
+    sh:message "Current owner requires a type Actor (crm:E39_Actor), Person (crm:E21_Person) or Group (crm:E74_Group)" ;
     sh:group vgw:OwnerGroup 
   ] ;
   sh:property [
@@ -117,13 +136,32 @@ vgw:Artwork
     sh:path crm:P52_has_current_owner ;
     sh:node vgw:ULANConcept ;
     sh:severity sh:Violation ;
-    sh:message "Current owner needs to be a concept from ULAN" ;
+    sh:message "Current owner is advised to be a concept from ULAN" ;
     sh:group vgw:OwnerGroup
+  ] ;
+  
+  # Production
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P108i_was_produced_by ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Artwork requires a production activity (crm:P108i_was_produced_by)" ;
+    sh:group vgw:ProductionGroup
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P108i_was_produced_by ;
+    sh:class crm:E12_Production ;
+    sh:severity sh:Warning ;
+    sh:message "Production activity requires the type Production (crm:E12_Production)" ;
+    sh:group vgw:OwnerGroup 
   ] .
 
 
 ### Identifiers
 vgw:ArtworkIdentifier a sh:NodeShape ;
+  sh:targetClass crm:E42_Identifier ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P190_has_symbolic_content;
@@ -131,29 +169,29 @@ vgw:ArtworkIdentifier a sh:NodeShape ;
     sh:nodeType "literal" ;
     sh:severity sh:Violation ;
     sh:message "Identifier misses the content literal"
-  ] ;
-  sh:property [
-    a sh:PropertyShape ;
-    sh:path  crm:P2_has_type;
-    sh:minCount 1 ;
-    sh:severity sh:Violation ;
-    sh:message "Indentifier misses a classification"
-  ] ;
-  sh:property [
-    a sh:PropertyShape ;
-    sh:path crm:P2_has_type ;
-    sh:nodeKind sh:IRI ;
-    sh:or(
-      [
-        sh:node vgw:AATConcept
-      ]
-      [
-        sh:node vgw:VGWConcept 
-      ]
-    ) ;
-    sh:severity sh:Warning ;
-    sh:message "Identifier classification is not an AAT or VGW concept" 
   ] .
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path  crm:P2_has_type;
+  #   sh:minCount 1 ;
+  #   sh:severity sh:Violation ;
+  #   sh:message "Indentifier misses a classification"
+  # ] ;
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P2_has_type ;
+  #   sh:nodeKind sh:IRI ;
+  #   sh:or(
+  #     [
+  #       sh:node vgw:AATConcept
+  #     ]
+  #     [
+  #       sh:node vgw:VGWConcept 
+  #     ]
+  #   ) ;
+  #   sh:severity sh:Warning ;
+  #   sh:message "Identifier classification is advised to have an AAT or VGW concept" 
+  # ] .
 
 ### Names
 vgw:ArtworkName a sh:NodeShape ;
@@ -165,27 +203,106 @@ vgw:ArtworkName a sh:NodeShape ;
     sh:nodeType "literal" ;
     sh:severity sh:Violation ;
     sh:message "Title misses the content literal"
-  ] ;
+  ] .
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path  crm:P2_has_type;
+  #   sh:minCount 1 ;
+  #   sh:severity sh:Violation ;
+  #   sh:message "Title misses a classification"
+  # ] ;
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P2_has_type ;
+  #   sh:node vgw:AATConcept ;
+  #   sh:severity sh:Warning ;
+  #   sh:message "Title classification is not an AAT concept" 
+  # ] ;
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P72_has_language;
+  #   sh:minCount 1 ;
+  #   sh:severity sh:Violation ;
+  #   sh:message "Title does not have a language definition"
+  # ] .
+
+### Production Activity
+vgw:Production
+  a sh:NodeShape ;
+  sh:targetClass crm:E12_Production ;
+
+  # carried out by
   sh:property [
     a sh:PropertyShape ;
-    sh:path  crm:P2_has_type;
+    sh:path crm:P14_carried_out_by ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Title misses a classification"
+    sh:message "Artwork requires a carried_out_by (crm:P14_carried_out_by)" ;
+    sh:group vgw:ProductionGroup
   ] ;
   sh:property [
     a sh:PropertyShape ;
-    sh:path crm:P2_has_type ;
-    sh:node vgw:AATConcept ;
+    sh:path crm:P14_carried_out_by ;
+    sh:or(
+      [ sh:class crm:E39_Actor ]
+      [ sh:class crm:E21_Person ]
+      [ sh:class crm:E74_Group ]
+    );
+    sh:severity sh:Violation ;
+    sh:message "Production carried_out_by requires a type Actor (crm:E39_Actor), Person (crm:E21_Person) or Group (crm:E74_Group)" ;
+    sh:group vgw:OwnerGroup 
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P14_carried_out_by ;
+    sh:node vgw:ULANConcept ;
     sh:severity sh:Warning ;
-    sh:message "Title classification is not an AAT concept" 
+    sh:message "Production creator is advised to be a concept from ULAN" ;
+    sh:group vgw:ProductionGroup
+  ] ;
+  # Timespan
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P4_has_time-span ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Artwork requires a timespan (crm:P4_has_time-span)" ;
+    sh:group vgw:ProductionGroup
   ] ;
   sh:property [
     a sh:PropertyShape ;
-    sh:path crm:P72_has_language;
+    sh:path crm:P4_has_time-span ;
+    sh:class crm:E52_Time-Span ;
+    sh:severity sh:Violation ;
+    sh:message "Production timespan requires type TimeSpan (crm:E52_Time-Span)" ;
+    sh:group vgw:ProductionGroup 
+  ] .
+
+vgw:TimeStamp
+  a sh:NodeShape ;
+  sh:targetClass crm:E52_Time-Span ;
+  # begin
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P82a_begin_of_the_begin ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Title does not have a language definition"
+    sh:message "Timespan requires a begin (crm:P82a_begin_of_the_begin)" 
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P82a_begin_of_the_begin ;
+    sh:severity sh:Violation ;
+    sh:datatype xsd:date ;
+    sh:message "Timespan begin requires a value of type xsd:date" 
+  ] ;
+  #end
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P82b_end_of_the_end ;
+    sh:severity sh:Violation ;
+    sh:datatype xsd:date ;
+    sh:message "Timespan end requires a value of type xsd:date" 
   ] .
 
 ### Concepts from controlled vocabularies
