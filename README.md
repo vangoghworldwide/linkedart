@@ -627,7 +627,7 @@ By modelling the parts of an artwork we define more specifically where informati
                                                   a crm:E22_Human-Made_Object. -->
                                                   
 ### Digital representation
-For an artwork provide at least one image of the front side of the artwork. To model photographs of other sides of the artwork see (parts)[#parts]. Representations made with special techniques, such as raking light or x-ray, are considered as [technical research](#technical-research) and should be modelled as such.
+For an artwork provide at least one image of the front side of the artwork. To model photographs of other sides of the artwork see [parts](#parts). Representations made with special techniques, such as raking light or x-ray, are considered as [technical research](#technical-research) and should be modelled as such.
 
 Van Gogh Worldwide follows the [IIIF standard](https://iiif.io/) for images. This enables various functions such as zooming and comparison. To support this please provide the highest resolution you can share. We identified three scenarios to share your images and model the metadata about them.
 
