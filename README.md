@@ -22,6 +22,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Material](#material) (e.g. oil paint)
 * [Subject type](#subject-type) (e.g. landscape, portrait)
 * [Digital representation](#digital-representation) of the artwork (image)
+* [Parts](#parts) (e.g. backside)
 * [Provenance](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
@@ -585,11 +586,9 @@ http://vocab.getty.edu/aat/300189568 | nudes
 http://vocab.getty.edu/aat/300117546 | seascapes
 http://vocab.getty.edu/aat/300139140 | genre
 
-<!--### Parts
-Some objects are composed of multiple smaller parts.
--->
-
 ### Digital representation
+For an artwork provide at least one image of the front side of the artwork. To model photographs of other sides of the artwork see (parts)[#parts]. Representations made with special techniques, such as raking light or x-ray, are considered as [technical research](#technical-research) and should be modelled as such.
+
 Van Gogh Worldwide follows the [IIIF standard](https://iiif.io/) for images. This enables various functions such as zooming and comparison. To support this please provide the highest resolution you can share. We identified three scenarios to share your images and model the metadata about them.
 
 #### Your own IIIF server
@@ -678,6 +677,46 @@ In your data refer to the IIIF server of Van Gogh Worldwide and the identifier o
 }
 ```
 
+### Parts
+Modelling the parts of objects provides a means to more precisly define where metadata is about. We have already seen this pattern to model the [support material](#support_material). The backside of an artwork is another important part. Use it to model that a digital representation depicts this part. Or to define the precise location of a [label](#label).
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300190692",
+          "type": "HumanMadeObject",
+          "_label": "backs"
+        }
+      ],
+      "representation": [
+        {...}
+      ]
+    }
+  ]
+}
+```
+
+#### Sibblings
+@TDB
+
+<!-- <http://vangoghmuseum.nl/data/artwork/s0004V1962> crm:P1_is_identified_by [a crm:E42_Identifier ; 
+                                                                           crm:P2_has_type <http://vocab.getty.edu/aat/300435704> ; 
+                                                                           crm:P190_has_symbolic_content "32882"],
+                                                                          [a crm:E42_Identifier ; 
+                                                                           crm:P2_has_type <http://vocab.getty.edu/aat/300312355> ; 
+                                                                           crm:P190_has_symbolic_content "s0004V1962"];
+                                                  crm:P2_has_type <http://vangoghmuseum.nl/data/term/4200>;
+                                                  crm:P46_is_composed_of <http://vangoghmuseum.nl/data/artwork/s0004V1962r>,
+                                                                         <http://vangoghmuseum.nl/data/artwork/s0004V1962v>;
+                                                  a crm:E22_Human-Made_Object. -->
+
 ### Provenance
 The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as a phase. A phase is initiated by an acquisition (auction, purchase, gift, loan)
 ```json
@@ -735,7 +774,6 @@ The provenance defines the different owners of the artwork and how they acquired
 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance.rdf.xml)
 
-@TBD Add AAT terms for acquisition types.
 URI | Label
 --- | -----
 http://vocab.getty.edu/aat/300417642 | purchase
@@ -1054,7 +1092,7 @@ In case the specific part can not be referred to as an article we might be able 
 Artworks are analysed in research activities. The output of this research occurs in the form of technical recordings, such as x-rays, or in the form of research reports.
 
 #### Technical recordings
-Technical recordings are itself human made objects and are thus modelled in a similar way as the artworks. A classification is used to indicate the specific type of object. The production activity describes the creator, the creation dates and the technique that is used to create the object. The production activity also defines that the artwork is used as the source (*used_specified_object*) to produce the technical recording.
+Technical recordings are itself human made objects and are thus modelled in a similar way as the artworks. A classification is used to indicate the specific type of object. The production activity describes the creator, the creation dates and the technique that is used to create the object. The production activity also defines that the artwork is used as the source (*used_specified_object*) to produce the technical recording. The digital representation follows the same standards as described in [digital representation](#digital-representation), thus using IIIF or a URL.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
