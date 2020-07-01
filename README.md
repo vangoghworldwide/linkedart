@@ -587,7 +587,7 @@ http://vocab.getty.edu/aat/300117546 | seascapes
 http://vocab.getty.edu/aat/300139140 | genre
 
 ### Parts
-By modelling the parts of an artwork we define more specifically where information belongs to. We have already seen this pattern to model the [support material](#support_material). The backside of an artwork is another important part. Use it to model that a [digital representation](#digital_representation) depicts this part. Or to define the precise location of a [label](#label).
+By modelling the parts of an artwork we define more specifically where information belongs to. We have already seen this pattern to model the [support material](#support-material). The backside of an artwork is another important part. Use it to model that a [digital representation](#digital-representation) depicts this part. Or to define the precise location of a [label](#label).
 
 ```json
 {
