@@ -517,7 +517,7 @@ Model the material of the support, such as the canvas in a separate part.
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300014844",
-          "type": "HumanMadeObject",
+          "type": "Type",
           "_label": "Canvas Support"
         }
       ],
