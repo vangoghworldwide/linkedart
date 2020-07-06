@@ -2,13 +2,13 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/">
   <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
     <crm:P65_shows_visual_item>
-      <crm:E37_Visual_Item>
+      <crm:E36_Visual_Item>
         <crm:P2_has_type>
           <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300117546">
             <rdfs:label>Seascape</rdfs:label>
           </crm:E55_Type>
         </crm:P2_has_type>
-      </crm:E37_Visual_Item>
+      </crm:E36_Visual_Item>
     </crm:P65_shows_visual_item>
   </crm:E22_Human-Made_Object>
 </rdf:RDF>

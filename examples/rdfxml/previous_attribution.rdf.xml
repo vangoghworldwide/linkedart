@@ -12,7 +12,7 @@
 						</crm:P4_has_time-span>
 						<crm:P14_carried_out_by>
 							<crm:E39_Actor rdf:about="https://example.org/uri_curator_researcher">
-								<rdfs:label>{Name of the curator/researcher}</rdfs:label>
+								<rdfs:label>Name of the curator/researcher</rdfs:label>
 							</crm:E39_Actor>
 						</crm:P14_carried_out_by>
 						<crm:P141_assigned>

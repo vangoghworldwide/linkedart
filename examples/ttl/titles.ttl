@@ -1,32 +1,54 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    crm:P1_is_identified_by [
-        crm:P190_has_symbolic_content "Zeezicht in Scheveningen"@nl ;
-        crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
-        crm:P72_has_language <http://vocab.getty.edu/aat/300388256> ;
-        a crm:E33_E41_Linguistic_Appellation
-    ], [
-        crm:P190_has_symbolic_content "View of the Sea at Scheveningen"@en ;
-        crm:P2_has_type <http://vocab.getty.edu/aat/300404670> ;
-        crm:P72_has_language <http://vocab.getty.edu/aat/300388277> ;
-        a crm:E33_E41_Linguistic_Appellation
-    ] ;
-    a crm:E22_Human-Made_Object .
+        rdf:type  crm:E22_Human-Made_Object .
 
-<http://vocab.getty.edu/aat/300388256>
-    a crm:E56_Language ;
-    rdfs:label "Dutch (language)" .
+_:b0    rdf:type  crm:E33_E41_Linguistic_Appellation .
 
-<http://vocab.getty.edu/aat/300388277>
-    a crm:E56_Language ;
-    rdfs:label "English (language)" .
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b0 .
 
 <http://vocab.getty.edu/aat/300404670>
-    a crm:E55_Type ;
-    rdfs:label "primary name" .
+        rdf:type  crm:E55_Type .
 
+_:b0    crm:P2_has_type  <http://vocab.getty.edu/aat/300404670> .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdfs:label  "primary name" .
+
+<http://vocab.getty.edu/aat/300388256>
+        rdf:type  crm:E56_Language .
+
+_:b0    crm:P72_has_language  <http://vocab.getty.edu/aat/300388256> .
+
+<http://vocab.getty.edu/aat/300388256>
+        rdfs:label  "Dutch (language)" .
+
+_:b0    crm:P190_has_symbolic_content  "Zeezicht in Scheveningen"@nl .
+
+_:b1    rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b1 .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdf:type  crm:E55_Type .
+
+_:b1    crm:P2_has_type  <http://vocab.getty.edu/aat/300404670> .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdfs:label  "primary name" .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdf:type  crm:E56_Language .
+
+_:b1    crm:P72_has_language  <http://vocab.getty.edu/aat/300388277> .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdfs:label  "English (language)" .
+
+_:b1    crm:P190_has_symbolic_content  "View of the Sea at Scheveningen"@en .

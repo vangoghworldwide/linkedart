@@ -1,29 +1,40 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    crm:P43_has_dimension [
-        crm:P2_has_type <http://vocab.getty.edu/aat/300055647> ;
-        crm:P90_has_value 51.9 ;
-        crm:P91_has_unit <http://vocab.getty.edu/aat/300379098> ;
-        a crm:E54_Dimension
-    ], [
-        crm:P2_has_type <http://vocab.getty.edu/aat/300055644> ;
-        crm:P90_has_value 36.4 ;
-        crm:P91_has_unit <http://vocab.getty.edu/aat/300379098> ;
-        a crm:E54_Dimension
-    ] ;
-    a crm:E22_Human-Made_Object .
+        rdf:type  crm:E22_Human-Made_Object .
 
-<http://vocab.getty.edu/aat/300055644>
-    a crm:E55_Type .
+_:b0    rdf:type  crm:E54_Dimension .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P43_has_dimension  _:b0 .
 
 <http://vocab.getty.edu/aat/300055647>
-    a crm:E55_Type .
+        rdf:type  crm:E55_Type .
+
+_:b0    crm:P2_has_type    <http://vocab.getty.edu/aat/300055647> ;
+        crm:P90_has_value  51.9 .
 
 <http://vocab.getty.edu/aat/300379098>
-    a crm:E58_Measurement_Unit .
+        rdf:type  crm:E58_Measurement_Unit .
 
+_:b0    crm:P91_has_unit  <http://vocab.getty.edu/aat/300379098> .
+
+_:b1    rdf:type  crm:E54_Dimension .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P43_has_dimension  _:b1 .
+
+<http://vocab.getty.edu/aat/300055644>
+        rdf:type  crm:E55_Type .
+
+_:b1    crm:P2_has_type    <http://vocab.getty.edu/aat/300055644> ;
+        crm:P90_has_value  36.4 .
+
+<http://vocab.getty.edu/aat/300379098>
+        rdf:type  crm:E58_Measurement_Unit .
+
+_:b1    crm:P91_has_unit  <http://vocab.getty.edu/aat/300379098> .

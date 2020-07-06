@@ -1,40 +1,57 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    a crm:E22_Human-Made_Object ;
-    la:has_phase [
-        crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500275558> ;
-        crm:P4_has_time-span [
-            crm:P82a_begin_of_the_begin "1949-01-01T00:00:00"^^xsd:dateTime ;
-            crm:P82b_end_of_the_end "1990-12-31T23:59:59"^^xsd:dateTime ;
-            a crm:E52_Time-Span
-        ] ;
-        crm:P7_took_place_at <http://vocab.getty.edu/tgn/7006952> ;
-        a la:Phase ;
-        la:initiated_by [
-            crm:P2_has_type <http://vocab.getty.edu/aat/300417645> ;
-            a crm:E8_Acquisition
-        ]
-    ] .
+        rdf:type  crm:E22_Human-Made_Object .
 
-<http://vocab.getty.edu/aat/300312281>
-    a crm:E55_Type ;
-    rdfs:label "Museum" .
+_:b0    rdf:type  la:Phase .
 
-<http://vocab.getty.edu/aat/300417645>
-    a crm:E55_Type ;
-    rdfs:label "loan" .
-
-<http://vocab.getty.edu/tgn/7006952>
-    a crm:E53_Place ;
-    rdfs:label "Amsterdam" .
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        la:has_phase  _:b0 .
 
 <http://vocab.getty.edu/ulan/500275558>
-    crm:P2_has_type <http://vocab.getty.edu/aat/300312281> ;
-    a crm:E39_Actor ;
-    rdfs:label "Van Gogh Museum" .
+        rdf:type  crm:E39_Actor .
 
+_:b0    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500275558> .
+
+<http://vocab.getty.edu/ulan/500275558>
+        rdfs:label  "Van Gogh Museum" .
+
+<http://vocab.getty.edu/aat/300312281>
+        rdf:type  crm:E55_Type .
+
+<http://vocab.getty.edu/ulan/500275558>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300312281> .
+
+<http://vocab.getty.edu/aat/300312281>
+        rdfs:label  "Museum" .
+
+<http://vocab.getty.edu/tgn/7006952>
+        rdf:type  crm:E53_Place .
+
+_:b0    crm:P7_took_place_at  <http://vocab.getty.edu/tgn/7006952> .
+
+<http://vocab.getty.edu/tgn/7006952>
+        rdfs:label  "Amsterdam" .
+
+_:b1    rdf:type  crm:E52_Time-Span .
+
+_:b0    crm:P4_has_time-span  _:b1 .
+
+_:b1    crm:P82a_begin_of_the_begin  "1949-01-01T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "1990-12-31T23:59:59"^^xsd:dateTime .
+
+_:b2    rdf:type  crm:E8_Acquisition .
+
+_:b0    la:initiated_by  _:b2 .
+
+<http://vocab.getty.edu/aat/300417645>
+        rdf:type  crm:E55_Type .
+
+_:b2    crm:P2_has_type  <http://vocab.getty.edu/aat/300417645> .
+
+<http://vocab.getty.edu/aat/300417645>
+        rdfs:label  "loan" .

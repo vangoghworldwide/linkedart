@@ -1,0 +1,933 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300177435>
+        rdf:type  crm:E55_Type .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300177435> .
+
+<http://vocab.getty.edu/aat/300177435>
+        rdfs:label  "paintings" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/ulan/500275558>
+        rdf:type  crm:E39_Actor .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P52_has_current_owner  <http://vocab.getty.edu/ulan/500275558> .
+
+<http://vocab.getty.edu/ulan/500275558>
+        rdfs:label  "Van Gogh Museum" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/BASE_URL_TO_IMAGE_ON_IIIF_SERVER>
+        rdf:type  crm:E36_Visual_Item .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P138i_has_representation  <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/BASE_URL_TO_IMAGE_ON_IIIF_SERVER> .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/BASE_URL_TO_IMAGE_ON_IIIF_SERVER>
+        dcterms:conformsTo  <http://iiif.io/api/image> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        rdf:type  crm:E36_Visual_Item .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P138i_has_representation  <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> .
+
+<http://vocab.getty.edu/aat/300215302>
+        rdf:type  crm:E55_Type .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300215302> .
+
+<http://vocab.getty.edu/aat/300215302>
+        rdfs:label  "digital images" .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        dc:format  "image/jpeg" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b0    rdf:type  crm:E54_Dimension .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P43_has_dimension  _:b0 .
+
+<http://vocab.getty.edu/aat/300055647>
+        rdf:type  crm:E55_Type .
+
+_:b0    crm:P2_has_type    <http://vocab.getty.edu/aat/300055647> ;
+        crm:P90_has_value  51.9 .
+
+<http://vocab.getty.edu/aat/300379098>
+        rdf:type  crm:E58_Measurement_Unit .
+
+_:b0    crm:P91_has_unit  <http://vocab.getty.edu/aat/300379098> .
+
+_:b1    rdf:type  crm:E54_Dimension .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P43_has_dimension  _:b1 .
+
+<http://vocab.getty.edu/aat/300055644>
+        rdf:type  crm:E55_Type .
+
+_:b1    crm:P2_has_type    <http://vocab.getty.edu/aat/300055644> ;
+        crm:P90_has_value  36.4 .
+
+<http://vocab.getty.edu/aat/300379098>
+        rdf:type  crm:E58_Measurement_Unit .
+
+_:b1    crm:P91_has_unit  <http://vocab.getty.edu/aat/300379098> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/exhibition/858>
+        rdf:type  crm:E7_Activity .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P16i_was_used_for  <http://vangoghmuseum.nl/data/exhibition/858> .
+
+<http://vocab.getty.edu/aat/300054766>
+        rdf:type  crm:E55_Type .
+
+<http://vangoghmuseum.nl/data/exhibition/858>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300054766> .
+
+<http://vocab.getty.edu/aat/300054766>
+        rdfs:label  "exhibitions" .
+
+<http://vangoghmuseum.nl/data/exhibition/858/titel>
+        rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/exhibition/858>
+        crm:P1_is_identified_by  <http://vangoghmuseum.nl/data/exhibition/858/titel> .
+
+<http://vangoghmuseum.nl/data/exhibition/858/titel>
+        crm:P190_has_symbolic_content  "Eeuwfeest Vincent van Gogh" .
+
+<http://vangoghmuseum.nl/data/exhibition/858/timespan>
+        rdf:type  crm:E52_Time-Span .
+
+<http://vangoghmuseum.nl/data/exhibition/858>
+        crm:P4_has_time-span  <http://vangoghmuseum.nl/data/exhibition/858/timespan> .
+
+<http://vangoghmuseum.nl/data/exhibition/858/timespan>
+        crm:P82a_begin_of_the_begin  "1953-07-23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end      "1953-09-20T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://vangoghmuseum.nl/data/person/8045>
+        rdf:type  crm:E39_Actor .
+
+<http://vangoghmuseum.nl/data/exhibition/858>
+        crm:P14_carried_out_by  <http://vangoghmuseum.nl/data/person/8045> .
+
+<http://vangoghmuseum.nl/data/person/8045>
+        rdfs:label  "Stedelijk Museum Amsterdam" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b2    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b2 .
+
+<http://vocab.getty.edu/aat/300312355>
+        rdf:type  crm:E55_Type .
+
+_:b2    crm:P2_has_type  <http://vocab.getty.edu/aat/300312355> .
+
+<http://vocab.getty.edu/aat/300312355>
+        rdfs:label  "accession numbers" .
+
+_:b2    crm:P190_has_symbolic_content  "s0416M1990" .
+
+_:b3    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b3 .
+
+<https://vangoghworldwide.org/data/concept/f_number>
+        rdf:type  crm:E55_Type .
+
+_:b3    crm:P2_has_type  <https://vangoghworldwide.org/data/concept/f_number> .
+
+<https://vangoghworldwide.org/data/concept/f_number>
+        rdfs:label  "De La Faille number" .
+
+_:b3    crm:P190_has_symbolic_content  "F21" .
+
+_:b4    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b4 .
+
+<https://vangoghworldwide.org/data/concept/jh_number>
+        rdf:type  crm:E55_Type .
+
+_:b4    crm:P2_has_type  <https://vangoghworldwide.org/data/concept/jh_number> .
+
+<https://vangoghworldwide.org/data/concept/jh_number>
+        rdfs:label  "Jan Hulsker number" .
+
+_:b4    crm:P190_has_symbolic_content  "JH415" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0100V1962>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b5    rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0100V1962>
+        crm:P46_is_composed_of  _:b5 .
+
+_:b6    rdf:type  crm:E33_Linguistic_Object .
+
+_:b5    crm:P128_carries  _:b6 .
+
+<http://vocab.getty.edu/aat/300028705>
+        rdf:type  crm:E55_Type .
+
+_:b6    crm:P2_has_type  <http://vocab.getty.edu/aat/300028705> .
+
+<http://vocab.getty.edu/aat/300028705>
+        rdfs:label  "signatures" .
+
+_:b6    crm:P190_has_symbolic_content  "Vincent" .
+
+<http://vocab.getty.edu/aat/300015012>
+        rdf:type  crm:E57_Material .
+
+_:b5    crm:P45_consists_of  <http://vocab.getty.edu/aat/300015012> .
+
+<http://vocab.getty.edu/aat/300015012>
+        rdfs:label  "ink" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://data.rkd.nl/images/52947>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b7    rdf:type  crm:E22_Human-Made_Object .
+
+<https://data.rkd.nl/images/52947>
+        crm:P9_consists_of  _:b7 .
+
+<http://vocab.getty.edu/aat/300207379>
+        rdf:type  crm:E55_Type .
+
+_:b7    crm:P2_has_type  <http://vocab.getty.edu/aat/300207379> .
+
+<http://vocab.getty.edu/aat/300207379>
+        rdfs:label  "stickers" .
+
+_:b8    rdf:type  crm:E33_Linguistic_Object .
+
+_:b7    crm:P128_carries  _:b8 .
+
+_:b8    crm:P190_has_symbolic_content  "Kunsthandel Oldenzeel Rotterdam" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/document/11031>
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/document/11031> .
+
+<http://vocab.getty.edu/aat/300048715>
+        rdf:type  crm:E55_Type .
+
+<http://vangoghmuseum.nl/data/document/11031>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300048715> .
+
+<http://vocab.getty.edu/aat/300048715>
+        rdfs:label  "articles" .
+
+<http://vangoghmuseum.nl/data/document/11031/title>
+        rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/document/11031>
+        crm:P1_is_identified_by  <http://vangoghmuseum.nl/data/document/11031/title> .
+
+<http://vangoghmuseum.nl/data/document/11031/title>
+        crm:P190_has_symbolic_content  "Een vroege Van Gogh voor Het Noordbrabants Museum : het verhaal van een ambitieuze aankoop" .
+
+_:b9    rdf:type  crm:E65_Creation .
+
+<http://vangoghmuseum.nl/data/document/11031>
+        crm:P94i_was_created_by  _:b9 .
+
+<http://vangoghmuseum.nl/data/document/11031/author1>
+        rdf:type  crm:E21_Person .
+
+_:b9    crm:P14_carried_out_by  <http://vangoghmuseum.nl/data/document/11031/author1> .
+
+<http://vangoghmuseum.nl/data/document/11031/author1>
+        rdfs:label  "Berger, Helewise" .
+
+<http://vangoghmuseum.nl/data/document/11031>
+        crm:P106i_forms_part_of  <http://vangoghmuseum.nl/data/document/7351> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/document/11030> .
+
+<http://vocab.getty.edu/aat/300028051>
+        rdf:type  crm:E55_Type .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300028051> .
+
+<http://vocab.getty.edu/aat/300028051>
+        rdfs:label  "Book" .
+
+<http://vangoghmuseum.nl/data/document/11030/title>
+        rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        crm:P1_is_identified_by  <http://vangoghmuseum.nl/data/document/11030/title> .
+
+<http://vangoghmuseum.nl/data/document/11030/title>
+        crm:P190_has_symbolic_content  "The complete Van Gogh : paintings, drawings, sketches" .
+
+_:b10   rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        crm:P1_is_identified_by  _:b10 .
+
+<http://vocab.getty.edu/aat/300417443>
+        rdf:type  crm:E55_Type .
+
+_:b10   crm:P2_has_type  <http://vocab.getty.edu/aat/300417443> .
+
+<http://vocab.getty.edu/aat/300417443>
+        rdfs:label  "ISBN" .
+
+_:b10   crm:P190_has_symbolic_content  "9780810917019" .
+
+_:b11   rdf:type  crm:E65_Creation .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        crm:P94i_was_created_by  _:b11 .
+
+<http://vangoghmuseum.nl/data/document/11030/author1>
+        rdf:type  crm:E21_Person .
+
+_:b11   crm:P14_carried_out_by  <http://vangoghmuseum.nl/data/document/11030/author1> .
+
+<http://vangoghmuseum.nl/data/document/11030/author1>
+        rdfs:label  "Hulsker, Jan" .
+
+_:b12   rdf:type  crm:E7_Activity .
+
+<http://vangoghmuseum.nl/data/document/11030>
+        crm:P16i_was_used_for  _:b12 .
+
+<http://vocab.getty.edu/aat/300054686>
+        rdf:type  crm:E55_Type .
+
+_:b12   crm:P2_has_type  <http://vocab.getty.edu/aat/300054686> .
+
+<http://vocab.getty.edu/aat/300054686>
+        rdfs:label  "Publishing" .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher>
+        rdf:type  crm:E74_Group .
+
+_:b12   crm:P14_carried_out_by  <http://vangoghmuseum.nl/data/document/11030/publisher> .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher>
+        rdfs:label  "Abrams" .
+
+_:b13   rdf:type  crm:E52_Time-Span .
+
+_:b12   crm:P4_has_time-span  _:b13 .
+
+_:b13   crm:P82a_begin_of_the_begin  "2018-01-01T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "2018-12-31T23:59:59"^^xsd:dateTime .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher_place>
+        rdf:type  crm:E53_Place .
+
+_:b12   crm:P7_took_place_at  <http://vangoghmuseum.nl/data/document/11030/publisher_place> .
+
+<http://vangoghmuseum.nl/data/document/11030/publisher_place>
+        rdfs:label  "New York" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
+        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages> .
+
+<http://vocab.getty.edu/aat/300435440>
+        rdf:type  crm:E55_Type .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300435440> .
+
+<http://vocab.getty.edu/aat/300435440>
+        rdfs:label  "Pagination Statement" .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
+        crm:P190_has_symbolic_content  "125-135" .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
+        crm:P106i_forms_part_of  <http://vangoghmuseum.nl/data/document/7351> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300015050>
+        rdf:type  crm:E57_Material .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P45_consists_of  <http://vocab.getty.edu/aat/300015050> .
+
+<http://vocab.getty.edu/aat/300015050>
+        rdfs:label  "oil paint" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b14   rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P46_is_composed_of  _:b14 .
+
+<http://vocab.getty.edu/aat/300014844>
+        rdf:type  crm:E55_Type .
+
+_:b14   crm:P2_has_type  <http://vocab.getty.edu/aat/300014844> .
+
+<http://vocab.getty.edu/aat/300014844>
+        rdfs:label  "supports" .
+
+<http://vocab.getty.edu/aat/300014078>
+        rdf:type  crm:E57_Material .
+
+_:b14   crm:P45_consists_of  <http://vocab.getty.edu/aat/300014078> .
+
+<http://vocab.getty.edu/aat/300014078>
+        rdfs:label  "canvas" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962>
+        rdf:type  crm:E12_Production .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P108i_was_produced_by  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        rdf:type  crm:E13_Attribute_Assignment .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962>
+        crm:P141i_was_assigned_by  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1> .
+
+_:b15   rdf:type  crm:E52_Time-Span .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P4_has_time-span  _:b15 .
+
+_:b15   crm:P82b_end_of_the_end  "2016-01-01T00:00:00"^^xsd:dateTime .
+
+<https://example.org/uri_curator_researcher>
+        rdf:type  crm:E39_Actor .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P14_carried_out_by  <https://example.org/uri_curator_researcher> .
+
+<https://example.org/uri_curator_researcher>
+        rdfs:label  "Name of the curator/researcher" .
+
+_:b16   rdf:type  crm:E12_Production .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P141_assigned  _:b16 .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdf:type  crm:E39_Actor .
+
+_:b16   crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500115588> .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdfs:label  "Gogh, Vincent van" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b17   rdf:type  crm:E12_Production .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P108i_was_produced_by  _:b17 .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdf:type  crm:E39_Actor .
+
+_:b17   crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500115588> .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdfs:label  "Gogh, Vincent van" .
+
+_:b18   rdf:type  crm:E52_Time-Span .
+
+_:b17   crm:P4_has_time-span  _:b18 .
+
+_:b18   crm:P82a_begin_of_the_begin  "1882-08-21T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "1882-08-21T23:59:59"^^xsd:dateTime .
+
+_:b19   rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+_:b18   crm:P1_is_identified_by  _:b19 .
+
+_:b19   crm:P190_has_symbolic_content  "Probably on 21 August 1882" .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdf:type  crm:E56_Language .
+
+_:b19   crm:P72_has_language  <http://vocab.getty.edu/aat/300388277> .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdfs:label  "English (language)" .
+
+<http://vocab.getty.edu/tgn/7006810>
+        rdf:type  crm:E53_Place .
+
+_:b17   crm:P7_took_place_at  <http://vocab.getty.edu/tgn/7006810> .
+
+<http://vocab.getty.edu/tgn/7006810>
+        rdfs:label  "'s-Gravenhage" .
+
+<http://vocab.getty.edu/aat/300054216>
+        rdf:type  crm:E55_Type .
+
+_:b17   crm:P32_used_general_technique  <http://vocab.getty.edu/aat/300054216> .
+
+<http://vocab.getty.edu/aat/300054216>
+        rdfs:label  "painting" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b20   rdf:type  la:Phase .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        la:has_phase  _:b20 .
+
+<http://vocab.getty.edu/ulan/500275558>
+        rdf:type  crm:E39_Actor .
+
+_:b20   crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500275558> .
+
+<http://vocab.getty.edu/ulan/500275558>
+        rdfs:label  "Van Gogh Museum" .
+
+<http://vocab.getty.edu/aat/300312281>
+        rdf:type  crm:E55_Type .
+
+<http://vocab.getty.edu/ulan/500275558>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300312281> .
+
+<http://vocab.getty.edu/aat/300312281>
+        rdfs:label  "Museum" .
+
+<http://vocab.getty.edu/tgn/7006952>
+        rdf:type  crm:E53_Place .
+
+_:b20   crm:P7_took_place_at  <http://vocab.getty.edu/tgn/7006952> .
+
+<http://vocab.getty.edu/tgn/7006952>
+        rdfs:label  "Amsterdam" .
+
+_:b21   rdf:type  crm:E52_Time-Span .
+
+_:b20   crm:P4_has_time-span  _:b21 .
+
+_:b21   crm:P82a_begin_of_the_begin  "1949-01-01T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "1990-12-31T23:59:59"^^xsd:dateTime .
+
+_:b22   rdf:type  crm:E8_Acquisition .
+
+_:b20   la:initiated_by  _:b22 .
+
+<http://vocab.getty.edu/aat/300417645>
+        rdf:type  crm:E55_Type .
+
+_:b22   crm:P2_has_type  <http://vocab.getty.edu/aat/300417645> .
+
+<http://vocab.getty.edu/aat/300417645>
+        rdfs:label  "loan" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300015050>
+        rdf:type  crm:E57_Material .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P45_consists_of  <http://vocab.getty.edu/aat/300015050> .
+
+<http://vocab.getty.edu/aat/300015050>
+        rdfs:label  "oil paint" .
+
+<http://vangoghmuseum.nl/data/term/1174>
+        rdf:type  crm:E57_Material .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P45_consists_of  <http://vangoghmuseum.nl/data/term/1174> .
+
+<http://vangoghmuseum.nl/data/term/1174>
+        rdf:type         skos:Concept ;
+        rdfs:label       "oil paint" ;
+        skos:prefLabel   "oil paint"@en ;
+        skos:altLabel    "olieverf"@nl ;
+        skos:exactMatch  <http://vocab.getty.edu/aat/300015050> .
+
+<http://vangoghmuseum.nl/data/term/1174x>
+        rdf:type  crm:E57_Material .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P45_consists_of  <http://vangoghmuseum.nl/data/term/1174x> .
+
+<http://vangoghmuseum.nl/data/term/1174x>
+        rdf:type        skos:Concept ;
+        rdfs:label      "oil paint" ;
+        skos:prefLabel  "oil paint"@en ;
+        skos:altLabel   "olieverf"@nl ;
+        skos:broader    <http://vocab.getty.edu/aat/300015050> .
+
+<http://vangoghmuseum.nl/data/term/123xyz>
+        rdf:type  crm:E57_Material .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P45_consists_of  <http://vangoghmuseum.nl/data/term/123xyz> .
+
+<http://vangoghmuseum.nl/data/term/123xyz>
+        rdfs:label  "very weird material that is not in AAT" .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b23   rdf:type  crm:E36_Visual_Item .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P65_shows_visual_item  _:b23 .
+
+<http://vocab.getty.edu/aat/300117546>
+        rdf:type  crm:E55_Type .
+
+_:b23   crm:P2_has_type  <http://vocab.getty.edu/aat/300117546> .
+
+<http://vocab.getty.edu/aat/300117546>
+        rdfs:label  "Seascape" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://data.rkd.nl/technical/5018290>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300419325>
+        rdf:type  crm:E55_Type .
+
+<https://data.rkd.nl/technical/5018290>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300419325> .
+
+<http://vocab.getty.edu/aat/300419325>
+        rdfs:label  "x-radiographs" .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        rdf:type  crm:E12_Production .
+
+<https://data.rkd.nl/technical/5018290>
+        crm:P108i_was_produced_by  <https://data.rkd.nl/technical/5018290/production/> .
+
+<https://data.rkd.nl/images/52947>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P16_used_specific_object  <https://data.rkd.nl/images/52947> .
+
+<https://data.rkd.nl/images/52947>
+        rdfs:label  "The peat boat" .
+
+<https://data.rkd.nl/artists/440500>
+        rdf:type  crm:E39_Actor .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P14_carried_out_by  <https://data.rkd.nl/artists/440500> .
+
+<https://data.rkd.nl/artists/440500>
+        rdfs:label  "Gerritsen, René" .
+
+_:b24   rdf:type  crm:E52_Time-Span .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P4_has_time-span  _:b24 .
+
+_:b24   crm:P82a_begin_of_the_begin  "2016-01-19T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "2016-01-19T23:59:59"^^xsd:dateTime .
+
+<http://vocab.getty.edu/aat/300419323>
+        rdf:type  crm:E55_Type .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P32_used_general_technique  <http://vocab.getty.edu/aat/300419323> .
+
+<http://vocab.getty.edu/aat/300419323>
+        rdfs:label  "x-ray photography" .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        rdf:type  crm:E36_Visual_Item .
+
+<https://data.rkd.nl/technical/5018290>
+        crm:P138i_has_representation  <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> .
+
+<http://vocab.getty.edu/aat/300215302>
+        rdf:type  crm:E55_Type .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300215302> .
+
+<http://vocab.getty.edu/aat/300215302>
+        rdfs:label  "digital images" .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+        dc:format  "image/jpeg" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://data.rkd.nl/technical/5001263>
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vocab.getty.edu/aat/300027323>
+        rdf:type  crm:E55_Type .
+
+<https://data.rkd.nl/technical/5001263>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300027323> .
+
+<http://vocab.getty.edu/aat/300027323>
+        rdfs:label  "Technical report" .
+
+_:b25   rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<https://data.rkd.nl/technical/5001263>
+        crm:P1_is_identified_by  _:b25 .
+
+_:b25   crm:P190_has_symbolic_content  "Title of the report"@nl .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        rdf:type  crm:E12_Production .
+
+<https://data.rkd.nl/technical/5001263>
+        crm:P108i_was_produced_by  <https://data.rkd.nl/technical/5018290/production/> .
+
+<https://data.rkd.nl/images/52953>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P16_used_specific_object  <https://data.rkd.nl/images/52953> .
+
+<https://data.rkd.nl/images/52953>
+        rdfs:label  "Lane of poplars near Nuenen" .
+
+<https://data.rkd.nl/artists/443078>
+        rdf:type  crm:E39_Actor .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P14_carried_out_by  <https://data.rkd.nl/artists/443078> .
+
+<https://data.rkd.nl/artists/443078>
+        rdfs:label  "Werf, P. van der" .
+
+_:b26   rdf:type  crm:E52_Time-Span .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P4_has_time-span  _:b26 .
+
+_:b26   crm:P82a_begin_of_the_begin  "2016-01-19T00:00:00"^^xsd:dateTime ;
+        crm:P82b_end_of_the_end      "2016-01-19T23:59:59"^^xsd:dateTime .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b27   rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b27 .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdf:type  crm:E55_Type .
+
+_:b27   crm:P2_has_type  <http://vocab.getty.edu/aat/300404670> .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdfs:label  "primary name" .
+
+<http://vocab.getty.edu/aat/300388256>
+        rdf:type  crm:E56_Language .
+
+_:b27   crm:P72_has_language  <http://vocab.getty.edu/aat/300388256> .
+
+<http://vocab.getty.edu/aat/300388256>
+        rdfs:label  "Dutch (language)" .
+
+_:b27   crm:P190_has_symbolic_content  "Zeezicht in Scheveningen"@nl .
+
+_:b28   rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b28 .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdf:type  crm:E55_Type .
+
+_:b28   crm:P2_has_type  <http://vocab.getty.edu/aat/300404670> .
+
+<http://vocab.getty.edu/aat/300404670>
+        rdfs:label  "primary name" .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdf:type  crm:E56_Language .
+
+_:b28   crm:P72_has_language  <http://vocab.getty.edu/aat/300388277> .
+
+<http://vocab.getty.edu/aat/300388277>
+        rdfs:label  "English (language)" .
+
+_:b28   crm:P190_has_symbolic_content  "View of the Sea at Scheveningen"@en .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        rdf:type      crm:E22_Human-Made_Object ;
+        rdfs:seeAlso  <https://vangoghworldwide.org/data/artwork/F4> .

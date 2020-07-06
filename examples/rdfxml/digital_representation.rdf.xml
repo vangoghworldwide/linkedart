@@ -2,14 +2,14 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990">
     <crm:P138i_has_representation>
-      <crm:E37_Visual_Item rdf:about="{URL_TO_YOUR_IMAGE}">
+      <crm:E36_Visual_Item rdf:about="URL_TO_YOUR_IMAGE">
         <crm:P2_has_type>
           <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300215302">
             <rdfs:label>digital images</rdfs:label>
           </crm:E55_Type>
         </crm:P2_has_type>
         <dc:format>image/jpeg</dc:format>
-      </crm:E37_Visual_Item>
+      </crm:E36_Visual_Item>
     </crm:P138i_has_representation>
   </crm:E22_Human-Made_Object>
 </rdf:RDF>

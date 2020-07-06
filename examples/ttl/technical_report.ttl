@@ -1,38 +1,57 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<http://vocab.getty.edu/aat/300027323>
-    a crm:E55_Type ;
-    rdfs:label "Technical report" .
-
-<https://data.rkd.nl/artists/443078>
-    a crm:E39_Actor ;
-    rdfs:label "Werf, P. van der" .
-
-<https://data.rkd.nl/images/52953>
-    a crm:E22_Human-Made_Object ;
-    rdfs:label "Lane of poplars near Nuenen" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://data.rkd.nl/technical/5001263>
-    crm:P108i_was_produced_by <https://data.rkd.nl/technical/5018290/production/> ;
-    crm:P1_is_identified_by [
-        crm:P190_has_symbolic_content "Title of the report"@nl ;
-        a crm:E33_E41_Linguistic_Appellation
-    ] ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300027323> ;
-    a crm:E33_Linguistic_Object .
+        rdf:type  crm:E33_Linguistic_Object .
+
+<http://vocab.getty.edu/aat/300027323>
+        rdf:type  crm:E55_Type .
+
+<https://data.rkd.nl/technical/5001263>
+        crm:P2_has_type  <http://vocab.getty.edu/aat/300027323> .
+
+<http://vocab.getty.edu/aat/300027323>
+        rdfs:label  "Technical report" .
+
+_:b0    rdf:type  crm:E33_E41_Linguistic_Appellation .
+
+<https://data.rkd.nl/technical/5001263>
+        crm:P1_is_identified_by  _:b0 .
+
+_:b0    crm:P190_has_symbolic_content  "Title of the report"@nl .
 
 <https://data.rkd.nl/technical/5018290/production/>
-    crm:P14_carried_out_by <https://data.rkd.nl/artists/443078> ;
-    crm:P16_used_specific_object <https://data.rkd.nl/images/52953> ;
-    crm:P4_has_time-span [
-        crm:P82a_begin_of_the_begin "2016-01-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        crm:P82b_end_of_the_end "2016-01-19T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        a crm:E52_Time-Span
-    ] ;
-    a crm:E12_Production .
+        rdf:type  crm:E12_Production .
 
+<https://data.rkd.nl/technical/5001263>
+        crm:P108i_was_produced_by  <https://data.rkd.nl/technical/5018290/production/> .
+
+<https://data.rkd.nl/images/52953>
+        rdf:type  crm:E22_Human-Made_Object .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P16_used_specific_object  <https://data.rkd.nl/images/52953> .
+
+<https://data.rkd.nl/images/52953>
+        rdfs:label  "Lane of poplars near Nuenen" .
+
+<https://data.rkd.nl/artists/443078>
+        rdf:type  crm:E39_Actor .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P14_carried_out_by  <https://data.rkd.nl/artists/443078> .
+
+<https://data.rkd.nl/artists/443078>
+        rdfs:label  "Werf, P. van der" .
+
+_:b1    rdf:type  crm:E52_Time-Span .
+
+<https://data.rkd.nl/technical/5018290/production/>
+        crm:P4_has_time-span  _:b1 .
+
+_:b1    crm:P82a_begin_of_the_begin  "2016-01-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end      "2016-01-19T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
