@@ -1,33 +1,52 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    crm:P1_is_identified_by [
-        crm:P190_has_symbolic_content "s0416M1990" ;
-        crm:P2_has_type <http://vocab.getty.edu/aat/300312355> ;
-        a crm:E42_Identifier
-    ], [
-        crm:P190_has_symbolic_content "F21" ;
-        crm:P2_has_type <https://vangoghworldwide.org/data/concept/f_number> ;
-        a crm:E42_Identifier
-    ], [
-        crm:P190_has_symbolic_content "JH415" ;
-        crm:P2_has_type <https://vangoghworldwide.org/data/concept/jh_number> ;
-        a crm:E42_Identifier
-    ] ;
-    a crm:E22_Human-Made_Object .
+        rdf:type  crm:E22_Human-Made_Object .
+
+_:b0    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b0 .
 
 <http://vocab.getty.edu/aat/300312355>
-    a crm:E55_Type ;
-    rdfs:label "accession numbers" .
+        rdf:type  crm:E55_Type .
+
+_:b0    crm:P2_has_type  <http://vocab.getty.edu/aat/300312355> .
+
+<http://vocab.getty.edu/aat/300312355>
+        rdfs:label  "accession numbers" .
+
+_:b0    crm:P190_has_symbolic_content  "s0416M1990" .
+
+_:b1    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b1 .
 
 <https://vangoghworldwide.org/data/concept/f_number>
-    a crm:E55_Type ;
-    rdfs:label "De La Faille number" .
+        rdf:type  crm:E55_Type .
+
+_:b1    crm:P2_has_type  <https://vangoghworldwide.org/data/concept/f_number> .
+
+<https://vangoghworldwide.org/data/concept/f_number>
+        rdfs:label  "De La Faille number" .
+
+_:b1    crm:P190_has_symbolic_content  "F21" .
+
+_:b2    rdf:type  crm:E42_Identifier .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P1_is_identified_by  _:b2 .
 
 <https://vangoghworldwide.org/data/concept/jh_number>
-    a crm:E55_Type ;
-    rdfs:label "Jan Hulsker number" .
+        rdf:type  crm:E55_Type .
 
+_:b2    crm:P2_has_type  <https://vangoghworldwide.org/data/concept/jh_number> .
+
+<https://vangoghworldwide.org/data/concept/jh_number>
+        rdfs:label  "Jan Hulsker number" .
+
+_:b2    crm:P190_has_symbolic_content  "JH415" .

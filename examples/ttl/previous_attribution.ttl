@@ -1,34 +1,49 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    crm:P108i_was_produced_by <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> ;
-    a crm:E22_Human-Made_Object .
+        rdf:type  crm:E22_Human-Made_Object .
 
 <http://vangoghmuseum.nl/data/artwork_production/s0076V1962>
-    crm:P141i_was_assigned_by <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1> ;
-    a crm:E12_Production .
+        rdf:type  crm:E12_Production .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+        crm:P108i_was_produced_by  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> .
 
 <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
-    crm:P141_assigned [
-        crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500115588> ;
-        a crm:E12_Production
-    ] ;
-    crm:P14_carried_out_by <https://example.org/uri_curator_researcher> ;
-    crm:P4_has_time-span [
-        crm:P82b_end_of_the_end "2016-01-01T00:00:00"^^xsd:dateTime ;
-        a crm:E52_Time-Span
-    ] ;
-    a crm:E13_Attribute_Assignment .
+        rdf:type  crm:E13_Attribute_Assignment .
 
-<http://vocab.getty.edu/ulan/500115588>
-    a crm:E39_Actor ;
-    rdfs:label "Gogh, Vincent van" .
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962>
+        crm:P141i_was_assigned_by  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1> .
+
+_:b0    rdf:type  crm:E52_Time-Span .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P4_has_time-span  _:b0 .
+
+_:b0    crm:P82b_end_of_the_end  "2016-01-01T00:00:00"^^xsd:dateTime .
 
 <https://example.org/uri_curator_researcher>
-    a crm:E39_Actor ;
-    rdfs:label "{Name of the curator/researcher}" .
+        rdf:type  crm:E39_Actor .
 
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P14_carried_out_by  <https://example.org/uri_curator_researcher> .
+
+<https://example.org/uri_curator_researcher>
+        rdfs:label  "Name of the curator/researcher" .
+
+_:b1    rdf:type  crm:E12_Production .
+
+<http://vangoghmuseum.nl/data/artwork_production/s0076V1962/assignment/1>
+        crm:P141_assigned  _:b1 .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdf:type  crm:E39_Actor .
+
+_:b1    crm:P14_carried_out_by  <http://vocab.getty.edu/ulan/500115588> .
+
+<http://vocab.getty.edu/ulan/500115588>
+        rdfs:label  "Gogh, Vincent van" .

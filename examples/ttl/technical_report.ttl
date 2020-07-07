@@ -1,21 +1,9 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix la: <https://linked.art/ns/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<http://vocab.getty.edu/aat/300027323>
-    a crm:E55_Type ;
-    rdfs:label "Technical report" .
-
-<https://data.rkd.nl/artists/443078>
-    a crm:E39_Actor ;
-    rdfs:label "Werf, P. van der" .
-
-<https://data.rkd.nl/images/52953>
-    a crm:E22_Human-Made_Object ;
-    rdfs:label "Lane of poplars near Nuenen" .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix la:  <https://linked.art/ns/terms/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://data.rkd.nl/technical/5001263>
     crm:P94i_was_created_by <https://data.rkd.nl/technical/5018290/creation/> ;
@@ -36,3 +24,14 @@
     ] ;
     a crm:E65_Creation .
 
+<http://vocab.getty.edu/aat/300027323>
+        rdf:type  crm:E55_Type ;
+        rdfs:label  "Technical report" .
+
+<https://data.rkd.nl/images/52953>
+    rdf:type  crm:E22_Human-Made_Object ;
+    rdfs:label  "Lane of poplars near Nuenen" .
+
+<https://data.rkd.nl/artists/443078>
+    rdfs:label  "Werf, P. van der" ;
+    rdf:type  crm:E39_Actor .

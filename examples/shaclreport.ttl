@@ -1,0 +1,318 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix la:    <https://linked.art/ns/terms/> .
+@prefix vgw:   <https://vangoghworldwide.org/shapes/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+[ a            sh:ValidationReport ;
+  sh:conforms  false ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork is advised to have a support material" ;
+                 sh:resultPath                 ( crm:P46_is_composed_of crm:P45_consists_of ) ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b0 ;
+                 sh:resultMessage              "Timespan requires a begin date (crm:P82a_begin_of_the_begin)" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/exhibition/858/timespan> ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "1953-07-23T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a production activity (crm:P108i_was_produced_by)" ;
+                 sh:resultPath                 crm:P108i_was_produced_by ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <https://data.rkd.nl/technical/5018290/production/> ;
+                 sh:resultMessage              "Production carried_out_by is advised to have a value from ULAN" ;
+                 sh:resultPath                 crm:P14_carried_out_by ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent ;
+                 sh:sourceShape                _:b2 ;
+                 sh:value                      <https://data.rkd.nl/artists/443078>
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork is advised to have a subject type" ;
+                 sh:resultPath                 ( crm:P65_shows_visual_item crm:P2_has_type ) ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b3 ;
+                 sh:resultMessage              "Production is advised to have a used_general_technique (crm:P32_used_general_technique)" ;
+                 sh:resultPath                 crm:P32_used_general_technique ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b4
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b5 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "2016-01-19T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b7 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "1882-08-21T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <https://data.rkd.nl/technical/5018290/production/> ;
+                 sh:resultMessage              "Production requires a took_place_at (crm:P7_took_place_at)" ;
+                 sh:resultPath                 crm:P7_took_place_at ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b8
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b0 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "2016-01-01T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b7 ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "1882-08-21T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a specific artwork type" ;
+                 sh:resultPath                 crm:P2_has_type ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> ;
+                 sh:resultMessage              "Production is advised to have a used_general_technique (crm:P32_used_general_technique)" ;
+                 sh:resultPath                 crm:P32_used_general_technique ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b4
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b3 ;
+                 sh:resultMessage              "Production requires a took_place_at (crm:P7_took_place_at)" ;
+                 sh:resultPath                 crm:P7_took_place_at ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b8
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork is advised to have an identifier for the F-number" ;
+                 sh:resultPath                 crm:P1_is_identified_by ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b3 ;
+                 sh:resultMessage              "Production requires a timespan (crm:P4_has_time-span)" ;
+                 sh:resultPath                 crm:P4_has_time-span ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b9
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires at least one English title" ;
+                 sh:resultPath                 crm:P1_is_identified_by ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a dimension width" ;
+                 sh:resultPath                 crm:P43_has_dimension ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b10 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "1990-12-31T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a current owner (crm:P52_has_current_owner)" ;
+                 sh:resultPath                 crm:P52_has_current_owner ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b11 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "2018-12-31T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <https://data.rkd.nl/technical/5018290/production/> ;
+                 sh:resultMessage              "Production carried_out_by is advised to have a value from ULAN" ;
+                 sh:resultPath                 crm:P14_carried_out_by ;
+                 sh:resultSeverity             sh:Warning ;
+                 sh:sourceConstraintComponent  sh:NodeConstraintComponent ;
+                 sh:sourceShape                _:b2 ;
+                 sh:value                      <https://data.rkd.nl/artists/440500>
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b11 ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "2018-01-01T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> ;
+                 sh:resultMessage              "Production requires a took_place_at (crm:P7_took_place_at)" ;
+                 sh:resultPath                 crm:P7_took_place_at ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b8
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b5 ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "2016-01-19T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a rdfs:seeAlso link to a VGW URI" ;
+                 sh:resultPath                 rdfs:seeAlso ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a dimension height" ;
+                 sh:resultPath                 crm:P43_has_dimension ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:QualifiedMinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork requires a material" ;
+                 sh:resultPath                 crm:P45_consists_of ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+                 sh:resultMessage              "Artwork does not have class crm:E22_Human-Made_Object" ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:ClassConstraintComponent ;
+                 sh:sourceShape                vgw:Artwork ;
+                 sh:value                      <http://vangoghmuseum.nl/data/artwork/d0005V1962>
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/exhibition/858/timespan> ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "1953-09-20T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b12 ;
+                 sh:resultMessage              "Timespan end_of_the_end requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82b_end_of_the_end ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b6 ;
+                 sh:value                      "2016-01-19T23:59:59"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> ;
+                 sh:resultMessage              "Artwork requires a carried_out_by (crm:P14_carried_out_by)" ;
+                 sh:resultPath                 crm:P14_carried_out_by ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                [] 
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b10 ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "1949-01-01T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  _:b12 ;
+                 sh:resultMessage              "Timespan begin_of_the_begin requires a value of type xsd:date" ;
+                 sh:resultPath                 crm:P82a_begin_of_the_begin ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:DatatypeConstraintComponent ;
+                 sh:sourceShape                _:b1 ;
+                 sh:value                      "2016-01-19T00:00:00"^^xsd:dateTime
+               ] ;
+  sh:result    [ a                             sh:ValidationResult ;
+                 sh:focusNode                  <http://vangoghmuseum.nl/data/artwork_production/s0076V1962> ;
+                 sh:resultMessage              "Production requires a timespan (crm:P4_has_time-span)" ;
+                 sh:resultPath                 crm:P4_has_time-span ;
+                 sh:resultSeverity             sh:Violation ;
+                 sh:sourceConstraintComponent  sh:MinCountConstraintComponent ;
+                 sh:sourceShape                _:b9
+               ]
+] .

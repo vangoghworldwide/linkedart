@@ -15,9 +15,11 @@
 						<crm:P1_is_identified_by>
 							<crm:E33_E41_Linguistic_Appellation>
 								<crm:P190_has_symbolic_content>Probably on 21 August 1882</crm:P190_has_symbolic_content>
-								<crm:E56_Language rdf:about="http://vocab.getty.edu/aat/300388277">
-            						<rdfs:label>English (language)</rdfs:label>
-			          			</crm:E56_Language>
+								<crm:P72_has_language>
+									<crm:E56_Language rdf:about="http://vocab.getty.edu/aat/300388277">
+										<rdfs:label>English (language)</rdfs:label>
+									</crm:E56_Language>
+								</crm:P72_has_language>
 							</crm:E33_E41_Linguistic_Appellation>
 						</crm:P1_is_identified_by>
 					</crm:E52_Time-Span>

@@ -1,6 +1,5 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-    a crm:E22_Human-Made_Object .
-
+        rdf:type  crm:E22_Human-Made_Object .
