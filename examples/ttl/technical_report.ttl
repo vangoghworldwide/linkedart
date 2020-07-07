@@ -18,7 +18,7 @@
     rdfs:label "Lane of poplars near Nuenen" .
 
 <https://data.rkd.nl/technical/5001263>
-    crm:P108i_was_produced_by <https://data.rkd.nl/technical/5018290/production/> ;
+    crm:P94i_was_created_by <https://data.rkd.nl/technical/5018290/creation/> ;
     crm:P1_is_identified_by [
         crm:P190_has_symbolic_content "Title of the report"@nl ;
         a crm:E33_E41_Linguistic_Appellation
@@ -26,7 +26,7 @@
     crm:P2_has_type <http://vocab.getty.edu/aat/300027323> ;
     a crm:E33_Linguistic_Object .
 
-<https://data.rkd.nl/technical/5018290/production/>
+<https://data.rkd.nl/technical/5018290/creation/>
     crm:P14_carried_out_by <https://data.rkd.nl/artists/443078> ;
     crm:P16_used_specific_object <https://data.rkd.nl/images/52953> ;
     crm:P4_has_time-span [
@@ -34,5 +34,5 @@
         crm:P82b_end_of_the_end "2016-01-19T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
         a crm:E52_Time-Span
     ] ;
-    a crm:E12_Production .
+    a crm:E65_Creation .
 

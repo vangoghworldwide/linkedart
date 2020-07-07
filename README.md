@@ -1190,9 +1190,9 @@ Reports are modelled in a similar way as technical recording. The only differenc
     }
   ],
   "created_by": {
-    "id": "https://data.rkd.nl/technical/production/5018290",
-    "type": "Production",
-    "_label": "Production of the report",
+    "id": "https://data.rkd.nl/technical/creation/5018290",
+    "type": "Creation",
+    "_label": "Creation of the report",
     "used_specific_object": [
       {
         "id": "https://data.rkd.nl/images/52953",

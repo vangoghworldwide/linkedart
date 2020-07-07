@@ -11,8 +11,8 @@
         <crm:P190_has_symbolic_content xml:lang="nl">Title of the report</crm:P190_has_symbolic_content>
       </crm:E33_E41_Linguistic_Appellation>
     </crm:P1_is_identified_by>
-    <crm:P108i_was_produced_by>
-      <crm:E12_Production rdf:about="https://data.rkd.nl/technical/5018290/production/">
+    <crm:P94i_was_created_by>
+      <crm:E65_Creation rdf:about="https://data.rkd.nl/technical/5018290/creation/">
                 <crm:P16_used_specific_object>
           <crm:E22_Human-Made_Object rdf:about="https://data.rkd.nl/images/52953">
             <rdfs:label>Lane of poplars near Nuenen</rdfs:label>
@@ -29,7 +29,7 @@
             <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-19T23:59:59</crm:P82b_end_of_the_end>
           </crm:E52_Time-Span>
         </crm:P4_has_time-span>
-      </crm:E12_Production>
-    </crm:P108i_was_produced_by>
+      </crm:E65_Creation>
+    </crm:P94i_was_created_by>
   </crm:E33_Linguistic_Object>
 </rdf:RDF>
