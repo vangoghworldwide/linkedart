@@ -586,6 +586,9 @@ http://vocab.getty.edu/aat/300124534 | self-portraits
 http://vocab.getty.edu/aat/300189568 | nudes
 http://vocab.getty.edu/aat/300117546 | seascapes
 http://vocab.getty.edu/aat/300139140 | genre
+http://vocab.getty.edu/aat/300263554 | animal paintings
+http://vocab.getty.edu/aat/300124520 | interior views
+http://vocab.getty.edu/aat/300236227 | townscapes
 
 ### Parts
 By modelling the parts of an artwork we define more specifically where information belongs to. We have already seen this pattern to model the [support material](#support-material). The backside of an artwork is another important part. Use it to model that a [digital representation](#digital-representation) depicts this part. Or to define the precise location of a [label](#label).

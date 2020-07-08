@@ -1,48 +1,32 @@
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix la:  <https://linked.art/ns/terms/> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        rdf:type  crm:E22_Human-Made_Object .
+    crm:P67i_is_referred_to_by <http://vangoghmuseum.nl/data/document/11031> ;
+    a crm:E22_Human-Made_Object .
 
 <http://vangoghmuseum.nl/data/document/11031>
-        rdf:type  crm:E33_Linguistic_Object .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/document/11031> .
-
-<http://vocab.getty.edu/aat/300048715>
-        rdf:type  crm:E55_Type .
-
-<http://vangoghmuseum.nl/data/document/11031>
-        crm:P2_has_type  <http://vocab.getty.edu/aat/300048715> .
-
-<http://vocab.getty.edu/aat/300048715>
-        rdfs:label  "articles" .
-
-<http://vangoghmuseum.nl/data/document/11031/title>
-        rdf:type  crm:E33_E41_Linguistic_Appellation .
-
-<http://vangoghmuseum.nl/data/document/11031>
-        crm:P1_is_identified_by  <http://vangoghmuseum.nl/data/document/11031/title> .
-
-<http://vangoghmuseum.nl/data/document/11031/title>
-        crm:P190_has_symbolic_content  "Een vroege Van Gogh voor Het Noordbrabants Museum : het verhaal van een ambitieuze aankoop" .
-
-_:b0    rdf:type  crm:E65_Creation .
-
-<http://vangoghmuseum.nl/data/document/11031>
-        crm:P94i_was_created_by  _:b0 .
+    crm:P106i_forms_part_of <http://vangoghmuseum.nl/data/document/7351> ;
+    crm:P1_is_identified_by <http://vangoghmuseum.nl/data/document/11031/title> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300048715> ;
+    crm:P94i_was_created_by [
+        crm:P14_carried_out_by <http://vangoghmuseum.nl/data/document/11031/author1> ;
+        a crm:E65_Creation
+    ] ;
+    a crm:E33_Linguistic_Object .
 
 <http://vangoghmuseum.nl/data/document/11031/author1>
-        rdf:type  crm:E21_Person .
+    a crm:E21_Person ;
+    rdfs:label "Berger, Helewise" .
 
-_:b0    crm:P14_carried_out_by  <http://vangoghmuseum.nl/data/document/11031/author1> .
+<http://vangoghmuseum.nl/data/document/11031/title>
+    crm:P190_has_symbolic_content "Een vroege Van Gogh voor Het Noordbrabants Museum : het verhaal van een ambitieuze aankoop" ;
+    a crm:E33_E41_Linguistic_Appellation .
 
-<http://vangoghmuseum.nl/data/document/11031/author1>
-        rdfs:label  "Berger, Helewise" .
+<http://vocab.getty.edu/aat/300048715>
+    a crm:E55_Type ;
+    rdfs:label "articles" .
 
-<http://vangoghmuseum.nl/data/document/11031>
-        crm:P106i_forms_part_of  <http://vangoghmuseum.nl/data/document/7351> .

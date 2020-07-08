@@ -1,25 +1,18 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix dc:  <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
+    dc:format "image/jpeg" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300215302> ;
+    a crm:E36_Visual_Item .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        rdf:type  crm:E22_Human-Made_Object .
-
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        rdf:type  crm:E36_Visual_Item .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        crm:P138i_has_representation  <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> .
+    crm:P138i_has_representation <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> ;
+    a crm:E22_Human-Made_Object .
 
 <http://vocab.getty.edu/aat/300215302>
-        rdf:type  crm:E55_Type .
+    a crm:E55_Type ;
+    rdfs:label "digital images" .
 
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        crm:P2_has_type  <http://vocab.getty.edu/aat/300215302> .
-
-<http://vocab.getty.edu/aat/300215302>
-        rdfs:label  "digital images" .
-
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        dc:format  "image/jpeg" .

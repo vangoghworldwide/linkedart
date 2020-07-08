@@ -1,27 +1,21 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix la:  <https://linked.art/ns/terms/> .
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
-
-<https://data.rkd.nl/images/52947>
-        rdf:type  crm:E22_Human-Made_Object .
-
-_:b0    rdf:type  crm:E22_Human-Made_Object .
-
-<https://data.rkd.nl/images/52947>
-        crm:P9_consists_of  _:b0 .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://vocab.getty.edu/aat/300207379>
-        rdf:type  crm:E55_Type .
+    a crm:E55_Type ;
+    rdfs:label "stickers" .
 
-_:b0    crm:P2_has_type  <http://vocab.getty.edu/aat/300207379> .
+<https://data.rkd.nl/images/52947>
+    crm:P9_consists_of [
+        crm:P128_carries [
+            crm:P190_has_symbolic_content "Kunsthandel Oldenzeel Rotterdam" ;
+            a crm:E33_Linguistic_Object
+        ] ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300207379> ;
+        a crm:E22_Human-Made_Object
+    ] ;
+    a crm:E22_Human-Made_Object .
 
-<http://vocab.getty.edu/aat/300207379>
-        rdfs:label  "stickers" .
-
-_:b1    rdf:type  crm:E33_Linguistic_Object .
-
-_:b0    crm:P128_carries  _:b1 .
-
-_:b1    crm:P190_has_symbolic_content  "Kunsthandel Oldenzeel Rotterdam" .

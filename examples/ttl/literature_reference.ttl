@@ -1,35 +1,24 @@
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix la:  <https://linked.art/ns/terms/> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        rdf:type  crm:E22_Human-Made_Object .
+    crm:P67i_is_referred_to_by <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1> ;
+    a crm:E22_Human-Made_Object .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
-        rdf:type  crm:E33_Linguistic_Object .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1> .
+    crm:P106i_forms_part_of <http://vangoghmuseum.nl/data/document/7351> ;
+    crm:P67i_is_referred_to_by <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages> ;
+    a crm:E33_Linguistic_Object .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
-        rdf:type  crm:E33_Linguistic_Object .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
-        crm:P67i_is_referred_to_by  <http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages> .
+    crm:P190_has_symbolic_content "125-135" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300435440> ;
+    a crm:E33_Linguistic_Object .
 
 <http://vocab.getty.edu/aat/300435440>
-        rdf:type  crm:E55_Type .
+    a crm:E55_Type ;
+    rdfs:label "Pagination Statement" .
 
-<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
-        crm:P2_has_type  <http://vocab.getty.edu/aat/300435440> .
-
-<http://vocab.getty.edu/aat/300435440>
-        rdfs:label  "Pagination Statement" .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1/pages>
-        crm:P190_has_symbolic_content  "125-135" .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990/reference/1>
-        crm:P106i_forms_part_of  <http://vangoghmuseum.nl/data/document/7351> .

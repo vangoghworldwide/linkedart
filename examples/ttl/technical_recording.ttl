@@ -1,77 +1,49 @@
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix dc:  <http://purl.org/dc/elements/1.1/> .
-@prefix la:  <https://linked.art/ns/terms/> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-
-<https://data.rkd.nl/technical/5018290>
-        rdf:type  crm:E22_Human-Made_Object .
-
-<http://vocab.getty.edu/aat/300419325>
-        rdf:type  crm:E55_Type .
-
-<https://data.rkd.nl/technical/5018290>
-        crm:P2_has_type  <http://vocab.getty.edu/aat/300419325> .
-
-<http://vocab.getty.edu/aat/300419325>
-        rdfs:label  "x-radiographs" .
-
-<https://data.rkd.nl/technical/5018290/production/>
-        rdf:type  crm:E12_Production .
-
-<https://data.rkd.nl/technical/5018290>
-        crm:P108i_was_produced_by  <https://data.rkd.nl/technical/5018290/production/> .
-
-<https://data.rkd.nl/images/52947>
-        rdf:type  crm:E22_Human-Made_Object .
-
-<https://data.rkd.nl/technical/5018290/production/>
-        crm:P16_used_specific_object  <https://data.rkd.nl/images/52947> .
-
-<https://data.rkd.nl/images/52947>
-        rdfs:label  "The peat boat" .
-
-<https://data.rkd.nl/artists/440500>
-        rdf:type  crm:E39_Actor .
-
-<https://data.rkd.nl/technical/5018290/production/>
-        crm:P14_carried_out_by  <https://data.rkd.nl/artists/440500> .
-
-<https://data.rkd.nl/artists/440500>
-        rdfs:label  "Gerritsen, René" .
-
-_:b0    rdf:type  crm:E52_Time-Span .
-
-<https://data.rkd.nl/technical/5018290/production/>
-        crm:P4_has_time-span  _:b0 .
-
-_:b0    crm:P82a_begin_of_the_begin  "2016-01-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-        crm:P82b_end_of_the_end      "2016-01-19T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-
-<http://vocab.getty.edu/aat/300419323>
-        rdf:type  crm:E55_Type .
-
-<https://data.rkd.nl/technical/5018290/production/>
-        crm:P32_used_general_technique  <http://vocab.getty.edu/aat/300419323> .
-
-<http://vocab.getty.edu/aat/300419323>
-        rdfs:label  "x-ray photography" .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix la: <https://linked.art/ns/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        rdf:type  crm:E36_Visual_Item .
-
-<https://data.rkd.nl/technical/5018290>
-        crm:P138i_has_representation  <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> .
+    dc:format "image/jpeg" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300215302> ;
+    a crm:E36_Visual_Item .
 
 <http://vocab.getty.edu/aat/300215302>
-        rdf:type  crm:E55_Type .
+    a crm:E55_Type ;
+    rdfs:label "digital images" .
 
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        crm:P2_has_type  <http://vocab.getty.edu/aat/300215302> .
+<http://vocab.getty.edu/aat/300419323>
+    a crm:E55_Type ;
+    rdfs:label "x-ray photography" .
 
-<http://vocab.getty.edu/aat/300215302>
-        rdfs:label  "digital images" .
+<http://vocab.getty.edu/aat/300419325>
+    a crm:E55_Type ;
+    rdfs:label "x-radiographs" .
 
-<file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE>
-        dc:format  "image/jpeg" .
+<https://data.rkd.nl/artists/440500>
+    a crm:E39_Actor ;
+    rdfs:label "Gerritsen, René" .
+
+<https://data.rkd.nl/images/52947>
+    a crm:E22_Human-Made_Object ;
+    rdfs:label "The peat boat" .
+
+<https://data.rkd.nl/technical/5018290>
+    crm:P108i_was_produced_by <https://data.rkd.nl/technical/5018290/production/> ;
+    crm:P138i_has_representation <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/URL_TO_YOUR_IMAGE> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300419325> ;
+    a crm:E22_Human-Made_Object .
+
+<https://data.rkd.nl/technical/5018290/production/>
+    crm:P14_carried_out_by <https://data.rkd.nl/artists/440500> ;
+    crm:P16_used_specific_object <https://data.rkd.nl/images/52947> ;
+    crm:P32_used_general_technique <http://vocab.getty.edu/aat/300419323> ;
+    crm:P4_has_time-span [
+        crm:P82a_begin_of_the_begin "2016-01-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end "2016-01-19T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        a crm:E52_Time-Span
+    ] ;
+    a crm:E12_Production .
+
