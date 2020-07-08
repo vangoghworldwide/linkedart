@@ -23,7 +23,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Subject type](#subject-type) (e.g. landscape, portrait)
 * [Parts](#parts) (e.g. backside)
 * [Digital representation](#digital-representation) of the artwork (image)
-* [Credit / attribution](#credit-/-attribution)
+* [Credit / attribution](#credit--attribution)
 * [Provenance](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
