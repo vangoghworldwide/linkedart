@@ -23,6 +23,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Subject type](#subject-type) (e.g. landscape, portrait)
 * [Parts](#parts) (e.g. backside)
 * [Digital representation](#digital-representation) of the artwork (image)
+* [Credit / attribution](#credit-/-attribution)
 * [Provenance](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
@@ -716,6 +717,31 @@ In your data refer to the IIIF server of Van Gogh Worldwide and the identifier o
   ]
 }
 ```
+
+### Credit / attribution
+When an explicit credit line needs to be displayd on [vangoghworldwide.org](http://vangoghworldwide.org) provide it as a linguist object that is classified with the AAT Concept for *Credit Statement*. 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/credit", 
+      "type": "LinguisticObject", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300026687", 
+          "type": "Type", 
+          "_label": "Credit Statement"
+        }
+      ], 
+      "content": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcredit.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/credit.rdf.xml)
 
 ### Provenance
 The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as a phase. A phase is initiated by an acquisition (auction, purchase, gift, loan)
