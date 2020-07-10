@@ -23,7 +23,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Subject type](#subject-type) (e.g. landscape, portrait)
 * [Parts](#parts) (e.g. backside)
 * [Digital representation](#digital-representation) of the artwork (image)
-* [Credit / attribution](#credit-/-attribution)
+* [Credit / attribution](#credit--attribution)
 * [Provenance](#provenance) about the artwork's current and previous owners
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
@@ -586,6 +586,9 @@ http://vocab.getty.edu/aat/300124534 | self-portraits
 http://vocab.getty.edu/aat/300189568 | nudes
 http://vocab.getty.edu/aat/300117546 | seascapes
 http://vocab.getty.edu/aat/300139140 | genre
+http://vocab.getty.edu/aat/300263554 | animal paintings
+http://vocab.getty.edu/aat/300124520 | interior views
+http://vocab.getty.edu/aat/300236227 | townscapes
 
 ### Parts
 By modelling the parts of an artwork we define more specifically where information belongs to. We have already seen this pattern to model the [support material](#support-material). The backside of an artwork is another important part. Use it to model that a [digital representation](#digital-representation) depicts this part. Or to define the precise location of a [label](#label).

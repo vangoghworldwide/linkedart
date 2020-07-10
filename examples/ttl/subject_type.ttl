@@ -1,19 +1,15 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        rdf:type  crm:E22_Human-Made_Object .
-
-_:b0    rdf:type  crm:E36_Visual_Item .
-
-<http://vangoghmuseum.nl/data/artwork/s0416M1990>
-        crm:P65_shows_visual_item  _:b0 .
-
-<http://vocab.getty.edu/aat/300117546>
-        rdf:type  crm:E55_Type .
-
-_:b0    crm:P2_has_type  <http://vocab.getty.edu/aat/300117546> .
+    crm:P65_shows_visual_item [
+        crm:P2_has_type <http://vocab.getty.edu/aat/300117546> ;
+        a crm:E36_Visual_Item
+    ] ;
+    a crm:E22_Human-Made_Object .
 
 <http://vocab.getty.edu/aat/300117546>
-        rdfs:label  "Seascape" .
+    a crm:E55_Type ;
+    rdfs:label "Seascape" .
+
