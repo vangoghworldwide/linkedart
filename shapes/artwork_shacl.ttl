@@ -9,8 +9,8 @@
 
 vgw:Artwork 
   a sh:NodeShape ;
-  #sh:targetClass crm:E22_Human-Made_Object ;
-  sh:targetNode <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
+  sh:targetClass crm:E22_Human-Made_Object ;
+  # sh:targetNode <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
   # sh:targetNode <https://data.kmm.nl/artwork/KMM_36350> ;
 
   # Class
