@@ -9,9 +9,7 @@
 
 vgw:Artwork 
   a sh:NodeShape ;
-  sh:targetClass crm:E22_Human-Made_Object ;
-  # sh:targetNode <http://vangoghmuseum.nl/data/artwork/d0005V1962> ;
-  # sh:targetNode <https://data.kmm.nl/artwork/KMM_36350> ;
+  sh:targetSubjectsOf rdfs:seeAlso ;
 
   # Class
   sh:class crm:E22_Human-Made_Object ;
@@ -24,17 +22,14 @@ vgw:Artwork
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a rdfs:seeAlso link to a VGW URI" ;
-    sh:group vgw:VgwUriGroup
+    sh:message "Artwork requires a rdfs:seeAlso link to a VGW URI"
   ] ;
-
   sh:property [
     a sh:PropertyShape ;
     sh:path rdfs:seeAlso ;
     sh:pattern "^https://vangoghworldwide.org/data/artwork/" ;
     sh:severity sh:Violation ;
-    sh:message "The value of the rdfs:seeAlso link is not a valid VGW URI" ;
-    sh:group vgw:VgwUriGroup
+    sh:message "The value of the rdfs:seeAlso link is not a valid VGW URI"
   ] ;
     
   # Specific artwork type
@@ -43,24 +38,21 @@ vgw:Artwork
     sh:path crm:P2_has_type ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a specific artwork type" ;
-    sh:group vgw:TypeGroup ;
-  ];
-  sh:property [
-    a sh:PropertyShape ;
-    sh:path crm:P2_has_type ;
-    sh:class crm:E55_Type ;
-    sh:severity sh:Warning ;
-    sh:message "The specific artwork classification requires the type Type (crm:E55_Type)" ;
-    sh:group vgw:TypeGroup 
+    sh:message "Artwork requires a specific artwork type" 
   ];
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P2_has_type ;
     sh:node vgw:AATConcept ;
     sh:severity sh:Warning ;
-    sh:message "Specific artwork type is advised to be a concept from AAT" ;
-    sh:group vgw:TypeGroup 
+    sh:message "Specific artwork type is advised to be a concept from AAT"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
+    sh:node vgw:Type ;
+    sh:severity sh:Violation ;
+    sh:message "The specific artwork type is not valid"
   ] ;
 
   # Identifiers
@@ -80,7 +72,7 @@ vgw:Artwork
     a sh:PropertyShape ;
     sh:path crm:P1_is_identified_by ;
     sh:qualifiedValueShape [
-      sh:class crm:E42_Identifier ;
+      sh:class  crm:E42_Identifier ;
       sh:property [
         a sh:PropertyShape ;
         sh:path crm:P2_has_type ;
@@ -165,16 +157,7 @@ vgw:Artwork
     sh:path crm:P43_has_dimension ;
     sh:severity sh:Violation ;
     sh:message "Dimension does not conform to shape vgw:Dimension" ;
-    sh:node vgw:Dimension ;
-    sh:group vgw:DimensionGroup
-  ] ;
-  sh:property [
-    a sh:PropertyShape ;
-    sh:path crm:P43_has_dimension ;
-    sh:class crm:E54_Dimension ;
-    sh:severity sh:Warning ;
-    sh:message "Dimension requires the type Dimension (crm:E54_Dimension)" ;
-    sh:group vgw:DimensionGroup 
+    sh:node vgw:Dimension
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -188,8 +171,7 @@ vgw:Artwork
     ];
 		sh:qualifiedMinCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a dimension width" ;
-    sh:group vgw:DimensionGroup
+    sh:message "Artwork requires a dimension width"
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -203,8 +185,7 @@ vgw:Artwork
     ];
 		sh:qualifiedMinCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a dimension height" ;
-    sh:group vgw:DimensionGroup
+    sh:message "Artwork requires a dimension height"
   ] ;
   
   # Material
@@ -305,6 +286,13 @@ vgw:Artwork
     sh:group vgw:PartsGroup
   ] .
 
+
+### Type
+#vgw:Type a sh:nodeShape ;
+#  sh:targetObjectsOf crm:P2_has_type ;
+#  sh:class crm:E55_Type ;
+#  sh:severity sh:Warning ;
+#  sh:message "Value requires the class Type (crm:E55_Type)" .
 
 ### Identifiers
 vgw:ArtworkIdentifier a sh:NodeShape ;
@@ -506,6 +494,10 @@ vgw:TimeStamp
 ### Dimension
 vgw:Dimension
   a sh:NodeShape ;
+  sh:targetObjectsOf crm:P43_has_dimension ;
+  sh:class crm:E54_Dimension ;
+  sh:severity sh:Warning ;
+  sh:message "Dimension requires the type Dimension (crm:E54_Dimension)" ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P2_has_type;
@@ -592,17 +584,3 @@ vgw:TGNConcept a sh:NodeShape ;
 vgw:VGWConcept a sh:NodeShape ;
   sh:nodeKind sh:IRI ;
   sh:pattern "^https://vangoghworldwide.org/data/concept/" .
-
-
-### Groups
-sh:VgwUriGroup 
-  a sh:PropertyGroup ;
-  rdfs:label "Link to VGW URI" .
-
-sh:TypeGroup 
-  a sh:PropertyGroup ;
-  rdfs:label "Specific type" .
-
-sh:IdentifierGroup 
-  a sh:PropertyGroup ;
-  rdfs:label "Indentifiers" .
