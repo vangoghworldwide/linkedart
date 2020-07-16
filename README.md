@@ -551,6 +551,38 @@ http://vocab.getty.edu/aat/300053013 | pasting
 http://vocab.getty.edu/aat/300014205 | Masonite (TM)
 http://vocab.getty.edu/aat/300014076 | burlap
 
+#### Materials statement
+In addition to the definition of the material (and support material) using AAT concept you can describe the materials in free text. This is done using a statement [](https://linked.art/model/object/physical/#materials-statement)
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/materials-statement", 
+      "type": "LinguisticObject", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435429", 
+          "type": "Type", 
+          "_label": "Material Statement", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049", 
+              "type": "Type", 
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ], 
+      "content": "Oil paint on canvas"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fmaterials_statement.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/materials_statement.rdf.xml)
+
 ### Subject type
 For the subject matter we only ask you to provide the [type of the subject](https://linked.art/model/object/aboutness/#other-classifications), such as landscape or portrait. You are free to provide the depicted content as well, but these are currently not shown on the VGW platform.
 
@@ -736,7 +768,14 @@ When an explicit credit line needs to be displayd on [vangoghworldwide.org](http
         {
           "id": "http://vocab.getty.edu/aat/300026687", 
           "type": "Type", 
-          "_label": "Credit Statement"
+          "_label": "Credit Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049", 
+              "type": "Type", 
+              "_label": "Brief Text"
+            }
+          ]
         }
       ], 
       "content": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
@@ -747,7 +786,7 @@ When an explicit credit line needs to be displayd on [vangoghworldwide.org](http
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcredit.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/credit.rdf.xml)
 
 ### Provenance
-The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as a phase. A phase is initiated by an acquisition (auction, purchase, gift, loan)
+The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as [a phase](https://linked.art/model/provenance/curation.html). A phase is initiated by an acquisition (auction, purchase, gift, loan)
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -811,6 +850,38 @@ http://vocab.getty.edu/aat/300417644 | transfer
 http://vocab.getty.edu/aat/300417637 | gift
 http://vocab.getty.edu/aat/300417646 | long-term loan
 http://vocab.getty.edu/aat/300417641 | bequest
+
+#### Provenance statement
+In addition to the definition the provenance phases you can describe the entire provenance of an artwork in free text. This is done using a [statement(https://linked.art/model/object/physical/#materials-statement)
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "referred_to_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/provenance-statement", 
+      "type": "LinguisticObject", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435438", 
+          "type": "Type", 
+          "_label": "Provenance Statement", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049", 
+              "type": "Type", 
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ], 
+      "content": "..."
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_statement.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_statement.rdf.xml)
 
 ### Exhibitions
 Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.

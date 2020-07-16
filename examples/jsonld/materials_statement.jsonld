@@ -4,13 +4,13 @@
   "type": "HumanMadeObject",
   "referred_to_by": [
     {
-      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/credit", 
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/materials-statement", 
       "type": "LinguisticObject", 
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300026687", 
+          "id": "http://vocab.getty.edu/aat/300435429", 
           "type": "Type", 
-          "_label": "Credit Statement",
+          "_label": "Material Statement", 
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300418049", 
@@ -20,7 +20,7 @@
           ]
         }
       ], 
-      "content": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation"
+      "content": "Oil paint on canvas"
     }
   ]
 }
