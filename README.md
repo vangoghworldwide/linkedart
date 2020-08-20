@@ -92,6 +92,8 @@ http://vocab.getty.edu/aat/300041273 | Prints
 ### Link to VGW URI
 To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](http://vangoghworldwide.org). Use the url of the artwork page, but make sure to use **https://** and include **/data** in the path. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
 
+Notice that the reference to De La Faille sometimes contains additional lettering, arabic or Roman numbers, eg. F1009a, F1116ar, F1664-13 or FXXXIII. These additions are part of the URI.
+
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
