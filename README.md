@@ -919,6 +919,13 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
           "_label": "Stedelijk Museum Amsterdam"
         }
       ],
+      "took_place_at": [
+        {
+          "id": "http://vocab.getty.edu/tgn/7006952",
+          "type": "Place",
+          "_label": "Amsterdam"
+        }
+      ],
       "timespan": [
         {
           "type": "TimeSpan",
