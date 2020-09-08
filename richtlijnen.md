@@ -5,7 +5,7 @@ Uit: Evelien de Visser & Marijke Heslenfeld, _Richtlijnen Van Gogh Worldwide_, v
 ## Kunsthistorische metadata
 ### Metadata identificatie
 Naam | Uitleg | Linked Art patroon | Wat staat er in de database?
---- | ----- | -----
+--- | ----- | ----- | -----
 Toeschrijving/vervaardiger | Wie heeft het kunstwerk gemaakt? Aan wie is het toegeschreven? | [production](https://github.com/vangoghworldwide/linkedart#production) | URI uit RKDartists (of ULAN)
 Status | Gaat over de status van de toeschrijving: huidig, verworpen. | [previous attribution](https://github.com/vangoghworldwide/linkedart#previous-attribution) | ???
 Datering | Wanneer is het kunstwerk gemaakt? Zo nauwkeurig mogelijk. | [production](https://github.com/vangoghworldwide/linkedart#production) | Twee velden: begindatum en einddatum. Beide in ISO formaat (dwz bv. "1890-04-06").
@@ -16,10 +16,13 @@ identificatie-nummer | De la Faille-nummer (oeuvrecatalogus 1970) van het kunstw
 
 ### Metadata fysieke kenmerken
 Naam | Uitleg | Linked Art patroon | Wat staat er in de database?
---- | ----- | -----
-Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [classification](https://github.com/vangoghworldwide/linkedart#classification) | Een veld: URI uit de AAT (bv. voor 'schilderijen')
+----- | ----- | ----- | -----
+Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [specific artwork type](https://github.com/vangoghworldwide/linkedart#specific-artwork-type) | Een veld: URI uit de AAT (bv. voor 'schilderijen')
 Materiaal/techniek | Met welke techniek (1) en welk materiaal (2) is het kunstwerk gemaakt? Welke drager (3) en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support) | Drie velden: alledrie URI's uit de AAT
 Afmetingen | Wat zijn de afmetingen van het kunstwerk? | [dimensions](https://github.com/vangoghworldwide/linkedart#dimensions) | Twee keer drie velden. Type (bv. hoogte, breedte): een URI uit de AAT; waarde (bv. 54.4) in Amerikaanse notatie; eenheid (bv. 'cm'): een URI uit de AAT.
+Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [specific artwork type](https://github.com/vangoghworldwide/linkedart#specific-artwork-type) | Een veld: URI uit AAT
+Materiaal/techniek | Met welke techniek (1) en welk materiaal (2) is het kunstwerk gemaakt? Welke drager (3) en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support) & [production](https://github.com/vangoghworldwide/linkedart#production) (techniek) | Drie velden: alledrie een URI uit de AAT
+Afmetingen | Wat zijn de afmetingen van het kunstwerk? | [dimensions](https://github.com/vangoghworldwide/linkedart#dimensions) | 
 
 ### Metadata opschriften/merken (Indien aanwezig)
 Naam | Uitleg | Linked Art patroon
