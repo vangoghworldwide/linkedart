@@ -20,9 +20,6 @@ Naam | Uitleg | Linked Art patroon | Wat staat er in de database?
 Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [specific artwork type](https://github.com/vangoghworldwide/linkedart#specific-artwork-type) | Een veld: URI uit de AAT (bv. voor 'schilderijen')
 Materiaal/techniek | Met welke techniek (1) en welk materiaal (2) is het kunstwerk gemaakt? Welke drager (3) en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support) | Drie velden: alledrie URI's uit de AAT
 Afmetingen | Wat zijn de afmetingen van het kunstwerk? | [dimensions](https://github.com/vangoghworldwide/linkedart#dimensions) | Twee keer drie velden. Type (bv. hoogte, breedte): een URI uit de AAT; waarde (bv. 54.4) in Amerikaanse notatie; eenheid (bv. 'cm'): een URI uit de AAT.
-Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [specific artwork type](https://github.com/vangoghworldwide/linkedart#specific-artwork-type) | Een veld: URI uit AAT
-Materiaal/techniek | Met welke techniek (1) en welk materiaal (2) is het kunstwerk gemaakt? Welke drager (3) en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support) & [production](https://github.com/vangoghworldwide/linkedart#production) (techniek) | Drie velden: alledrie een URI uit de AAT
-Afmetingen | Wat zijn de afmetingen van het kunstwerk? | [dimensions](https://github.com/vangoghworldwide/linkedart#dimensions) | 
 
 ### Metadata opschriften/merken (Indien aanwezig)
 Naam | Uitleg | Linked Art patroon
