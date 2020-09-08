@@ -18,7 +18,7 @@ identificatie-nummer | De la Faille-nummer (oeuvrecatalogus 1970) van het kunstw
 Naam | Uitleg | Linked Art patroon
 --- | ----- | -----
 Objecttype | Wat voor type object is het kunstwerk? Schilderij, tekening, prent, aquarel etc. | [specific artwork type](https://github.com/vangoghworldwide/linkedart#specific-artwork-type)
-Materiaal/techniek | Met welke techniek en welkmateriaal is het kunstwerk gemaakt? Welke  drager en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support)
+Materiaal/techniek | Met welke techniek en welkmateriaal is het kunstwerk gemaakt? Welke  drager en schilder/ tekenmaterialen zijn gebruikt? | [material](https://github.com/vangoghworldwide/linkedart#material) & [material-support](https://github.com/vangoghworldwide/linkedart#material-support) & [production](https://github.com/vangoghworldwide/linkedart#production) (techniek)
 Afmetingen | Wat zijn de afmetingen van het kunstwerk? | [dimensions](https://github.com/vangoghworldwide/linkedart#dimensions)
 
 ### Metadata opschriften/merken (Indien aanwezig)
