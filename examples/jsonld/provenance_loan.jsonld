@@ -2,7 +2,7 @@
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
   "type": "HumanMadeObject",
-  "_label": "Purchase of Painting", 
+  "_label": "Loan of Painting", 
   "classified_as": [
     {
       "id": "http://vocab.getty.edu/aat/300055863", 
@@ -13,14 +13,8 @@
   "timespan": [
     {
       "type": "TimeSpan",
-      "end_of_the_end": "1948-01-01",
-      "begin_of_the_begin": "1949-01-01",
-      "identified_by": [ 
-        {
-          "type": "Name",
-          "content": "1949"
-        }
-      ]
+      "end_of_the_end": "1949-01-01",
+      "begin_of_the_begin": "1949-01-01"
     }
   ],
   "carried_out_by": [
@@ -39,21 +33,27 @@
   ],
   "part": [
     {
-      "type": "Acquisition", 
-      "_label": "Acquisition of Painting from Seller",
-      "transferred_title_of": [
+      "type": "TransferOfCustody", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417645", 
+          "type": "Type", 
+          "_label": "Loan"
+        }
+      ], 
+      "transferred_custody_of": [
         {
           "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
           "type": "HumanMadeObject"
         }
       ],
-      "transferred_title_from": [
+      "transferred_custody_from": [
         {
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }
       ],
-      "transferred_title_to": [
+      "transferred_custody_to": [
         {
           "id": "http://vocab.getty.edu/ulan/500275558", 
           "type": "Actor", 
