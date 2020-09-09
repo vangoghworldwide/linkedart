@@ -92,6 +92,8 @@ http://vocab.getty.edu/aat/300041273 | Prints
 ### Link to VGW URI
 To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](http://vangoghworldwide.org). Use the url of the artwork page, but make sure to use **https://** and include **/data** in the path. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
 
+Notice that the reference to De La Faille sometimes contains additional lettering, arabic or Roman numbers, eg. F1009a, F1116ar, F1664-13 or FXXXIII. These additions are part of the URI.
+
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -347,6 +349,8 @@ http://vocab.getty.edu/tgn/7011562 | Ramsgate
 http://vocab.getty.edu/tgn/7006842 | Eindhoven
 http://vocab.getty.edu/tgn/7016995 | Laken
 http://vocab.getty.edu/tgn/7007865 | Borinage
+http://vocab.getty.edu/tgn/7009654 | Saint-Rémy-de-Provence
+
 
 #### Timespan
 Time is modeled as timespan with a start and an end date. This means that if you know that the artwork is created on 15 May 1888, it is created between 15 May 1888 00:00:00 (1888-05-15T00:00:00) and 15 May 1888 23:59:59 (1888-05-15T23:59:59). When the date is not known exactly model the first possible begin and the latest possible end. 
@@ -1012,6 +1016,13 @@ Artworks are used for exhibitions. An exhibition is identified by a name, the or
           "id": "http://vangoghmuseum.nl/data/person/8045",
           "type": "Actor",
           "_label": "Stedelijk Museum Amsterdam"
+        }
+      ],
+      "took_place_at": [
+        {
+          "id": "http://vocab.getty.edu/tgn/7006952",
+          "type": "Place",
+          "_label": "Amsterdam"
         }
       ],
       "timespan": [
