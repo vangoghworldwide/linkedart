@@ -157,20 +157,20 @@ vgw:Artwork
     sh:path crm:P108i_was_produced_by ;
     sh:node vgw:Production ;
     sh:severity sh:Violation ;
-    sh:message "Production does not conform to shape vgw:Production" ;
+    sh:message "Production is not valid" ;
   ] ;
   sh:property [
     sh:path [ sh:inversePath crm:P108_has_produced ] ;
     sh:node vgw:Production ;
     sh:severity sh:Violation ;
-    sh:message "Production does not conform to shape vgw:Production" ;
+    sh:message "Production is not valid" ;
   ] ;
 
   # Dimensions.
   sh:property [
     sh:path crm:P43_has_dimension ;
     sh:severity sh:Violation ;
-    sh:message "Dimension does not conform to shape vgw:Dimension" ;
+    sh:message "Dimension is not valid" ;
     sh:node vgw:Dimension
   ] ;
   sh:property [
