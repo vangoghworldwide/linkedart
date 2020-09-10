@@ -9,10 +9,10 @@
 
 vgw:Artwork 
   a sh:NodeShape ;
-  sh:targetSubjectsOf rdfs:seeAlso ;
+  # sh:targetNode "http://groningermuseum.nl/data/artwork/1962.0200" ;
 
   # Class
-  sh:class crm:E22_Human-Made_Object ;
+  sh:targetClass crm:E22_Human-Made_Object ;
   sh:message "Artwork does not have class crm:E22_Human-Made_Object" ;
   
   # Link to VGW URI
@@ -56,17 +56,21 @@ vgw:Artwork
   ] ;
 
   # Identifiers
+  
   sh:property [
-    a sh:PropertyShape ;
     sh:path crm:P1_is_identified_by ;
-    sh:xor(
-      [ sh:class crm:E42_Identifier ]
-      [ sh:class crm:E33_E41_Linguistic_Appellation ]
+    sh:or(
+      [
+        sh:class crm:E33_E41_Linguistic_Appellation ;
+        sh:node vgw:ArtworkName ;
+      ]
+      [
+        sh:class crm:E42_Identifier ;
+      ]
     ) ;
     sh:severity sh:Violation ;
-    sh:message "Artwork identifier requires a type Identifier (E42_Identifier) or Name (crm:E33_E41_Linguistic_Appellation)" ;
-    sh:group vgw:IdentifierGroup 
-  ] ;
+    sh:message "identifier/name is not valid"
+  ] ;  
 
   sh:property [
     a sh:PropertyShape ;
@@ -100,7 +104,6 @@ vgw:Artwork
 		sh:qualifiedMinCount 1 ;
     sh:severity sh:Violation ;
     sh:message "Artwork requires at least one English title" ;
-    sh:group vgw:TitleGroup
   ] ;
 
   # Current owner
@@ -109,8 +112,7 @@ vgw:Artwork
     sh:path crm:P52_has_current_owner ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a current owner (crm:P52_has_current_owner)" ;
-    sh:group vgw:OwnerGroup
+    sh:message "Artwork requires a current owner" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -134,26 +136,38 @@ vgw:Artwork
   ] ;
   
   # Production
+  sh:or(
+    [ sh:property [
+        sh:path [ sh:inversePath crm:P108_has_produced ] ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Artwork requires a production activity" ;
+      ]
+    ]
+    [ sh:property [
+        sh:path crm:P108i_was_produced_by ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Artwork requires a production activity" ;
+      ]
+    ]
+  );
+
   sh:property [
-    a sh:PropertyShape ;
     sh:path crm:P108i_was_produced_by ;
-    sh:minCount 1 ;
+    sh:node vgw:Production ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a production activity (crm:P108i_was_produced_by)" ;
-    sh:group vgw:ProductionGroup
+    sh:message "Production does not conform to shape vgw:Production" ;
   ] ;
   sh:property [
-    a sh:PropertyShape ;
-    sh:path crm:P108i_was_produced_by ;
-    sh:class crm:E12_Production ;
+    sh:path [ sh:inversePath crm:P108_has_produced ] ;
+    sh:node vgw:Production ;
     sh:severity sh:Violation ;
-    sh:message "Production activity requires the type Production (crm:E12_Production)" ;
-    sh:group vgw:OwnerGroup 
+    sh:message "Production does not conform to shape vgw:Production" ;
   ] ;
-  
+
   # Dimensions.
   sh:property [
-    a sh:PropertyShape ;
     sh:path crm:P43_has_dimension ;
     sh:severity sh:Violation ;
     sh:message "Dimension does not conform to shape vgw:Dimension" ;
@@ -304,33 +318,34 @@ vgw:ArtworkIdentifier a sh:NodeShape ;
     sh:nodeType "literal" ;
     sh:severity sh:Violation ;
     sh:message "Identifier misses the content literal"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path  crm:P2_has_type;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Indentifier misses a classification"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
+    sh:nodeKind sh:IRI ;
+    sh:or(
+      [
+        sh:node vgw:AATConcept
+      ]
+      [
+        sh:node vgw:VGWConcept 
+      ]
+    ) ;
+    sh:severity sh:Warning ;
+    sh:message "Identifier classification is advised to have an AAT or VGW concept" 
   ] .
-  # sh:property [
-  #   a sh:PropertyShape ;
-  #   sh:path  crm:P2_has_type;
-  #   sh:minCount 1 ;
-  #   sh:severity sh:Violation ;
-  #   sh:message "Indentifier misses a classification"
-  # ] ;
-  # sh:property [
-  #   a sh:PropertyShape ;
-  #   sh:path crm:P2_has_type ;
-  #   sh:nodeKind sh:IRI ;
-  #   sh:or(
-  #     [
-  #       sh:node vgw:AATConcept
-  #     ]
-  #     [
-  #       sh:node vgw:VGWConcept 
-  #     ]
-  #   ) ;
-  #   sh:severity sh:Warning ;
-  #   sh:message "Identifier classification is advised to have an AAT or VGW concept" 
-  # ] .
 
 ### Names
 vgw:ArtworkName a sh:NodeShape ;
   sh:targetClass crm:E33_E41_Linguistic_Appellation ;
+
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P190_has_symbolic_content;
@@ -338,33 +353,41 @@ vgw:ArtworkName a sh:NodeShape ;
     sh:nodeType "literal" ;
     sh:severity sh:Violation ;
     sh:message "Title misses the content literal"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path  crm:P2_has_type;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Title misses a classification"
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
+    sh:node vgw:AATConcept ;
+    sh:severity sh:Warning ;
+    sh:message "Title classification is not an AAT concept" 
+  ] ;
+  sh:property [
+    a sh:PropertyShape ;
+    sh:path crm:P72_has_language;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "Title does not have a language definition"
   ] .
-  # sh:property [
-  #   a sh:PropertyShape ;
-  #   sh:path  crm:P2_has_type;
-  #   sh:minCount 1 ;
-  #   sh:severity sh:Violation ;
-  #   sh:message "Title misses a classification"
-  # ] ;
-  # sh:property [
-  #   a sh:PropertyShape ;
-  #   sh:path crm:P2_has_type ;
-  #   sh:node vgw:AATConcept ;
-  #   sh:severity sh:Warning ;
-  #   sh:message "Title classification is not an AAT concept" 
-  # ] ;
-  # sh:property [
-  #   a sh:PropertyShape ;
-  #   sh:path crm:P72_has_language;
-  #   sh:minCount 1 ;
-  #   sh:severity sh:Violation ;
-  #   sh:message "Title does not have a language definition"
-  # ] .
 
 ### Production Activity
 vgw:Production
   a sh:NodeShape ;
-  sh:targetClass crm:E12_Production ;
+  sh:targetSubjectsOf crm:P108_has_produced ;
+  # sh:or(
+  #   [ sh:targetSubjectsOf crm:P108_has_produced ]
+  #   [ sh:targetObjectsOf crm:P108i_was_produced_by ]
+  # );
+
+  sh:class crm:E12_Production ;
+  sh:severity sh:Violation ;
+  sh:message "Production activity requires the type Production (crm:E12_Production)" ;
 
   # carried out by
   sh:property [
@@ -372,8 +395,7 @@ vgw:Production
     sh:path crm:P14_carried_out_by ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Artwork requires a carried_out_by (crm:P14_carried_out_by)" ;
-    sh:group vgw:ProductionGroup
+    sh:message "Production requires a carried_out_by" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -385,7 +407,6 @@ vgw:Production
     );
     sh:severity sh:Violation ;
     sh:message "Production carried_out_by requires a type Actor (crm:E39_Actor), Person (crm:E21_Person) or Group (crm:E74_Group)" ;
-    sh:group vgw:ProductionGroup 
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -393,7 +414,6 @@ vgw:Production
     sh:node vgw:ULANConcept ;
     sh:severity sh:Warning ;
     sh:message "Production carried_out_by is advised to have a value from ULAN" ;
-    sh:group vgw:ProductionGroup
   ] ;
   # took place at
   sh:property [
@@ -401,16 +421,14 @@ vgw:Production
     sh:path crm:P7_took_place_at ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Production requires a took_place_at (crm:P7_took_place_at)" ;
-    sh:group vgw:ProductionGroup
+    sh:message "Production requires a took_place_at" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P7_took_place_at ;
     sh:class crm:E53_Place;
     sh:severity sh:Violation ;
-    sh:message "Production took_place_at requires a type Place (crm:E53_Place)" ;
-    sh:group vgw:ProductionGroup 
+    sh:message "Production took_place_at requires a type Place" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -418,7 +436,6 @@ vgw:Production
     sh:node vgw:TGNConcept ;
     sh:severity sh:Warning ;
     sh:message "Production took_place_at is advised to have a value from TGN" ;
-    sh:group vgw:ProductionGroup
   ] ;
   # Timespan
   sh:property [
@@ -426,24 +443,22 @@ vgw:Production
     sh:path crm:P4_has_time-span ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Production requires a timespan (crm:P4_has_time-span)" ;
-    sh:group vgw:ProductionGroup
+    sh:message "Production requires a timespan" ;
   ] ;
-  sh:property [
-    a sh:PropertyShape ;
-    sh:path crm:P4_has_time-span ;
-    sh:class crm:E52_Time-Span ;
-    sh:severity sh:Violation ;
-    sh:message "Production timespan requires type TimeSpan (crm:E52_Time-Span)" ;
-    sh:group vgw:ProductionGroup 
-  ] ;
+  # sh:property [
+  #   a sh:PropertyShape ;
+  #   sh:path crm:P4_has_time-span ;
+  #   sh:class crm:E52_Time-Span ;
+  #   sh:severity sh:Violation ;
+  #   sh:message "Production timespan requires type TimeSpan (crm:E52_Time-Span)" ;
+  # ] ;
   # technique
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P32_used_general_technique ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Production is advised to have a used_general_technique (crm:P32_used_general_technique)" ;
+    sh:message "Production is advised to have a used_general_technique" ;
     sh:group vgw:ProductionGroup
   ] ;
   sh:property [
@@ -473,7 +488,7 @@ vgw:TimeStamp
     sh:path crm:P82a_begin_of_the_begin ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Timespan requires a begin date (crm:P82a_begin_of_the_begin)" 
+    sh:message "Timespan requires a begin date" 
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -525,14 +540,14 @@ vgw:Dimension
     sh:path crm:P91_has_unit;
     sh:class crm:E58_Measurement_Unit ;
     sh:severity sh:Violation ;
-    sh:message "Dimension unit requires type MeasurementUnit (crm:E58_Measurement_Unit)" 
+    sh:message "Dimension unit requires type MeasurementUnit" 
   ] ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P90_has_value ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Dimension requires a value (crm:P90_has_value)" 
+    sh:message "Dimension requires a value" 
   ] .
 
 ### Concepts from controlled vocabularies
