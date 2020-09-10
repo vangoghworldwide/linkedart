@@ -13,7 +13,7 @@ vgw:Artwork
 
   # Class
   sh:targetClass crm:E22_Human-Made_Object ;
-  sh:message "Artwork does not have class crm:E22_Human-Made_Object" ;
+  #sh:message "Artwork does not have class crm:E22_Human-Made_Object" ;
   
   # Link to VGW URI
   sh:property [
@@ -123,7 +123,7 @@ vgw:Artwork
       [ sh:class crm:E74_Group ]
     );
     sh:severity sh:Violation ;
-    sh:message "Current owner requires a type Actor (crm:E39_Actor), Person (crm:E21_Person) or Group (crm:E74_Group)" ;
+    sh:message "Current owner requires a type crm:E39_Actor, crm:E21_Person or crm:E74_Group" ;
     sh:group vgw:OwnerGroup 
   ] ;
   sh:property [
@@ -216,7 +216,7 @@ vgw:Artwork
     sh:path crm:P45_consists_of ;
     sh:class crm:E57_Material ;
     sh:severity sh:Warning ;
-    sh:message "Material requires the type Material (crm:E57_Material)" ;
+    sh:message "Material requires the type crm:E57_Material" ;
     sh:group vgw:MaterialGroup 
   ];
   sh:property [
@@ -242,7 +242,7 @@ vgw:Artwork
     sh:path ( crm:P46_is_composed_of crm:P45_consists_of ) ;
     sh:class crm:E57_Material ;
     sh:severity sh:Warning ;
-    sh:message "Support material requires the type Material (crm:E57_Material)" ;
+    sh:message "Support material requires the type crm:E57_Material" ;
     sh:group vgw:MaterialGroup 
   ];
   sh:property [
@@ -268,7 +268,7 @@ vgw:Artwork
     sh:path ( crm:P65_shows_visual_item crm:P2_has_type ) ;
     sh:class crm:E55_Type ;
     sh:severity sh:Warning ;
-    sh:message "Subject type requires the type Type (crm:E55_Type)" ;
+    sh:message "Subject type requires the type crm:E55_Type" ;
     sh:group vgw:SubjectTypeGroup
   ] ;
   sh:property [
@@ -286,7 +286,7 @@ vgw:Artwork
     sh:path crm:P65_shows_visual_item;
     sh:class crm:E36_Visual_Item ;
     sh:severity sh:Violation ;
-    sh:message "Artwork shows requires the type VisualItem (crm:E36_Visual_Item)" ;
+    sh:message "Artwork shows requires the type crm:E36_Visual_Item" ;
     sh:group vgw:PartsGroup
   ] ;
 
@@ -296,7 +296,7 @@ vgw:Artwork
     sh:path crm:P46_is_composed_of;
     sh:class crm:E22_Human-Made_Object ;
     sh:severity sh:Violation ;
-    sh:message "Artwork part requires the type HumanMadeObject (crm:E22_Human-Made_Object)" ;
+    sh:message "Artwork part requires the type crm:E22_Human-Made_Object" ;
     sh:group vgw:PartsGroup
   ] .
 
@@ -339,7 +339,7 @@ vgw:ArtworkIdentifier a sh:NodeShape ;
       ]
     ) ;
     sh:severity sh:Warning ;
-    sh:message "Identifier classification is advised to have an AAT or VGW concept" 
+    sh:message "Identifier is advised to have an AAT or VGW concept" 
   ] .
 
 ### Names
@@ -387,7 +387,7 @@ vgw:Production
 
   sh:class crm:E12_Production ;
   sh:severity sh:Violation ;
-  sh:message "Production activity requires the type Production (crm:E12_Production)" ;
+  sh:message "Production activity requires the type crm:E12_Production" ;
 
   # carried out by
   sh:property [
@@ -395,7 +395,7 @@ vgw:Production
     sh:path crm:P14_carried_out_by ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Production requires a carried_out_by" ;
+    sh:message "Production requires a an actor" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -406,7 +406,7 @@ vgw:Production
       [ sh:class crm:E74_Group ]
     );
     sh:severity sh:Violation ;
-    sh:message "Production carried_out_by requires a type Actor (crm:E39_Actor), Person (crm:E21_Person) or Group (crm:E74_Group)" ;
+    sh:message "Production carried_out_by requires a type crm:E39_Actor, crm:E21_Person or crm:E74_Group" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
@@ -421,21 +421,21 @@ vgw:Production
     sh:path crm:P7_took_place_at ;
     sh:minCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Production requires a took_place_at" ;
+    sh:message "Production requires a place" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P7_took_place_at ;
     sh:class crm:E53_Place;
     sh:severity sh:Violation ;
-    sh:message "Production took_place_at requires a type Place" ;
+    sh:message "Production place requires a type Place (crm:E53_Place)" ;
   ] ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P7_took_place_at ;
     sh:node vgw:TGNConcept ;
     sh:severity sh:Warning ;
-    sh:message "Production took_place_at is advised to have a value from TGN" ;
+    sh:message "Production place is advised to have a value from TGN" ;
   ] ;
   # Timespan
   sh:property [
@@ -458,7 +458,7 @@ vgw:Production
     sh:path crm:P32_used_general_technique ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Production is advised to have a used_general_technique" ;
+    sh:message "Production is advised to have a technique" ;
     sh:group vgw:ProductionGroup
   ] ;
   sh:property [
@@ -466,7 +466,7 @@ vgw:Production
     sh:path crm:P32_used_general_technique ;
     sh:class crm:E55_Type;
     sh:severity sh:Violation ;
-    sh:message "Production technique requires a type Type (crm:E55_Type)" ;
+    sh:message "Production technique requires the type crm:E55_Type" ;
     sh:group vgw:ProductionGroup 
   ] ;
   sh:property [
@@ -474,7 +474,7 @@ vgw:Production
     sh:path crm:P32_used_general_technique ;
     sh:node vgw:AATConcept ;
     sh:severity sh:Warning ;
-    sh:message "Production used_general_technique is advised to have a value from AAT" ;
+    sh:message "Production technique is advised to have a value from AAT" ;
     sh:group vgw:ProductionGroup
   ] .
 
@@ -495,7 +495,7 @@ vgw:TimeStamp
     sh:path crm:P82a_begin_of_the_begin ;
     sh:severity sh:Violation ;
     sh:datatype xsd:date ;
-    sh:message "Timespan begin_of_the_begin requires a value of type xsd:date" 
+    sh:message "Timespan begin requires a value of type xsd:date" 
   ] ;
   #end
   sh:property [
@@ -503,7 +503,7 @@ vgw:TimeStamp
     sh:path crm:P82b_end_of_the_end ;
     sh:severity sh:Violation ;
     sh:datatype xsd:date ;
-    sh:message "Timespan end_of_the_end requires a value of type xsd:date" 
+    sh:message "Timespan end requires a value of type xsd:date" 
   ] .
 
 ### Dimension
@@ -512,7 +512,7 @@ vgw:Dimension
   sh:targetObjectsOf crm:P43_has_dimension ;
   sh:class crm:E54_Dimension ;
   sh:severity sh:Warning ;
-  sh:message "Dimension requires the type Dimension (crm:E54_Dimension)" ;
+  sh:message "Dimension requires the type crm:E54_Dimension" ;
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P2_has_type;
@@ -540,7 +540,7 @@ vgw:Dimension
     sh:path crm:P91_has_unit;
     sh:class crm:E58_Measurement_Unit ;
     sh:severity sh:Violation ;
-    sh:message "Dimension unit requires type MeasurementUnit" 
+    sh:message "Dimension unit requires type E58_Measurement_Unit" 
   ] ;
   sh:property [
     a sh:PropertyShape ;
