@@ -1,0 +1,72 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+  "type": "HumanMadeObject",
+  "_label": "Purchase of Painting", 
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863", 
+      "type": "Type", 
+      "_label": "Provenance Entry"
+    }
+  ], 
+  "timespan": [
+    {
+      "type": "TimeSpan",
+      "end_of_the_end": "1948-01-01",
+      "begin_of_the_begin": "1949-01-01",
+      "identified_by": [ 
+        {
+          "type": "Name",
+          "content": "1949"
+        }
+      ]
+    }
+  ],
+  "carried_out_by": [
+    {
+      "id": "http://vocab.getty.edu/ulan/500275558", 
+      "type": "Actor", 
+      "_label": "Van Gogh Museum", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300312281", 
+          "type": "Type", 
+          "_label": "Museum"
+        }
+      ]
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition", 
+      "_label": "Acquisition of Painting from Seller",
+      "transferred_title_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
+          "type": "HumanMadeObject"
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Actor",
+          "_label": "PREVIOUS_OWNER"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "id": "http://vocab.getty.edu/ulan/500275558", 
+          "type": "Actor", 
+          "_label": "Van Gogh Museum", 
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300312281", 
+              "type": "Type", 
+              "_label": "Museum"
+            }
+          ]
+        }
+      ]
+    }
+  ] 
+}
