@@ -129,9 +129,16 @@ vgw:Artwork
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P52_has_current_owner ;
-    sh:node vgw:ULANConcept ;
+    sh:or(
+      [
+        sh:node vgw:ULANConcept ;
+      ]
+      [
+        sh:node vgw:RKDArtist
+      ]
+    ) ;
     sh:severity sh:Violation ;
-    sh:message "Current owner is advised to be a concept from ULAN" ;
+    sh:message "Current owner is advised to be a concept from ULAN or RKD artists" ;
     sh:group vgw:OwnerGroup
   ] ;
   
@@ -578,6 +585,21 @@ vgw:ULANConcept a sh:NodeShape ;
         sh:path skos:exactMatch ;
         sh:nodeKind sh:IRI ;
         sh:pattern "^http://vocab.getty.edu/ulan/"
+      ]
+    ]
+  ).
+vgw:RKDartist a sh:NodeShape ;
+  sh:nodeKind sh:IRI ;
+  sh:or(
+    [
+      sh:pattern "^https://data.rkd.nl/artist/" 
+    ]
+    [
+      sh:property [
+        sh:minCount 1 ;
+        sh:path skos:exactMatch ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://data.rkd.nl/artist/"
       ]
     ]
   ).
