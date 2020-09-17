@@ -134,7 +134,7 @@ vgw:Artwork
         sh:node vgw:ULANConcept ;
       ]
       [
-        sh:node vgw:RKDArtist
+        sh:node vgw:RKDartist
       ]
     ) ;
     sh:severity sh:Violation ;
@@ -418,9 +418,16 @@ vgw:Production
   sh:property [
     a sh:PropertyShape ;
     sh:path crm:P14_carried_out_by ;
-    sh:node vgw:ULANConcept ;
+    sh:or(
+      [
+        sh:node vgw:ULANConcept ;
+      ]
+      [
+        sh:node vgw:RKDartist
+      ]
+    ) ;
     sh:severity sh:Warning ;
-    sh:message "Production carried_out_by is advised to have a value from ULAN" ;
+    sh:message "Production carried_out_by is advised to have a value from ULAN or RKD artists" ;
   ] ;
   # took place at
   sh:property [
