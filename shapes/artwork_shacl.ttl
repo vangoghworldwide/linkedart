@@ -160,18 +160,24 @@ vgw:Artwork
     ]
   );
 
-  sh:property [
-    sh:path crm:P108i_was_produced_by ;
-    sh:node vgw:Production ;
-    sh:severity sh:Violation ;
-    sh:message "Production is not valid" ;
-  ] ;
-  sh:property [
-    sh:path [ sh:inversePath crm:P108_has_produced ] ;
-    sh:node vgw:Production ;
-    sh:severity sh:Violation ;
-    sh:message "Production is not valid" ;
-  ] ;
+  sh:or(
+    [
+      sh:property [
+        sh:path crm:P108i_was_produced_by ;
+        sh:node vgw:Production ;
+        sh:severity sh:Violation ;
+        sh:message "Production is not valid" ;
+      ] 
+    ]
+    [
+      sh:property [
+        sh:path [ sh:inversePath crm:P108_has_produced ] ;
+        sh:node vgw:Production ;
+        sh:severity sh:Violation ;
+        sh:message "Production is not valid" ;
+      ]
+    ]
+  );
 
   # Dimensions.
   sh:property [
