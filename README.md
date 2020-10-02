@@ -358,14 +358,18 @@ Time is modeled as timespan with a start and an end date. This means that if you
 These machine readable dates are important, for example to sort artworks on date of production. Optionally a textual description of the date can be provided with an *identified_by* relation on the timespan.
 
 #### Technique
-Relate the technique used in the production event.
+Technique relates to the way in which the artist used materials in order to create the art work. These terms will especially apply to, but are not limited to, works on paper.
 
 Relevant AAT-concepts:
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300054216 | painting
-
-(NB: this is the concept for "painting" as an activity, not the objectcategory "paintings")
+http://vocab.getty.edu/aat/300182748 | wash technique of colorwashing
+http://vocab.getty.edu/aat/300053062 | colorwashing
+http://vocab.getty.edu/aat/300053418 | heightening
+http://vocab.getty.edu/aat/300053412 | stumping
+http://vocab.getty.edu/aat/300379457 | scratching (process)
+http://vocab.getty.edu/aat/300054196 | stumping
+http://vocab.getty.edu/aat/300053431 | squaring (transferring technique)
 
 ### Previous attribution
 
