@@ -358,7 +358,7 @@ Time is modeled as timespan with a start and an end date. This means that if you
 These machine readable dates are important, for example to sort artworks on date of production. Optionally a textual description of the date can be provided with an *identified_by* relation on the timespan.
 
 #### Technique
-Technique relates to the way in which the artist used materials in order to create the art work. These terms will especially apply to, but are not limited to, works on paper.
+Technique relates to the way in which Van Gogh used materials in order to create the art work. For Van Gogh Worldwide, it specifically relates to a technique which is not apparent or can be deducted from the used materials. For example, for ‘oil on canvas’ it is not necessary to list the technique ‘painted’ (there is also a subject type stating the object is a ‘painting’). This is not the case for works on paper. Watercolor can be applied using various techniques. Those can be specified here. The term Technique is not limited to works on paper. It can be applied to any work of Vincent van Gogh, as long as the term is not redundant (as in case of the example ‘painted’).
 
 Relevant AAT-concepts:
 URI | Label
