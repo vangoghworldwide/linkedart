@@ -18,6 +18,7 @@
         a crm:E12_Production
     ] ;
     crm:P14_carried_out_by <https://example.org/uri_curator_researcher> ;
+    crm:P2_has_type <https://vangoghworldwide.org/data/concept/previous_attribution> ;
     crm:P4_has_time-span [
         crm:P82b_end_of_the_end "2016-01-01T00:00:00"^^xsd:dateTime ;
         a crm:E52_Time-Span
@@ -31,4 +32,8 @@
 <https://example.org/uri_curator_researcher>
     a crm:E39_Actor ;
     rdfs:label "Name of the curator/researcher" .
+
+<https://vangoghworldwide.org/data/concept/previous_attribution>
+    a crm:E55_Type ;
+    rdfs:label "Previously attributed to Vincent van Gogh" .
 

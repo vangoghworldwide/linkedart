@@ -6,9 +6,14 @@
 
 <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/BASE_URL_TO_IMAGE_ON_IIIF_SERVER>
     dcterms:conformsTo <http://iiif.io/api/image> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300215302> ;
     a crm:E36_Visual_Item .
 
 <http://vangoghmuseum.nl/data/artwork/s0416M1990>
     crm:P138i_has_representation <file:///home/ivo/Documents/git/linkedart/examples/rdfxml/BASE_URL_TO_IMAGE_ON_IIIF_SERVER> ;
     a crm:E22_Human-Made_Object .
+
+<http://vocab.getty.edu/aat/300215302>
+    a crm:E55_Type ;
+    rdfs:label "digital images" .
 
