@@ -849,7 +849,7 @@ The provenance defines the different owners of the artwork and how they acquired
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance.rdf.xml)
 
-<!-- In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
+**Experimental** In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -1001,7 +1001,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
   ] 
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_loan.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_loan.rdf.xml) -->
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_loan.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_loan.rdf.xml)
 
 URI | Label
 --- | -----
