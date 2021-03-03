@@ -853,8 +853,8 @@ The provenance defines the different owners of the artwork and how they acquired
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
-  "type": "HumanMadeObject",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1",
+  "type": "Activity",
   "_label": "Purchase of Painting", 
   "classified_as": [
     {
@@ -930,8 +930,8 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
-  "type": "HumanMadeObject",
+  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/activity/2",
+  "type": "Activity",
   "_label": "Loan of Painting", 
   "classified_as": [
     {
