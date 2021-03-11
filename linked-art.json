@@ -1,6 +1,5 @@
 {
   "@context": {
-    "@version": 1, 
     "crm": "http://www.cidoc-crm.org/cidoc-crm/", 
     "sci": "http://www.ics.forth.gr/isl/CRMsci/", 
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
