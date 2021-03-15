@@ -794,62 +794,7 @@ When an explicit credit line needs to be displayd on [vangoghworldwide.org](http
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcredit.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/credit.rdf.xml)
 
 ### Provenance
-The provenance defines the different owners of the artwork and how they acquired the work. Each ownership is modeled as [a phase](https://linked.art/model/provenance/curation.html). A phase is initiated by an acquisition (auction, purchase, gift, loan)
-```json
-{
-  "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
-  "type": "HumanMadeObject",
-  "has_phase": [
-     {
-      "type": "Phase",
-      "carried_out_by": [
-        {
-          "id": "http://vocab.getty.edu/ulan/500275558", 
-          "type": "Actor", 
-          "_label": "Van Gogh Museum", 
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300312281", 
-              "type": "Type", 
-              "_label": "Museum"
-            }
-          ]
-        }
-      ], 
-      "took_place_at": [
-        {
-          "id": "http://vocab.getty.edu/tgn/7006952",
-          "type": "Place",
-          "_label": "Amsterdam"
-        }
-      ],
-      "timespan": [
-        {
-          "type": "TimeSpan",
-          "end_of_the_end": "1990-12-31",
-          "begin_of_the_begin": "1949-01-01"
-        }
-      ],
-      "initiated_by": [
-        {
-          "type": "Acquisition",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300417645",
-              "type": "Type",
-              "_label": "loan"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance.rdf.xml)
-
-**Experimental** In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
+In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -924,7 +869,7 @@ The provenance defines the different owners of the artwork and how they acquired
   ] 
 }
 ```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance.rdf.xml)
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_acquisition.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_acquisition.rdf.xml)
 
 A loan is modelled in a similar fashion, but using the specific part of type "TransferOfCustody".
 ```json
