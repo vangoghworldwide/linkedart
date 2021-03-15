@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+>
+  <crm:E7_Activity rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1">
+    <rdfs:label>Purchase of Painting</rdfs:label>
+    <crm:P14_carried_out_by>
+      <crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500275558">
+        <rdfs:label>Van Gogh Museum</rdfs:label>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300312281">
+            <rdfs:label>Museum</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+      </crm:E39_Actor>
+    </crm:P14_carried_out_by>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span>
+        <crm:P1_is_identified_by>
+          <crm:E33_E41_Linguistic_Appellation>
+            <crm:P190_has_symbolic_content>1949</crm:P190_has_symbolic_content>
+          </crm:E33_E41_Linguistic_Appellation>
+        </crm:P1_is_identified_by>
+        <crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-01-01</crm:P82a_begin_of_the_begin>
+        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1948-01-01</crm:P82b_end_of_the_end>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+    <crm:P2_has_type>
+      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300055863">
+        <rdfs:label>Provenance Entry</rdfs:label>
+      </crm:E55_Type>
+    </crm:P2_has_type>
+    <crm:P9_consists_of>
+      <crm:E10_Transfer_of_Custody rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990/loan/1">
+        <rdfs:label>Loan of Painting</rdfs:label>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300417645">
+            <rdfs:label>Loan</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P28_custody_surrendered_by>
+          <crm:E39_Actor>
+            <rdfs:label>PREVIOUS_OWNER</rdfs:label>
+          </crm:E39_Actor>
+        </crm:P28_custody_surrendered_by>
+        <crm:P30_transferred_custody_of>
+          <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990"/>
+        </crm:P30_transferred_custody_of>
+        <crm:P29_custody_received_by>
+          <crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500275558">
+            <rdfs:label>Van Gogh Museum</rdfs:label>
+            <crm:P2_has_type>
+              <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300312281">
+                <rdfs:label>Museum</rdfs:label>
+              </crm:E55_Type>
+            </crm:P2_has_type>
+          </crm:E39_Actor>
+        </crm:P29_custody_received_by>
+      </crm:E10_Transfer_of_Custody>
+    </crm:P9_consists_of>
+  </crm:E7_Activity>
+</rdf:RDF>
