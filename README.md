@@ -811,7 +811,7 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
   "timespan": [
     {
       "type": "TimeSpan",
-      "end_of_the_end": "1949-31-12",
+      "end_of_the_end": "1949-12-31",
       "begin_of_the_begin": "1949-01-01",
       "identified_by": [ 
         {
@@ -888,7 +888,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
   "timespan": [
     {
       "type": "TimeSpan",
-      "end_of_the_end": "1949-31-12",
+      "end_of_the_end": "1949-12-31",
       "begin_of_the_begin": "1949-01-01"
     }
   ],

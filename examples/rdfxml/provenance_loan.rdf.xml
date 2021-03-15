@@ -24,7 +24,7 @@
           </crm:E33_E41_Linguistic_Appellation>
         </crm:P1_is_identified_by>
         <crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-01-01</crm:P82a_begin_of_the_begin>
-        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-31-12</crm:P82b_end_of_the_end>
+        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-12-31</crm:P82b_end_of_the_end>
       </crm:E52_Time-Span>
     </crm:P4_has_time-span>
     <crm:P2_has_type>
