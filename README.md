@@ -991,7 +991,7 @@ In addition to the definition the provenance phases you can describe the entire 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_statement.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_statement.rdf.xml)
 
 ### Auctions
-Auctions are a specific way to change ownership. Linked Art provided an elaborate model for auctions (https://linked.art/model/provenance/auctions.html). We start with the auction itself.
+Auctions are a specific way to change ownership. Linked Art provides an elaborate model for auctions (https://linked.art/model/provenance/auctions.html). We start with the auction itself.
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
