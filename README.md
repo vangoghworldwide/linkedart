@@ -1030,7 +1030,7 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction.rdf.xml)
 
-Next there is the sub-activity of the auctioning of the lot, which is part of the auction. Within this activity a set of objects is auctioned (used_specific_object). This set of described separatly after this example. Note, how they are linked by the set id.
+Next there is the sub-activity of the auctioning of a specific lot. This activity is related via "part_of" to the auction. But you may also choose to model it in from auction to the lot using the inverse relation "part". Also the relation between the set of objects and the lot can be modelled in either directions, from lot to set with "used_specific_object" and From set to lot with "used_for". 
 
 ```json
 {
@@ -1068,7 +1068,7 @@ Next there is the sub-activity of the auctioning of the lot, which is part of th
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_lot.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_lot.rdf.xml)
 
-The set of objects that are auctioned contain the actual works as the members. It may also have various other aspect related to the auction, such as a lot number or information related to prices (dimension). 
+The set of objects that are auctioned contain the actual works as the members. The set may have information about the lot number or information related to prices (so called dimensions). 
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json", 
@@ -1117,8 +1117,6 @@ The set of objects that are auctioned contain the actual works as the members. I
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_set.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_set.rdf.xml)
-
-Note, that the set of objects can be related to the auction of the lot in both directions. From lot to set with "used_specific_object". From set to lot with "used_for". 
 
 The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set.
 ```json
@@ -1181,7 +1179,7 @@ The set of objects in the lot may be acquired by someone. This is how the proven
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_auction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_auction.rdf.xml)
 
-Note, that the set of objects can be related to the provenance entry in both directions. From provenance to set with "used_specific_object". From set to provenance with "used_for". 
+Also here the set of objects can be related to the provenance entry in both directions. From provenance to set with "used_specific_object". From set to provenance with "used_for". 
 
 ### Exhibitions
 Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.
