@@ -1,0 +1,34 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/auction/914",
+  "type": "Activity",
+  "_label_": "Impressionist and modern drawings and watercolors. The properties of: Brown University, Providence, Rhode Island [...].",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300054751", 
+      "type": "Type", 
+      "_label": "Auction Event"
+    }
+  ], 
+  "carried_out_by": [
+    {
+      "@id": "http://vocab.getty.edu/ulan/500371692",
+      "type": "Actor",
+      "_label": "Christie's New York"
+    }
+  ],
+  "took_place_at": [
+    {
+      "@id": "http://vocab.getty.edu/tgn/7007567",
+      "type": "Place",
+      "_label": "New York"
+    }
+  ],
+  "timespan": [
+    {
+      "type": "TimeSpan",
+      "end_of_the_end": "1979-05-16",
+      "begin_of_the_begin": "1979-05-16"
+    }
+  ]
+}

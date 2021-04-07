@@ -25,6 +25,7 @@ Provide information about the artworks made by Vincent van Gogh in your collecti
 * [Digital representation](#digital-representation) of the artwork (image)
 * [Credit / attribution](#credit--attribution)
 * [Provenance](#provenance) about the artwork's current and previous owners
+* [Auctions](#auctions)
 * [Exhibitions](#exhibitions) the artwork was used in
 * [Inscriptions](#inscriptions) on the artwork such as signatures and labels
 * [Literature](#literature) about an artwork
@@ -988,6 +989,199 @@ In addition to the definition the provenance phases you can describe the entire 
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_statement.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_statement.rdf.xml)
+
+### Auctions
+Auctions are a specific way to change ownership. Linked Art provided an elaborate model for auctions (https://linked.art/model/provenance/auctions.html). We start with the auction itself.
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://vangoghmuseum.nl/data/auction/914",
+  "type": "Activity",
+  "_label_": "Impressionist and modern drawings and watercolors. The properties of: Brown University, Providence, Rhode Island [...].",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300054751", 
+      "type": "Type", 
+      "_label": "Auction Event"
+    }
+  ], 
+  "carried_out_by": [
+    {
+      "@id": "http://vocab.getty.edu/ulan/500371692",
+      "type": "Actor",
+      "_label": "Christie's New York"
+    }
+  ],
+  "took_place_at": [
+    {
+      "@id": "http://vocab.getty.edu/tgn/7007567",
+      "type": "Place",
+      "_label": "New York"
+    }
+  ],
+  "timespan": [
+    {
+      "type": "TimeSpan",
+      "end_of_the_end": "1979-05-16",
+      "begin_of_the_begin": "1979-05-16"
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction.rdf.xml)
+
+Next there is the sub-activity of the auctioning of the lot, which is part of the auction. Within this activity a set of objects is auctioned (used_specific_object). This set of described separatly after this example. Note, how they are linked by the set id.
+
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json", 
+  "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+  "type": "Activity", 
+  "_label": "Auction of lot 437", 
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300420001", 
+      "type": "Type", 
+      "_label": "Auction of Lot"
+    }
+  ], 
+  "carried_out_by": [
+    {
+      "type": "Person", 
+      "_label": "Example Auctioneer"
+    }
+  ], 
+  "used_specific_object": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set",
+      "type": "Set", 
+      "_label": "Set of Objects for Lot 437",
+    }
+  ], 
+  "part_of": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914",
+      "type": "Activity"
+    }
+  ]
+} 
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_lot.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_lot.rdf.xml)
+
+The set of objects that are auctioned contain the actual works as the members. It may also have various other aspect related to the auction, such as a lot number or information related to prices (dimension). 
+```json
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json", 
+  "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set", 
+  "type": "Set", 
+  "_label": "Set of Objects for Lot 437",
+  "identified_by": [
+    {
+      "type": "Identifier", 
+      "content": "437",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404628",
+          "type": "Type",
+          "_label": "Lot number"
+        }
+      ]
+    }
+  ],
+  "member": [
+    {
+      "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
+      "type": "HumanMadeObject"
+    }
+  ],
+  "dimension": [
+    {
+      "type": "MonetaryAmount",
+      "value": "30000",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417244",
+          "type": "Type",
+          "_label": "estimated price"
+        }
+      ],
+      "currency": [
+        {
+          "id": "http://vocab.getty.edu/aat/300411998",
+          "type": "Type",
+          "_label": "pound sterling"
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_set.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_set.rdf.xml)
+
+Note, that the set of objects can be related to the auction of the lot in both directions. From lot to set with "used_specific_object". From set to lot with "used_for". 
+
+The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set.
+```json
+{
+  "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
+  "type": "Activity",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "provenance"
+    }
+  ],
+  "used_specific_object": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition", 
+      "_label": "Acquisition of Painting at auction",
+      "transferred_title_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
+          "type": "HumanMadeObject"
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Actor",
+          "_label": "PREVIOUS_OWNER"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Actor", 
+          "_label": "NEW_OWNER"
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "paid_amount": [
+        {
+          "type": "MonetaryAmount",
+          "value": "16000",
+          "currency": [
+            {
+              "id": "",
+              "type": "Currency",
+              "_label": "pound sterling"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_auction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_auction.rdf.xml)
+
+Note, that the set of objects can be related to the provenance entry in both directions. From provenance to set with "used_specific_object". From set to provenance with "used_for". 
 
 ### Exhibitions
 Artworks are used for exhibitions. An exhibition is identified by a name, the organisation that carried it out and the time that it took place. Every exhibition MUST HAVE an identifying URI. A blank node for an exhibition is not allowed.

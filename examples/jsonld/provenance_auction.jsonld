@@ -1,0 +1,56 @@
+{
+  "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
+  "type": "Activity",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "provenance"
+    }
+  ],
+  "used_specific_object": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition", 
+      "_label": "Acquisition of Painting at auction",
+      "transferred_title_of": [
+        {
+          "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
+          "type": "HumanMadeObject"
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Actor",
+          "_label": "PREVIOUS_OWNER"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Actor", 
+          "_label": "NEW_OWNER"
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "paid_amount": [
+        {
+          "type": "MonetaryAmount",
+          "value": "16000",
+          "currency": [
+            {
+              "id": "",
+              "type": "Currency",
+              "_label": "pound sterling"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

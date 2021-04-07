@@ -1,0 +1,32 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json", 
+  "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+  "type": "Activity", 
+  "_label": "Auction of lot 437", 
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300420001", 
+      "type": "Type", 
+      "_label": "Auction of Lot"
+    }
+  ], 
+  "carried_out_by": [
+    {
+      "type": "Person", 
+      "_label": "Example Auctioneer"
+    }
+  ], 
+  "used_specific_object": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set",
+      "type": "Set", 
+      "_label": "Set of Objects for Lot 437",
+    }
+  ], 
+  "part_of": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914",
+      "type": "Activity"
+    }
+  ]
+} 
