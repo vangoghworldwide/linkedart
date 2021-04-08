@@ -30,5 +30,71 @@
       "end_of_the_end": "1979-05-16",
       "begin_of_the_begin": "1979-05-16"
     }
+  ],
+  "part": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+      "type": "Activity", 
+      "_label": "Auction of lot 437", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300420001", 
+          "type": "Type", 
+          "_label": "Auction of Lot"
+        }
+      ], 
+      "carried_out_by": [
+        {
+          "type": "Person", 
+          "_label": "Example Auctioneer"
+        }
+      ], 
+      "used_specific_object": [
+        {
+          "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set", 
+          "type": "Set", 
+          "_label": "Set of Objects for Lot 437",
+          "identified_by": [
+            {
+              "type": "Identifier", 
+              "content": "437",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404628",
+                  "type": "Type",
+                  "_label": "Lot number"
+                }
+              ]
+            }
+          ],
+          "member": [
+            {
+              "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
+              "type": "HumanMadeObject"
+            }
+          ],
+          "dimension": [
+            {
+              "type": "MonetaryAmount",
+              "value": "30000",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300417244",
+                  "type": "Type",
+                  "_label": "estimated price"
+                }
+              ],
+              "currency": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300411998",
+                  "type": "Type",
+                  "_label": "pound sterling"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

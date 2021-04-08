@@ -796,6 +796,9 @@ When an explicit credit line needs to be displayd on [vangoghworldwide.org](http
 
 ### Provenance
 In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
+
+(A provenance entry may wrap information for multiple artworks, for example when multiple artworks were acquired in one single transaction. In this case it is thus important that the same provenance entry is used for each o artwork.)
+
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -991,7 +994,8 @@ In addition to the definition the provenance phases you can describe the entire 
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_statement.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_statement.rdf.xml)
 
 ### Auctions
-Auctions are a specific way to change ownership. Linked Art provides an elaborate model for auctions (https://linked.art/model/provenance/auctions.html). We start with the auction itself.
+Auctions are a specific way to change ownership. Linked Art provides an elaborate model for auctions (https://linked.art/model/provenance/auctions.html). We start with the auction itself, defining the actor that carried it out, the location and the timespan. As a part of the auction we define the specific activities of auctioning a specific lot. The lot then defines the set of objects that are auctioned "uses_specific_object". This set ocontain the actual artworks as the members. The set may also have information about the lot number or information related to prices (so called dimensions).
+ 
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -1025,98 +1029,78 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
       "end_of_the_end": "1979-05-16",
       "begin_of_the_begin": "1979-05-16"
     }
+  ],
+  "part": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+      "type": "Activity", 
+      "_label": "Auction of lot 437", 
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300420001", 
+          "type": "Type", 
+          "_label": "Auction of Lot"
+        }
+      ], 
+      "carried_out_by": [
+        {
+          "type": "Person", 
+          "_label": "Example Auctioneer"
+        }
+      ], 
+      "used_specific_object": [
+        {
+          "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set", 
+          "type": "Set", 
+          "_label": "Set of Objects for Lot 437",
+          "identified_by": [
+            {
+              "type": "Identifier", 
+              "content": "437",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404628",
+                  "type": "Type",
+                  "_label": "Lot number"
+                }
+              ]
+            }
+          ],
+          "member": [
+            {
+              "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
+              "type": "HumanMadeObject"
+            }
+          ],
+          "dimension": [
+            {
+              "type": "MonetaryAmount",
+              "value": "30000",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300417244",
+                  "type": "Type",
+                  "_label": "estimated price"
+                }
+              ],
+              "currency": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300411998",
+                  "type": "Type",
+                  "_label": "pound sterling"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction.rdf.xml)
 
-Next there is the sub-activity of the auctioning of a specific lot. This activity is related via "part_of" to the auction. But you may also choose to model it in from auction to the lot using the inverse relation "part". Also the relation between the set of objects and the lot can be modelled in either directions, from lot to set with "used_specific_object" and From set to lot with "used_for". 
-
-```json
-{
-  "@context": "https://linked.art/ns/v1/linked-art.json", 
-  "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
-  "type": "Activity", 
-  "_label": "Auction of lot 437", 
-  "classified_as": [
-    {
-      "id": "http://vocab.getty.edu/aat/300420001", 
-      "type": "Type", 
-      "_label": "Auction of Lot"
-    }
-  ], 
-  "carried_out_by": [
-    {
-      "type": "Person", 
-      "_label": "Example Auctioneer"
-    }
-  ], 
-  "used_specific_object": [
-    {
-      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set",
-      "type": "Set", 
-      "_label": "Set of Objects for Lot 437",
-    }
-  ], 
-  "part_of": [
-    {
-      "id": "http://vangoghmuseum.nl/data/auction/914",
-      "type": "Activity"
-    }
-  ]
-} 
-```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_lot.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_lot.rdf.xml)
-
-The set of objects that are auctioned contain the actual works as the members. The set may have information about the lot number or information related to prices (so called dimensions). 
-```json
-{
-  "@context": "https://linked.art/ns/v1/linked-art.json", 
-  "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set", 
-  "type": "Set", 
-  "_label": "Set of Objects for Lot 437",
-  "identified_by": [
-    {
-      "type": "Identifier", 
-      "content": "437",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300404628",
-          "type": "Type",
-          "_label": "Lot number"
-        }
-      ]
-    }
-  ],
-  "member": [
-    {
-      "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968",
-      "type": "HumanMadeObject"
-    }
-  ],
-  "dimension": [
-    {
-      "type": "MonetaryAmount",
-      "value": "30000",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300417244",
-          "type": "Type",
-          "_label": "estimated price"
-        }
-      ],
-      "currency": [
-        {
-          "id": "http://vocab.getty.edu/aat/300411998",
-          "type": "Type",
-          "_label": "pound sterling"
-        }
-      ]
-    }
-  ]
-}
-```
-[JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_set.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_set.rdf.xml)
+(For most relations in Linked Art an inverse relation is available. When modelling the data either of these relations may be used. For example, From lot to set with "used_specific_object" or from set to lot with "used_for". From set to artwork with "member" or from artwork to set with "member_of". For auction to lot with "part" or from lot to auction with "part_of").
 
 The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set, "used_specific_object". In addition we advise you to model the causal relation between the provenance entry and the activity of auctioning the lot, using the "caused_by" relation.
 ```json
