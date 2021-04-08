@@ -1116,6 +1116,7 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
 The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set, "used_specific_object". In addition we advise you to model the causal relation between the provenance entry and the activity of auctioning the lot, using the "caused_by" relation.
 ```json
 {
+  "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
   "type": "Activity",
   "classified_as": [

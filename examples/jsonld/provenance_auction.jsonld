@@ -1,4 +1,5 @@
 {
+  "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
   "type": "Activity",
   "classified_as": [
