@@ -8,12 +8,17 @@
       "id": "http://vocab.getty.edu/aat/300055863", 
       "type": "Type", 
       "_label": "Provenance Entry"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300417642", 
+      "type": "Type",
+      "_label": "Purchase"
     }
   ], 
   "timespan": [
     {
       "type": "TimeSpan",
-      "end_of_the_end": "1948-01-01",
+      "end_of_the_end": "1949-12-31",
       "begin_of_the_begin": "1949-01-01",
       "identified_by": [ 
         {
@@ -39,7 +44,6 @@
   ],
   "part": [
     {
-      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/acquisition/1",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
       "transferred_title_of": [

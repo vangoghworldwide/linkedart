@@ -31,6 +31,9 @@
       <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300055863">
         <rdfs:label>Provenance Entry</rdfs:label>
       </crm:E55_Type>
+      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300417642">
+        <rdfs:label>Purchase</rdfs:label>
+      </crm:E55_Type>
     </crm:P2_has_type>
     <crm:P9_consists_of>
       <crm:E8_Acquisition rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990/acquisition/1">

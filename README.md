@@ -810,6 +810,11 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
       "id": "http://vocab.getty.edu/aat/300055863", 
       "type": "Type", 
       "_label": "Provenance Entry"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300417642", 
+      "type": "Type",
+      "_label": "Purchase"
     }
   ], 
   "timespan": [
@@ -875,6 +880,16 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_acquisition.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_acquisition.rdf.xml)
 
+The specific type of the provenance activity should be added to clarify the particular event as an extra entry in the "classified_as".
+URI | Label
+--- | -----
+http://vocab.getty.edu/aat/300417642 | purchase
+http://vocab.getty.edu/aat/300417645 | Loan
+http://vocab.getty.edu/aat/300417644 | transfer
+http://vocab.getty.edu/aat/300417637 | gift
+http://vocab.getty.edu/aat/300417646 | long-term loan
+http://vocab.getty.edu/aat/300417641 | bequest
+
 A loan is modelled in a similar fashion, but using the specific part of type "TransferOfCustody".
 ```json
 {
@@ -887,6 +902,11 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
       "id": "http://vocab.getty.edu/aat/300055863", 
       "type": "Type", 
       "_label": "Provenance Entry"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300417645", 
+      "type": "Type", 
+      "_label": "Loan"
     }
   ], 
   "timespan": [
@@ -951,15 +971,6 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
 }
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fprovenance_loan.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/provenance_loan.rdf.xml)
-
-URI | Label
---- | -----
-http://vocab.getty.edu/aat/300417642 | purchase
-http://vocab.getty.edu/aat/300417645 | Loan
-http://vocab.getty.edu/aat/300417644 | transfer
-http://vocab.getty.edu/aat/300417637 | gift
-http://vocab.getty.edu/aat/300417646 | long-term loan
-http://vocab.getty.edu/aat/300417641 | bequest
 
 #### Provenance statement
 In addition to the definition the provenance phases you can describe the entire provenance of an artwork in free text. This is done using a [statement(https://linked.art/model/object/physical/#materials-statement)

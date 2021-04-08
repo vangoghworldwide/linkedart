@@ -8,6 +8,11 @@
       "id": "http://vocab.getty.edu/aat/300055863", 
       "type": "Type", 
       "_label": "Provenance Entry"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300417645", 
+      "type": "Type", 
+      "_label": "Loan"
     }
   ], 
   "timespan": [
