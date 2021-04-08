@@ -13,6 +13,13 @@
       "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set"
     }
   ],
+  "caused_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+      "type": "Activity", 
+      "_label": "Auction of Lot 437"
+    }
+  ],
   "part": [
     {
       "type": "Acquisition", 

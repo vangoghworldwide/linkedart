@@ -1118,7 +1118,7 @@ The set of objects that are auctioned contain the actual works as the members. T
 ```
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fauction_set.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/auction_set.rdf.xml)
 
-The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set.
+The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set, "used_specific_object". In addition we advise you to model the causal relation between the provenance entry and the activity of auctioning the lot, using the "caused_by" relation.
 ```json
 {
   "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
@@ -1133,6 +1133,13 @@ The set of objects in the lot may be acquired by someone. This is how the proven
   "used_specific_object": [
     {
       "id": "http://vangoghmuseum.nl/data/auction/914/lot/437/set"
+    }
+  ],
+  "caused_by": [
+    {
+      "id": "http://vangoghmuseum.nl/data/auction/914/lot/437", 
+      "type": "Activity", 
+      "_label": "Auction of Lot 437"
     }
   ],
   "part": [
