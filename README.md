@@ -846,6 +846,8 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1/acquisition",
+      "type": "Activity",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
       "transferred_title_of": [
@@ -856,6 +858,7 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
       ],
       "transferred_title_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }
@@ -932,6 +935,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/activity/2/custody",
       "type": "TransferOfCustody", 
       "classified_as": [
         {
@@ -948,6 +952,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
       ],
       "transferred_custody_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }
@@ -1140,6 +1145,7 @@ The set of objects in the lot may be acquired by someone. This is how the proven
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1/acquisition",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting at auction",
       "transferred_title_of": [
@@ -1150,12 +1156,14 @@ The set of objects in the lot may be acquired by someone. This is how the proven
       ],
       "transferred_title_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }
       ],
       "transferred_title_to": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor", 
           "_label": "NEW_OWNER"
         }
