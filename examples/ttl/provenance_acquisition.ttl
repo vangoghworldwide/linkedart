@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990>
+    a crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/acquisition/1>
+    crm:P22_transferred_title_to <http://vocab.getty.edu/ulan/500275558> ;
+    crm:P23_transferred_title_from [
+        a crm:E39_Actor ;
+        rdfs:label "PREVIOUS_OWNER"
+    ] ;
+    crm:P24_transferred_title_of <http://vangoghmuseum.nl/data/artwork/s0416M1990> ;
+    a crm:E8_Acquisition ;
+    rdfs:label "Acquisition of Painting from Seller" .
+
+<http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1>
+    crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500275558> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300055863>, <http://vocab.getty.edu/aat/300417642> ;
+    crm:P4_has_time-span [
+        crm:P1_is_identified_by [
+            crm:P190_has_symbolic_content "1949" ;
+            a crm:E33_E41_Linguistic_Appellation
+        ] ;
+        crm:P82a_begin_of_the_begin "1949-01-01"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end "1949-12-31"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        a crm:E52_Time-Span
+    ] ;
+    crm:P9_consists_of <http://vangoghmuseum.nl/data/artwork/s0416M1990/acquisition/1> ;
+    a crm:E7_Activity ;
+    rdfs:label "Purchase of Painting" .
+
+<http://vocab.getty.edu/aat/300055863>
+    a crm:E55_Type ;
+    rdfs:label "Provenance Entry" .
+
+<http://vocab.getty.edu/aat/300312281>
+    a crm:E55_Type ;
+    rdfs:label "Museum" .
+
+<http://vocab.getty.edu/aat/300417642>
+    a crm:E55_Type ;
+    rdfs:label "Purchase" .
+
+<http://vocab.getty.edu/ulan/500275558>
+    crm:P2_has_type <http://vocab.getty.edu/aat/300312281> ;
+    a crm:E39_Actor ;
+    rdfs:label "Van Gogh Museum" .
+

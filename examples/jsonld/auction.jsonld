@@ -15,6 +15,12 @@
       "@id": "http://vocab.getty.edu/ulan/500371692",
       "type": "Actor",
       "_label": "Christie's New York"
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417515", 
+          "type": "Type", 
+          "_label": "Auction House (businesses)"
+        }
     }
   ],
   "took_place_at": [
@@ -86,9 +92,14 @@
               ],
               "currency": [
                 {
-                  "id": "http://vocab.getty.edu/aat/300411998",
-                  "type": "Type",
-                  "_label": "pound sterling"
+                  "type": "Currency",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300411998",
+                      "type": "Type",
+                      "_label": "pound sterling"
+                    }
+                  ]
                 }
               ]
             }

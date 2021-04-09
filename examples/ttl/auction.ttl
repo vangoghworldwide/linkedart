@@ -1,0 +1,80 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix la: <https://linked.art/ns/terms/> .
+
+<http://vangoghmuseum.nl/data/artwork/d0372V1968>
+    a crm:E22_Human-Made_Object .
+
+<http://vangoghmuseum.nl/data/auction/914>
+    crm:P14_carried_out_by <http://vocab.getty.edu/ulan/500371692> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300054751> ;
+    crm:P4_has_time-span [
+        crm:P1_is_identified_by [
+            crm:P190_has_symbolic_content "16 mei 1979" ;
+            a crm:E33_E41_Linguistic_Appellation
+        ] ;
+        crm:P82a_begin_of_the_begin "1979-05-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        crm:P82b_end_of_the_end "1979-05-16T23:59:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        a crm:E52_Time-Span
+    ] ;
+    crm:P7_took_place_at <http://vocab.getty.edu/tgn/7007567> ;
+    crm:P9_consists_of <http://vangoghmuseum.nl/data/auction/914/lot/437> ;
+    a crm:E7_Activity ;
+    rdfs:label "Impressionist and modern drawings and watercolors. The properties of: Brown University, Providence, Rhode Island [...]." .
+
+<http://vangoghmuseum.nl/data/auction/914/lot/437>
+    crm:P16_used_specific_object <http://vangoghmuseum.nl/data/auction/914/lot/437/set> ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300420001> ;
+    a crm:E7_Activity ;
+    rdfs:label "Auction of lot 437" .
+
+<http://vangoghmuseum.nl/data/auction/914/lot/437/set>
+    crm:P1_is_identified_by [
+        crm:P190_has_symbolic_content "437" ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300404628> ;
+        a crm:E42_Identifier
+    ] ;
+    crm:P43_has_dimension [
+        crm:P180_has_currency <http://vocab.getty.edu/aat/300379098> ;
+        crm:P2_has_type <http://vocab.getty.edu/aat/300417244> ;
+        crm:P90_has_value 30000 ;
+        a crm:E97_Monetary_Amount
+    ] ;
+    a la:Set ;
+    rdfs:label "Set of Objects for Lot 437" ;
+    la:has_member <http://vangoghmuseum.nl/data/artwork/d0372V1968> .
+
+<http://vocab.getty.edu/aat/300054751>
+    a crm:E55_Type ;
+    rdfs:label "Auction Event" .
+
+<http://vocab.getty.edu/aat/300379098>
+    a crm:E98_Currency ;
+    rdfs:label "Pound Sterling" .
+
+<http://vocab.getty.edu/aat/300404628>
+    a crm:E55_Type ;
+    rdfs:label "Lot number" .
+
+<http://vocab.getty.edu/aat/300417244>
+    a crm:E55_Type ;
+    rdfs:label "estimated price" .
+
+<http://vocab.getty.edu/aat/300417515>
+    a crm:E55_Type ;
+    rdfs:label "Auction House (businesses)" .
+
+<http://vocab.getty.edu/aat/300420001>
+    a crm:E55_Type ;
+    rdfs:label "Auction of Lot" .
+
+<http://vocab.getty.edu/tgn/7007567>
+    a crm:E53_Place ;
+    rdfs:label "New York" .
+
+<http://vocab.getty.edu/ulan/500371692>
+    crm:P2_has_type <http://vocab.getty.edu/aat/300417515> ;
+    a crm:E39_Actor ;
+    rdfs:label "Christie's New York" .
+
