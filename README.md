@@ -1118,6 +1118,8 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
 
 (For most relations in Linked Art an inverse relation is available. When modelling the data either of these relations may be used. For example, From lot to set with "used_specific_object" or from set to lot with "used_for". From set to artwork with "member" or from artwork to set with "member_of". For auction to lot with "part" or from lot to auction with "part_of").
 
+#### Acquisition at an auction
+
 The set of objects in the lot may be acquired by someone. This is how the provenance and the auctions are linked together. Linked Art specifies this with a relation between the provenance entry and the object set, "used_specific_object". In addition we advise you to model the causal relation between the provenance entry and the activity of auctioning the lot, using the "caused_by" relation.
 ```json
 {

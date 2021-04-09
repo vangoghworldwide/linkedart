@@ -31,6 +31,8 @@
       <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300055863">
         <rdfs:label>Provenance Entry</rdfs:label>
       </crm:E55_Type>
+    </crm:P2_has_type>
+    <crm:P2_has_type>
       <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300417642">
         <rdfs:label>Purchase</rdfs:label>
       </crm:E55_Type>

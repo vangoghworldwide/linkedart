@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:la="https://linked.art/ns/terms/">
+  <crm:E7_Activity rdf:about="http://vangoghmuseum.nl/data/auction/914">
+    <rdfs:label>Impressionist and modern drawings and watercolors. The properties of: Brown University, Providence, Rhode Island [...].</rdfs:label>
+    <crm:P14_carried_out_by>
+      <crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500371692">
+        <rdfs:label>Christie's New York</rdfs:label>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300417515">
+            <rdfs:label>Auction House (businesses)</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+      </crm:E39_Actor>
+    </crm:P14_carried_out_by>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span>
+        <crm:P1_is_identified_by>
+          <crm:E33_E41_Linguistic_Appellation>
+            <crm:P190_has_symbolic_content>16 mei 1979</crm:P190_has_symbolic_content>
+          </crm:E33_E41_Linguistic_Appellation>
+        </crm:P1_is_identified_by>
+        <crm:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-05-16T00:00:00</crm:P82a_begin_of_the_begin>
+        <crm:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-05-16T23:59:59</crm:P82b_end_of_the_end>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+    <crm:P7_took_place_at>
+      <crm:E53_Place rdf:about="http://vocab.getty.edu/tgn/7007567">
+        <rdfs:label>New York</rdfs:label>
+      </crm:E53_Place>
+    </crm:P7_took_place_at>
+    <crm:P2_has_type>
+      <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300054751">
+        <rdfs:label>Auction Event</rdfs:label>
+      </crm:E55_Type>
+    </crm:P2_has_type>
+    <crm:P9_consists_of>
+      <crm:E7_Activity rdf:about="http://vangoghmuseum.nl/data/auction/914/lot/437">
+        <rdfs:label>Auction of lot 437</rdfs:label>
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300420001">
+           <rdfs:label>Auction of Lot</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P16_used_specific_object>
+          <la:Set rdf:about="http://vangoghmuseum.nl/data/auction/914/lot/437/set">
+            <rdfs:label>Set of Objects for Lot 437</rdfs:label>
+              <crm:P1_is_identified_by>
+                <crm:E42_Identifier>
+                  <crm:P2_has_type>
+                    <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300404628">
+                      <rdfs:label>Lot number</rdfs:label>
+                    </crm:E55_Type>
+                  </crm:P2_has_type>
+                  <crm:P190_has_symbolic_content>437</crm:P190_has_symbolic_content>
+                </crm:E42_Identifier>
+              </crm:P1_is_identified_by>
+              <la:has_member>
+                <crm:E22_Human-Made_Object rdf:about="http://vangoghmuseum.nl/data/artwork/d0372V1968"/>
+              </la:has_member>
+              <crm:P43_has_dimension>
+                <crm:E97_Monetary_Amount>
+                  <crm:P2_has_type>
+                    <crm:E55_Type rdf:about="http://vocab.getty.edu/aat/300417244">
+                      <rdfs:label>estimated price</rdfs:label>
+                    </crm:E55_Type>
+                  </crm:P2_has_type>
+                  <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</crm:P90_has_value>
+                  <crm:P180_has_currency>
+                    <crm:E98_Currency rdf:about="http://vocab.getty.edu/aat/300379098">
+                      <rdfs:label>Pound Sterling</rdfs:label>
+                    </crm:E98_Currency>
+                  </crm:P180_has_currency>
+                </crm:E97_Monetary_Amount>
+              </crm:P43_has_dimension>
+          </la:Set>
+        </crm:P16_used_specific_object>
+      </crm:E7_Activity>
+    </crm:P9_consists_of>
+  </crm:E7_Activity>
+</rdf:RDF>
