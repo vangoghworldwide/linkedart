@@ -12,20 +12,14 @@
   ], 
   "carried_out_by": [
     {
-      "@id": "http://vocab.getty.edu/ulan/500371692",
+      "id": "http://vocab.getty.edu/ulan/500371692",
       "type": "Actor",
       "_label": "Christie's New York"
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300417515", 
-          "type": "Type", 
-          "_label": "Auction House (businesses)"
-        }
     }
   ],
   "took_place_at": [
     {
-      "@id": "http://vocab.getty.edu/tgn/7007567",
+      "id": "http://vocab.getty.edu/tgn/7007567",
       "type": "Place",
       "_label": "New York"
     }
@@ -51,6 +45,7 @@
       ], 
       "carried_out_by": [
         {
+          "id": "ID of Auctoneer",
           "type": "Person", 
           "_label": "Example Auctioneer"
         }

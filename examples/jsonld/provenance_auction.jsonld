@@ -1,6 +1,6 @@
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
+  "id": "http://vangoghmuseum.nl/data/provenance/3",
   "type": "Activity",
   "classified_as": [
     {
@@ -23,6 +23,7 @@
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/acquisition/3",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting at auction",
       "transferred_title_of": [
@@ -33,12 +34,14 @@
       ],
       "transferred_title_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }
       ],
       "transferred_title_to": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor", 
           "_label": "NEW_OWNER"
         }
@@ -52,9 +55,14 @@
           "value": "16000",
           "currency": [
             {
-              "id": "",
               "type": "Currency",
-              "_label": "pound sterling"
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300411998",
+                  "type": "Type",
+                  "_label": "pound sterling"
+                }
+              ]
             }
           ]
         }

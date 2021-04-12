@@ -1,7 +1,7 @@
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990",
-  "type": "HumanMadeObject",
+  "id": "http://vangoghmuseum.nl/data/provenance/2",
+  "type": "Activity",
   "_label": "Loan of Painting", 
   "classified_as": [
     {
@@ -18,7 +18,7 @@
   "timespan": [
     {
       "type": "TimeSpan",
-      "end_of_the_end": "1949-01-01",
+      "end_of_the_end": "1949-12-31",
       "begin_of_the_begin": "1949-01-01"
     }
   ],
@@ -38,6 +38,7 @@
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/transfer_of_custody/1",
       "type": "TransferOfCustody", 
       "classified_as": [
         {
@@ -54,6 +55,7 @@
       ],
       "transferred_custody_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }

@@ -1,6 +1,6 @@
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1",
+  "id": "http://vangoghmuseum.nl/data/provenance/1",
   "type": "Activity",
   "_label": "Purchase of Painting", 
   "classified_as": [
@@ -44,6 +44,7 @@
   ],
   "part": [
     {
+      "id": "http://vangoghmuseum.nl/data/acquisition/1",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
       "transferred_title_of": [
@@ -54,6 +55,7 @@
       ],
       "transferred_title_from": [
         {
+          "id": "ID_OF_ACTOR",
           "type": "Actor",
           "_label": "PREVIOUS_OWNER"
         }

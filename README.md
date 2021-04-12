@@ -802,7 +802,7 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1",
+  "id": "http://vangoghmuseum.nl/data/provenance/1",
   "type": "Activity",
   "_label": "Purchase of Painting", 
   "classified_as": [
@@ -846,7 +846,7 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
   ],
   "part": [
     {
-      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1/acquisition",
+      "id": "http://vangoghmuseum.nl/data/acquisition/1",
       "type": "Activity",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
@@ -897,7 +897,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/activity/2",
+  "id": "http://vangoghmuseum.nl/data/provenance/2",
   "type": "Activity",
   "_label": "Loan of Painting", 
   "classified_as": [
@@ -935,7 +935,7 @@ A loan is modelled in a similar fashion, but using the specific part of type "Tr
   ],
   "part": [
     {
-      "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/activity/2/custody",
+      "id": "http://vangoghmuseum.nl/data/transfer_of_custody/1",
       "type": "TransferOfCustody", 
       "classified_as": [
         {
@@ -1027,14 +1027,14 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
   ], 
   "carried_out_by": [
     {
-      "@id": "http://vocab.getty.edu/ulan/500371692",
+      "id": "http://vocab.getty.edu/ulan/500371692",
       "type": "Actor",
       "_label": "Christie's New York"
     }
   ],
   "took_place_at": [
     {
-      "@id": "http://vocab.getty.edu/tgn/7007567",
+      "id": "http://vocab.getty.edu/tgn/7007567",
       "type": "Place",
       "_label": "New York"
     }
@@ -1060,6 +1060,7 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
       ], 
       "carried_out_by": [
         {
+          "id": "ID of Auctoneer",
           "type": "Person", 
           "_label": "Example Auctioneer"
         }
@@ -1101,9 +1102,14 @@ Auctions are a specific way to change ownership. Linked Art provides an elaborat
               ],
               "currency": [
                 {
-                  "id": "http://vocab.getty.edu/aat/300411998",
-                  "type": "Type",
-                  "_label": "pound sterling"
+                  "type": "Currency",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300411998",
+                      "type": "Type",
+                      "_label": "pound sterling"
+                    }
+                  ]
                 }
               ]
             }
@@ -1124,7 +1130,7 @@ The set of objects in the lot may be acquired by someone. This is how the proven
 ```json
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "http://vangoghmuseum.nl/data/artwork/d0372V1968/activity/1",
+  "id": "http://vangoghmuseum.nl/data/acquisition/1",
   "type": "Activity",
   "classified_as": [
     {

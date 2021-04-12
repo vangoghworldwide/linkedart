@@ -4,7 +4,7 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
 >
-  <crm:E7_Activity rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990/purchase/1">
+  <crm:E7_Activity rdf:about="http://vangoghmuseum.nl/data/provenance/1">
     <rdfs:label>Purchase of Painting</rdfs:label>
     <crm:P14_carried_out_by>
       <crm:E39_Actor rdf:about="http://vocab.getty.edu/ulan/500275558">
@@ -38,7 +38,7 @@
       </crm:E55_Type>
     </crm:P2_has_type>
     <crm:P9_consists_of>
-      <crm:E8_Acquisition rdf:about="http://vangoghmuseum.nl/data/artwork/s0416M1990/acquisition/1">
+      <crm:E8_Acquisition rdf:about="http://vangoghmuseum.nl/data/acquisition/1">
         <rdfs:label>Acquisition of Painting from Seller</rdfs:label>
         <crm:P23_transferred_title_from>
           <crm:E39_Actor>
