@@ -847,7 +847,6 @@ A provenance entry may wrap information for multiple artworks, for example when 
   "part": [
     {
       "id": "http://vangoghmuseum.nl/data/acquisition/1",
-      "type": "Activity",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
       "transferred_title_of": [
