@@ -91,7 +91,7 @@ http://vocab.getty.edu/aat/300033973 | Drawings
 http://vocab.getty.edu/aat/300041273 | Prints
 
 ### Link to VGW URI
-To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber. The VGW URIs can be found by searching for a work on [vangoghworldwide.org](http://vangoghworldwide.org). Use the url of the artwork page, but make sure to use **https://** and include **/data** in the path. Thus the url for the artwork https://vangoghworldwide.org/artwork/F4 becomes the VGW URI https://vangoghworldwide.org/data/artwork/F4.
+To identify how your artwork relates to Van Gogh Worldwide provide a *see_also* link to a VGW URI. The VGW URI is based on the Fnumber: https://vangoghworldwide.org/data/artwork/{F-NUMBER} (without trailing zeros: https://vangoghworldwide.org/data/artwork/F1).
 
 Notice that the reference to De La Faille sometimes contains additional lettering, arabic or Roman numbers, eg. F1009a, F1116ar, F1664-13 or FXXXIII. These additions are part of the URI.
 
@@ -795,9 +795,9 @@ When an explicit credit line needs to be displayd on [vangoghworldwide.org](http
 [JSON-LD playground](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Fvangoghworldwide%2Flinkedart%2Fmaster%2Fexamples%2Fjsonld%2Fcredit.jsonld) | [RDF/XML](https://github.com/vangoghworldwide/linkedart/blob/master/examples/rdfxml/credit.rdf.xml)
 
 ### Provenance
-In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of events. The provenance event describes the actor, the timespan and optionnaly a title or identifier. The details are modelled by specific subsequent events (parts), such as an acquisition event, an auction or a the transfer of custody. See the [Linked Art documentation](https://linked.art/model/provenance/#parts) for more details.
+In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwork is modelled a series of (transaction) events. The provenance event describes the transfer of a work between owners or custodians. In the event you should describe at least the timespan of the transfer. Additionally provide who carried out the transfer and the location where it took place. The provenance event is a wrapper for the actual transaction, for Van Gogh Worldwide we currently accept acquistions and transfers of custody. The transaction is provided as a part of the provenance event. At this level you define from which actor the artwork was transferred and to which actor it was transferred (e.g. seller/buyer in case of a transaction).
 
-(A provenance entry may wrap information for multiple artworks, for example when multiple artworks were acquired in one single transaction. In this case it is thus important that the same provenance entry is used for each o artwork.)
+A provenance entry may wrap information for multiple artworks, for example when multiple artworks were acquired in one single transaction. In this case it is thus important that the **same** provenance entry is used for each artwork within the transaction.
 
 ```json
 {
@@ -847,7 +847,6 @@ In Linked Art the [provenance](https://linked.art/model/provenance/) of an artwo
   "part": [
     {
       "id": "http://vangoghmuseum.nl/data/acquisition/1",
-      "type": "Activity",
       "type": "Acquisition", 
       "_label": "Acquisition of Painting from Seller",
       "transferred_title_of": [
