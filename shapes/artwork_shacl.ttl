@@ -585,6 +585,14 @@ vgw:AATConcept a sh:NodeShape ;
         sh:pattern "^http://vocab.getty.edu/aat/"
       ]
     ]
+    [
+      sh:property [
+        sh:minCount 1 ;
+        sh:path owl:sameAs ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^http://vocab.getty.edu/aat/"
+      ]
+    ]
   ).
 vgw:ULANConcept a sh:NodeShape ;
   sh:nodeKind sh:IRI ;
@@ -596,6 +604,14 @@ vgw:ULANConcept a sh:NodeShape ;
       sh:property [
         sh:minCount 1 ;
         sh:path skos:exactMatch ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^http://vocab.getty.edu/ulan/"
+      ]
+    ]
+    [
+      sh:property [
+        sh:minCount 1 ;
+        sh:path owl:sameAs ;
         sh:nodeKind sh:IRI ;
         sh:pattern "^http://vocab.getty.edu/ulan/"
       ]
@@ -615,6 +631,14 @@ vgw:RKDartist a sh:NodeShape ;
         sh:pattern "^https://data.rkd.nl/artists/"
       ]
     ]
+    [
+      sh:property [
+        sh:minCount 1 ;
+        sh:path owl:sameAs ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^https://data.rkd.nl/artists/"
+      ]
+    ]
   ).
 vgw:TGNConcept a sh:NodeShape ;
   sh:nodeKind sh:IRI ;
@@ -626,6 +650,14 @@ vgw:TGNConcept a sh:NodeShape ;
       sh:property [
         sh:minCount 1 ;
         sh:path skos:exactMatch ;
+        sh:nodeKind sh:IRI ;
+        sh:pattern "^http://vocab.getty.edu/tgn/"
+      ]
+    ]
+    [
+      sh:property [
+        sh:minCount 1 ;
+        sh:path owl:sameAs ;
         sh:nodeKind sh:IRI ;
         sh:pattern "^http://vocab.getty.edu/tgn/"
       ]
