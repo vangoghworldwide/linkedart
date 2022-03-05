@@ -197,9 +197,7 @@ In Linked Art titles are also considered identifiers. We thus use the same patte
           "_label": "Preferred terms"
         }
       ]
-    }
-  ],
-  "identified_by": [
+    },
     {
       "type": "Name",
       "content": "Zeezicht in Scheveningen",
