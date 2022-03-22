@@ -434,7 +434,7 @@ A [Dimension](https://linked.art/model/object/physical/#dimensions) consists of 
     {
       "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/width",
       "type": "Dimension",
-      "value": "51.9",
+      "value": 51.9,
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300055647",
@@ -451,7 +451,7 @@ A [Dimension](https://linked.art/model/object/physical/#dimensions) consists of 
     {
       "id": "http://vangoghmuseum.nl/data/artwork/s0416M1990/dimension/height",
       "type": "Dimension",
-      "value": "36.4",
+      "value": 36.4,
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300055644",
