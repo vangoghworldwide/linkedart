@@ -294,8 +294,8 @@ The [production](https://linked.art/model/object/production/) of the artwork is 
     "timespan": [
       {
         "type": "TimeSpan",
-        "end_of_the_end": "1882-08-21T00:00:00",
-        "begin_of_the_begin": "1882-08-21T23:59:59",
+        "begin_of_the_begin": "1882-08-21T00:00:00",
+        "end_of_the_end": "1882-08-21T23:59:59",
         "identified_by": [
           {
             "type": "Name", 
@@ -349,6 +349,7 @@ http://vocab.getty.edu/tgn/7006842 | Eindhoven
 http://vocab.getty.edu/tgn/7016995 | Laken
 http://vocab.getty.edu/tgn/7007865 | Borinage
 http://vocab.getty.edu/tgn/7009654 | Saint-Rémy-de-Provence
+http://vocab.getty.edu/tgn/7008783 | Montmajour
 
 
 #### Timespan
@@ -367,8 +368,9 @@ http://vocab.getty.edu/aat/300053062 | colorwashing
 http://vocab.getty.edu/aat/300053418 | heightening
 http://vocab.getty.edu/aat/300053412 | stumping
 http://vocab.getty.edu/aat/300379457 | scratching (process)
-http://vocab.getty.edu/aat/300054196 | stumping
+http://vocab.getty.edu/aat/300054196 | drawing (image-making)
 http://vocab.getty.edu/aat/300053431 | squaring (transferring technique)
+http://vocab.getty.edu/aat/300053271 | lithography
 
 ### Previous attribution
 
