@@ -657,7 +657,7 @@ By modelling the parts of an artwork we define more specifically where informati
 }
 ```
 
-#### Sibblings
+#### Siblings
 @TDB
 
 <!-- <http://vangoghmuseum.nl/data/artwork/s0004V1962> crm:P1_is_identified_by [a crm:E42_Identifier ; 
@@ -1416,7 +1416,7 @@ Artworks are referred to in literature such as scientific publications, books or
 
 URI | Label
 --- | -----
-http://vocab.getty.edu/aat/300417443 | books
+http://vocab.getty.edu/aat/300028051 | books
 http://vocab.getty.edu/aat/300048715 | articles
 http://vocab.getty.edu/aat/300026061 | catalogues raisonnés	
 http://vocab.getty.edu/aat/300026096 | exhibition catalogs	
